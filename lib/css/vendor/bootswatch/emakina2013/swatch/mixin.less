@@ -1,0 +1,12 @@
+// Font Mixin
+// Si aucun paramètre n'est défini
+// 300, 22px, 32px sont les valeurs par défaut. 
+.font(@weight: 300, @size: 22px, @height: 32px) {
+	font-family: museo-sans, sans-serif;
+	font-weight: @weight;
+	font-size: @size;
+	line-height: @height;
+
+	// ze smoothin.
+	-webkit-font-smoothing:antialiased; font-smoothing:antialiased; 
+}

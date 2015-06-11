@@ -1,0 +1,80 @@
+
+/*################################################################################
+=======================Box-Work section comportement==========================
+################################################################################*/
+.box-work
+{
+	background: @black url(../img/grip_bg.png) 0 0 repeat;
+	margin-top: 78px;
+	padding:0 0 50px 0;
+
+	header
+	{
+		margin: 50px 0 40px 0;
+	}
+
+
+
+	/*====================================================================
+	=============================Work Div===============================
+	====================================================================*/
+	.works
+	{
+		.lt-ie8 li
+		{
+			min-height:1px; /*triggers haslayout for ie < 8*/
+			display:inline; /*faking inline-block behaviour for IE < 8*/
+		}
+
+		.holder 
+		{
+			border-bottom: 1px solid @gray;
+			margin-bottom:30px;
+			padding-bottom: 30px;
+			float : none;
+
+			h6.h8 {line-height:20px;}
+
+		}
+
+		.holder li 
+		{
+			width: 50%;
+			margin: 0;
+			display: inline-block;
+			vertical-align: top;
+			
+
+
+			.right
+			{
+				// float:none;
+				// width: 250px;
+				padding:0 20px 0 0;
+				float:right;
+			 }
+		}
+
+		li li.clearfix {float:left;}
+
+		p 
+		{
+			padding:0;
+		}
+
+		.right h4
+		{
+			margin-top: 0;
+			line-height: 1em;
+		}
+
+	}
+
+	.more
+	{
+		width: 80px;
+		margin: 30px auto 0 auto;
+		display: block;
+	}
+
+}

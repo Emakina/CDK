@@ -1,0 +1,42 @@
+/*################################################################################
+=======================Box-Contact section comportement==========================
+################################################################################*/
+
+.box-contact
+{
+
+	.visu-contact
+	{
+		position:relative;
+		background: @black url(../img/contact/bg.jpg) center top repeat-y;
+		background-size:contain;
+		padding-bottom:100px;
+		z-index:4;
+	}
+
+	.form-horizontal {padding:0; }
+	.form {
+		background:none;
+
+		fieldset {
+			div {padding:0;}
+
+			div.row-fluid {padding:0 0 20px;}
+			div.row-fluid.holder {border-bottom: 1px solid @grayLight; padding:0 0 40px;  }
+
+			div.span6, div.span12 {padding:0;}
+
+			input[type="text"] {width: 96%; padding: 4px 2%;}
+			input[type="checkbox"] {float:left; line-height: 35px; margin-top:14px; margin-right:10px;}
+
+			textarea {
+				width:98%;
+				padding: 4px 1% ;
+				height:270px;
+				resize:none;
+			}
+		}
+	}
+
+	border-bottom: 5px solid @white;
+}

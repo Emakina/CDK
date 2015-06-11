@@ -1,0 +1,233 @@
+/*################################################################################
+=======================Box-service section comportement==========================
+################################################################################*/
+
+.box-service
+{
+	position: relative;
+	.visu-service
+	{
+		background: @black url(../img/service/bg.jpg) center top no-repeat;
+		position:relative;
+		background-size:100%;
+		z-index:4;
+	}
+
+
+
+	header 
+	{
+		margin-bottom: 95px;
+	}
+
+
+	.services .span3 
+	{
+		margin-bottom:35px;
+		position: relative;
+	}
+
+	
+
+}
+
+
+
+/*==============================================================================
+---------------------Carousel de transition entre les deux.---------------------
+==============================================================================*/
+
+.jcarousel_services {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+   
+}
+
+.jcarousel_services > ul {
+    width: 20000%;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.jcarousel_services > ul > li {
+    float: left;
+	width: 0.5%;
+    margin: 0 auto;
+    display: block;
+}
+
+@media(max-width: 768px)
+{
+	.jcarousel_services {
+		height: 1500px;
+	}
+}
+
+.box-service
+{
+
+	[class^=slide-] 
+	{
+		background: rgba(000, 000, 000, 0.3);
+		color: #fff;
+
+	}
+
+	.slide-previous {
+			
+		left: 0;
+
+
+			&:hover {background-position: left center;}
+		}
+
+		.slide-next {
+		
+		right: 0;
+			
+
+			&:hover {background-position: right center;}
+		}
+
+		.slid-nav
+		{
+			max-width: 1200px;
+			position: relative;
+			margin: 0 auto;
+			margin-top: 10%;
+		}
+}
+
+/*==============================================================================
+--------------------------------Expertise part.--------------------------------
+==============================================================================*/
+
+
+.expertise 
+{
+	.tab-nav
+	{
+		font-size: 16px;
+		text-transform: capitalize;
+		margin: 0;
+		padding: 0;
+
+		span
+		{
+			border: 0;
+		}
+
+
+		 a:before
+		{
+			background: @black url(../img/service/expertise/sprite-ex.png) 0 0 no-repeat;
+			margin: 0 auto;
+			content:"";
+			display: block;
+			width:53px;
+			height:54px;
+
+	
+		}
+
+		li 
+		{
+			margin: 0 auto;
+			background-color: @black;
+
+			&.active
+			{
+				background: @black url(../img/service/expertise/background.png) 0 0 repeat;
+			}
+
+			&:first-child span
+			{
+				width: 0;
+				padding: 0;
+			}
+		}
+	
+
+
+.architects  a:before { background-position: 0 0; width: 54px; height: 53px; } 
+.architects.active a:before{ background-position: -55px 0; width: 54px; height: 53px; background-color: transparent;} 
+.directs a:before{ background-position: -110px 0; width: 54px; height: 53px; } 
+.directs.active a:before{ background-position: -165px 0; width: 54px; height: 53px; background-color: transparent;} 
+.media a:before{ background-position: -220px 0; width: 54px; height: 53px; } 
+.media.active a:before{ background-position: -275px 0; width: 54px; height: 53px; background-color: transparent;} 
+.mobile a:before{ background-position: -330px 0; width: 54px; height: 53px; } 
+.mobile.active a:before{ background-position: -385px 0; width: 54px; height: 53px; background-color: transparent;} 
+.motion a:before{ background-position: -440px 0; width: 54px; height: 53px; } 
+.motion.active a:before{ background-position: -495px 0; width: 54px; height: 53px; background-color: transparent;} 
+.operation a:before{ background-position: -550px 0; width: 54px; height: 53px; } 
+.operation.active a:before{ background-position: -605px 0; width: 54px; height: 53px; background-color: transparent;} 
+.perform a:before{ background-position: -660px 0; width: 54px; height: 53px; } 
+.perform.active a:before{ background-position: -715px 0; width: 54px; height: 53px; background-color: transparent;} 
+.social a:before{ background-position: -770px 0; width: 54px; height: 53px; } 
+.social.active a:before{ background-position: -825px 0; width: 54px; height: 53px; background-color: transparent;} 
+.strategy a:before{ background-position: -880px 0; width: 54px; height: 53px; } 
+.strategy.active a:before{ background-position: -935px 0; width: 54px; height: 53px; background-color: transparent;} 
+
+	}
+
+	figure
+	{
+		margin: 0;
+	}
+
+}
+
+
+.jcarousel_expertise {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+
+    li
+    {
+    	background: @black url(../img/service/expertise/background.png) 0 0 repeat;
+
+    }
+    .visu, .info
+    {
+    	padding: 5%;
+    }
+    .visu
+    {
+    	background: @black url(../img/service/expertise/visu/mobile.jpg) right center no-repeat;
+    	background-size: 100%;
+    	-webkit-box-shadow: inset 0px 15px 50px 10px rgba(0, 0, 0, 0.8);
+		box-shadow: inset 0px 15px 50px 10px rgba(0, 0, 0, 0.8); 
+		padding-bottom: 20%;
+
+    }
+
+}
+
+.jcarousel_expertise > ul {
+    width: 20000%;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.jcarousel_expertise > ul > li {
+    float: left;
+	width: 0.5%;
+    margin: 0 auto;
+    display: block;
+}
+
+@media(max-width: 768px)
+{
+	.jcarousel_services {
+		height: 1200px;
+	}
+}

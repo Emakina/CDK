@@ -1,0 +1,125 @@
+/*################################################################################
+=======================Box-service section comportement==========================
+################################################################################*/
+
+	.visu-text
+	{
+		position: absolute;
+		background: rgba(000, 000, 000, 0.7);
+		color: #fff;
+		width: 40%;
+		right:8%;
+		padding: 1%;
+		top: 20%;
+
+
+	}
+
+.box-financial
+{
+	position: relative;
+	.visu-financial
+	{
+		background: @black url(../img/financial/bg.jpg) center top no-repeat;
+		position:relative;
+		background-size:100%;
+		padding-bottom:100px;
+		z-index:4;
+	}
+
+
+
+	header 
+	{
+		margin-bottom: 95px;
+	}
+
+
+	.info
+	{
+		li
+		{
+			background: @black;
+			padding: 1%;
+		}
+
+		.head
+		{
+			padding: 20px;
+		}
+	}
+
+
+	.gray 
+	{
+		background-color:#202020;
+		background-size: contain;
+		padding: 20px;
+
+
+	}
+
+	.btn
+	{
+		text-align: right;
+	}
+
+	figure
+	{
+		margin: 0;
+		position: relative;
+
+		figcaption
+		{
+			position: absolute;
+			bottom: 0;
+			background: rgba(000, 000, 000, 0.7);
+			display: block;
+			padding: 2%;
+			width: 96%;
+			text-align: center;
+
+		}
+	}
+
+
+	
+
+}
+
+
+
+/*==============================================================================
+---------------------Carousel de transition entre les deux.---------------------
+==============================================================================*/
+
+.jcarousel_financial {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+   
+}
+
+.jcarousel_financial > ul {
+    width: 20000%;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.jcarousel_financial > ul > li {
+    float: left;
+	width: 0.5%;
+    margin: 0 auto;
+    display: block;
+}
+
+@media(max-width: 768px)
+{
+	.jcarousel_financial {
+		height: 1500px;
+	}
+}
+

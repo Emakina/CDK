@@ -1,0 +1,329 @@
+// Emakina Website 2013 Bootswatch Theme
+// Variables
+// --------------------------------------------------
+
+
+// Global values
+// --------------------------------------------------
+@themePath:"/assets/themes/emakina2013";
+
+
+// Grays
+// -------------------------
+@black:                 #000;
+@grayTable:             #1a1a1a;
+@grayDarker:            #020202;
+@grayDark:              #303030;
+@gray:                  #999;
+@grayLight:             #ADAFAE;
+@grayLighter:           #e9ecec;
+@white:                 #fff;
+
+
+// Accent colors
+// -------------------------
+@blue:                  #00a6e0;
+@blueDark:              #0099CC;
+@green:                 #9fbd38;
+@greenDark:             #2f8400;
+@red:                   #CC0000;
+@yellow:                #ECBB13;
+@orange:                #fb761c;
+@pink:                  #FF4444;
+@purple:                #9933CC;
+
+// Quote
+// -------------------------
+@textColor: 			#f5f5f5;		
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        #060606;
+@textColor:             @grayLighter;
+
+
+// Links
+// -------------------------
+@linkColor:             @blue;
+@linkColorHover:        @grayLighter;
+
+
+// Typography
+// -------------------------
+@sansFontFamily:        museo-sans, sans-serif;
+
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+
+@baseFontSize:          15px;
+@baseFontFamily:        @sansFontFamily;
+@baseLineHeight:        20px;
+@altFontFamily:         @serifFontFamily;
+
+@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    normal;    // instead of browser default, bold
+@headingsColor:         @white; // empty to use BS default, @textColor
+
+
+// Component sizing
+// --------------------------
+// Based on 14px font-size and 20px  line-height
+
+@fontSizeLarge:         @baseFontSize * 1.25; // ~18px
+@fontSizeSmall:         @baseFontSize * 0.85; // ~12px
+@fontSizeMini:          @baseFontSize * 0.75; // ~11px
+
+@paddingLarge:          11px 19px; // 44px
+@paddingSmall:          2px 10px;  // 26px
+@paddingMini:           0px 6px;   // 22px
+
+@baseBorderRadius:      4px;
+@borderRadiusLarge:     6px;
+@borderRadiusSmall:     3px;
+
+
+// Tables
+// -------------------------
+@tableBackground:                   transparent; // overall background-color
+@tableBackgroundAccent:             rgba(100, 100, 100, 0.1); // for striping
+@tableBackgroundHover:              @grayDark; // for hover
+@tableBorder:                       @grayDark; // table and cell border
+
+// Buttons
+// -------------------------
+@btnBackground:                     darken(@gray, 20%);
+@btnBackgroundHighlight:            darken(@gray, 25%);
+@btnBorder:                         rgba(0, 0, 0, 0);
+
+@btnPrimaryBackground:              @blueDark;
+@btnPrimaryBackgroundHighlight:     darken(@blueDark, 10%);
+
+@btnInfoBackground:                 darken(@gray, 40%);
+@btnInfoBackgroundHighlight:        darken(@gray, 50%);
+
+@btnSuccessBackground:              lighten(@green, 10%);
+@btnSuccessBackgroundHighlight:     @green;
+
+@btnWarningBackground:              lighten(@orange, 15%);
+@btnWarningBackgroundHighlight:     @orange;
+
+@btnDangerBackground:               lighten(@red, 10%);
+@btnDangerBackgroundHighlight:      @red;
+
+@btnInverseBackground:              lighten(@purple, 5%);
+@btnInverseBackgroundHighlight:     @purple;
+
+
+// Forms
+// -------------------------
+@inputBackground:               #ccc;
+@inputBorder:                   #bbb;
+@inputBorderRadius:             @baseBorderRadius;
+@inputDisabledBackground:       #555;
+@formActionsBackground:         transparent;
+@inputHeight:                   @baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
+
+
+// Dropdowns
+// -------------------------
+@dropdownBackground:            #131517;
+@dropdownBorder:                rgba(0,0,0,.2);
+@dropdownDividerTop:            transparent;
+@dropdownDividerBottom:         #222;
+
+@dropdownLinkColor:             @textColor;
+@dropdownLinkColorHover:        @white;
+@dropdownLinkColorActive:       @white;
+
+@dropdownLinkBackgroundActive:  @linkColor;
+@dropdownLinkBackgroundHover:   @linkColor;
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+@zindexDropdown:          1000;
+@zindexPopover:           1010;
+@zindexTooltip:           1020;
+@zindexFixedNavbar:       1030;
+@zindexModalBackdrop:     1040;
+@zindexModal:             1050;
+
+
+// Sprite icons path
+// -------------------------
+@iconSpritePath:          "../img/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
+
+
+// Input placeholder text color
+// -------------------------
+@placeholderText:         @grayLight;
+
+
+// Hr border color
+// -------------------------
+@hrBorder:                @grayDark;
+
+
+// Horizontal forms & lists
+// -------------------------
+@horizontalComponentOffset:       180px;
+
+
+// Wells
+// -------------------------
+@wellBackground:                  #131517;
+
+
+// Navbar
+// -------------------------
+@navbarCollapseWidth:             850px;
+@navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
+
+@navbarHeight:                    68px;
+@navbarBackgroundHighlight:       @grayDarker;
+@navbarBackground:                @grayDarker;
+@navbarBorder:                    darken(@navbarBackground, 12%);
+
+@navbarText:                      @grayLight;
+@navbarLinkColor:                 @grayLight;
+@navbarLinkColorHover:            @white;
+@navbarLinkColorActive:           @navbarLinkColorHover;
+@navbarLinkBackgroundHover:       transparent;
+@navbarLinkBackgroundActive:      @navbarBackground;
+
+@navbarBrandColor:                @navbarLinkColor;
+
+// Inverted navbar
+@navbarInverseBackground:                @black;
+@navbarInverseBackgroundHighlight:       @black;
+@navbarInverseBorder:                    transparent;
+
+@navbarInverseText:                      @grayLighter;
+@navbarInverseLinkColor:                 @grayLighter;
+@navbarInverseLinkColorHover:            @grayLighter;
+@navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
+@navbarInverseLinkBackgroundHover:       transparent;
+@navbarInverseLinkBackgroundActive:      @navbarInverseLinkBackgroundHover;
+
+@navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
+@navbarInverseSearchBackgroundFocus:     @white;
+@navbarInverseSearchBorder:              @navbarInverseBackground;
+@navbarInverseSearchPlaceholderColor:    @white;
+
+@navbarInverseBrandColor:                @navbarInverseLinkColor;
+
+
+// Pagination
+// -------------------------
+@paginationBackground:                @bodyBackground;
+@paginationBorder:                    transparent;
+@paginationActiveBackground:          @blue;
+
+
+// Hero unit
+// -------------------------
+@heroUnitBackground:              #131517;
+@heroUnitHeadingColor:            inherit;
+@heroUnitLeadColor:               inherit;
+
+
+// Form states and alerts
+// -------------------------
+@warningText:             darken(#c09853, 10%);
+@warningBackground:       @grayLighter;
+@warningBorder:           transparent;
+
+@errorText:               #b94a48;
+@errorBackground:         @grayLighter;
+@errorBorder:             darken(spin(@errorBackground, -10), 3%);
+
+@successText:             #468847;
+@successBackground:       @grayLighter;
+@successBorder:           darken(spin(@successBackground, -10), 5%);
+
+@infoText:                @blueDark;
+@infoBackground:          @grayLighter;
+@infoBorder:              darken(spin(@infoBackground, -10), 7%);
+
+
+// Tooltips and popovers
+// -------------------------
+@tooltipColor:            #fff;
+@tooltipBackground:       @heroUnitBackground;
+@tooltipArrowWidth:       5px;
+@tooltipArrowColor:       @tooltipBackground;
+
+@popoverBackground:       @heroUnitBackground;
+@popoverArrowWidth:       10px;
+@popoverArrowColor:       @popoverBackground;
+@popoverTitleBackground:  @popoverBackground;
+
+// Special enhancement for popovers
+@popoverArrowOuterWidth:  @popoverArrowWidth + 1;
+@popoverArrowOuterColor:  rgba(0,0,0,.25);
+
+
+
+// GRID
+// --------------------------------------------------
+// 768px-979px
+// -------------------------
+// ISSUE : bootstrap compte 12 colonnes, et 13 gutters. donc 12*44 + 13*21;
+// Row-Width = 759px, Total-Grid-Width = 801px
+// Sur un desktop de 768px le grid dépasse de (801-768)-(2*21)= -9px (donc c'est ok).
+
+// Row-Width = 724px, Total-Grid-Width = 764px (default)
+@gridColumnWidth768:      44px; //42
+@gridGutterWidth768:      21px; //20
+@gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
+
+
+// 980px-1199px
+// -------------------------
+// Emakina 987px (Instead of default 940px)
+// -------------------------
+// ISSUE : bootstrap compte 12 colonnes, et 13 gutters. donc 12*63 + 13*21;
+// Row-Width = 987px, Total-Grid-Width = 1029px
+// Sur un desktop de 980px le grid dépasse de (1029-980)-(2*21)= 7px.
+
+// Row-Width = 940px, Total-Grid-Width = 980px (default)
+@gridColumns:             12;
+@gridColumnWidth:         63px; //60 (emakina 63)
+@gridGutterWidth:         21px; //20
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+
+// 1200px min
+// -------------------------
+// ISSUE : bootstrap compte 12 colonnes, et 13 gutters. donc 12*80 + 13*21;
+// Row-Width = 1191px, Total-Grid-Width = 1233px
+// Sur un desktop de 1200px le grid dépasse de (1233-1200)-(2*21)= -9px (donc c'est ok)
+
+// Row-Width = 1170px, Total-Grid-Width = 1230px
+@gridColumnWidth1200:     78px; //70 (emakina 80)
+@gridGutterWidth1200:     21px; //30
+@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+
+
+// Fluid grid
+// -------------------------
+@fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
+@fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+
+// 1200px min
+@fluidGridColumnWidth1200:     percentage(@gridColumnWidth1200/@gridRowWidth1200);
+@fluidGridGutterWidth1200:     percentage(@gridGutterWidth1200/@gridRowWidth1200);
+
+// 768px-979px
+@fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
+@fluidGridGutterWidth768:      percentage(@gridGutterWidth768/@gridRowWidth768);
+
+

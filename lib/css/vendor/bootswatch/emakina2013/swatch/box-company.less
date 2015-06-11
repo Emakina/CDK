@@ -1,0 +1,437 @@
+/*################################################################################
+=======================Box-service section comportement==========================
+################################################################################*/
+
+.box-company
+{
+	overflow: hidden;
+
+	.visu-company
+	{
+		background: @black url(../img/company/bg_black.jpg) center top no-repeat;
+		background-size:100%;
+		width: 100%;
+		padding:0;
+		z-index: 4;
+		position:relative;
+
+	}
+
+	.holder, .info, .span3, .company-menu, .history, .groupe
+	{
+		position: relative;
+		top: 0;
+	}
+
+	.alliance, .curseurHolder, .curseur, .allianceCurs, .loupe,  .legend, figcaption, .mapHolder
+	{
+		position: absolute;
+		top: 0;
+
+	}
+
+	[class^=icon-]
+	{
+		margin-bottom: 2em;
+	}
+
+	.company-menu, 
+	{
+		z-index: 15;
+		padding: 0.1;
+	}
+
+	.carousel-inner
+	{
+		overflow: visible;
+	}
+
+		.groupe
+		{
+			.container-fluid, .row-fluid, .span6
+			{
+				position: static;
+			}
+
+			.mapHolder
+			{
+				max-width: 50%;
+				right: 0;
+			}	
+		}
+
+		.alliance
+		{
+
+			.mapHolder
+			{
+				width: 100%;
+			}
+
+			#map1 >img, #map2 >img 
+			{
+				width: 100%;
+				margin: 0 auto;
+			}
+
+
+		}
+
+
+
+	header 
+	{
+		margin-bottom: 95px;
+	}
+
+	h3 {margin-bottom: 26px; }
+
+	.span3 {
+		margin-bottom:40px;
+
+		div > img {margin-bottom:26px;}
+		p {padding:26px 0;}
+
+	}
+
+
+	.alliance
+	{ width: 100%;
+		
+		.loupe
+		{
+			display: block;
+			top: 0;
+			opacity:1;
+			padding: 0;
+			margin: 0;
+		}
+		.legend
+		{
+			background-color: rgba(0, 0, 0, 0.4);
+			//color: rgba(0, 0, 0, 0.7);
+			top: 10%;
+			left: 80%;
+			display: block;
+			padding: 2%;
+			width: 10%;
+
+		}
+
+	}
+
+	.legend
+	{
+		img, span
+		{
+			display: inline-block;
+			margin: 0.2em 0;
+		}
+
+		span 
+		{
+			word-break: normal;
+		}
+	}
+
+
+	.people
+	{
+		padding: 15% 0 5%;
+	}
+
+	.mapHolder
+	{
+		display: block;
+		top: -36%;
+
+
+		&.span6
+		{
+			left: 50%;
+		
+		}
+
+		.map-groupe, .map-alliance 
+		{
+			display: block;
+			width: 100%;
+		}
+	
+
+	}
+	
+	figure, img
+	{
+		margin: 0;
+		padding: 0;
+		display: block;
+		z-index: 12;
+
+		figcaption 
+		{ 
+ 		
+ 			margin-left: 1.8em;
+ 			top: 0;
+ 			z-index: 12;
+ 			text-transform: uppercase;
+
+		}
+
+	}
+
+
+
+		.curseur, .allianceCurs
+		{
+			background-repeat: no-repeat ;
+			background-position: 0 0 ;
+			z-index: 12;
+			//width: 1.86%;
+			//height: 1.7%;
+			margin-top: -300px;
+			opacity: 0;
+		}
+
+/*___________________________________________
+La position des curseurs est calculé en %
+La formule est simple, on divise la taille du 
+contenu par la taille du conteneur et on mul-
+tiplie le tout par 100
+
+"(cotenu/conteneur)*100"
+
+Les tailles des conteneurs sont :
+
+ - La partie Emakina Group :  965 * 1465 
+ -La partie alliance : 1915 * 1117 
+
+___________________________________________*/
+	
+	.curseur1
+	{
+		left: 35.025%;
+		top:  37.72% ;
+
+		figcaption
+		{
+			margin-top: -1em;
+		}
+	}
+
+	.curseur2
+	{
+		left: 53.05%;
+		top: 40.32%;
+
+		figcaption
+		{
+			margin-top: 0.8em;
+			bottom: 0;
+		}
+	}
+
+	.curseur3
+	{
+		left: 54.92%;
+		top:36.22%;
+
+		figcaption
+		{
+			margin-top: -1em;
+		}
+	}
+
+	.curseur4
+	{
+		left:47.15%;
+		top:46.6%;
+	}
+
+	.curseur5
+	{
+		left:59.48%;
+		top: 53.76%;
+	}
+
+	.curseur6
+	{
+		left:43.52%;
+		top:58.75%;
+	}
+
+	.curseur7
+	{
+		left:49.94%;
+		top:39.5%;
+
+		figcaption
+		{
+			right: 0;
+			margin: 0.5em 1.8em 0 0;
+		}
+	}
+	.curseur8
+	{
+		left:52.2%;
+		top:38.54%;
+	}
+
+	.allianceCurs1
+	{
+		left:  36.45%;
+		top:  38.49%;
+	}
+
+	.allianceCurs2
+	{
+		left: 46%;
+		top:  44.94%;
+	}
+	.allianceCurs3
+	{
+		left: 45.58%;
+		top: 37.24%;
+	}
+
+	.allianceCurs4
+	{
+		left: 42.35%;
+		top: 52.37%;
+	}
+
+	.allianceCurs5
+	{
+		left:51.33%;
+		top: 60.78%;
+	}
+
+	.allianceCurs6
+	{
+		left: 39.84%;
+		top: 58.64%;	
+	}
+
+	.allianceCurs7
+	{
+		left: 44.9%;
+		top: 42.97%;
+	}
+
+	.allianceCurs8
+	{
+		left: 43.5%;
+		top: 42.70%;
+		figcaption
+		{
+			right: 0;
+			margin: 0.5em 1.8em 0 0;
+		}
+	}
+
+	.allianceCurs9
+	{
+		left: 53.95%;
+		top: 28.55%;
+	}
+
+	.allianceCurs10
+	{
+		left: 60%;
+		top: 32.85%;
+	}
+
+	.allianceCurs11
+	{
+		left: 53.83%;
+		top: 35.54%;
+	}
+
+	.allianceCurs12
+	{
+		left: 51.48%;
+		top: 44.58%;
+	}
+
+	.allianceCurs13
+	{
+		left: 62.2%;
+		top: 46%;
+	}
+
+	.allianceCurs14
+	{
+		left: 57.2%;
+		top: 54.34%;
+	}
+
+	.allianceCurs15
+	{
+		left: 74.2%;
+		top: 49.15%;
+	}
+
+	.allianceCurs16
+	{
+		left: 81.1%;
+		top:50.2%;
+	}
+
+	.allianceCurs17
+	{
+		left: 75.72%;
+		top: 54.16%;
+	}
+
+	.allianceCurs18
+	{
+		left: 14.15%;
+		top: 42.25%;
+	}
+
+	.allianceCurs19
+	{
+		left: 27.78%;
+		top: 48.25%;
+	}
+
+
+	.allianceCurs20
+	{
+		left: 71.75%;
+		top: 66.78%;
+	}
+
+
+}
+
+@media (max-width: 850px)
+{
+	#map
+	{
+		float: none;
+	}
+
+	.groupe .mapHolder
+	{
+		position: relative !important;
+		max-width: 100% !important;
+	}
+
+	.curseur, .allianceCurs
+	{
+		figcaption
+		{
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+		&:hover figcaption
+		{
+			text-indent: 0;
+			overflow: visible;
+		}
+	}
+}
+

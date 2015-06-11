@@ -1,0 +1,1474 @@
+// -----------------------------------------------------
+// Emakina 2013 0.6.0
+// Bootswatch template
+// -----------------------------------------------------
+
+
+/*################################################################################
+====================================TYPOGRAPHY=====================================
+################################################################################*/
+body, .body
+{
+	background: @black url(../img/jeans_bg.png) 0 0 repeat;
+	.font(300; 16px; 26px);
+	color: #aaa7a7;
+}
+
+/*==============================================================================
+===================================TYPO : Title=================================
+==============================================================================*/
+
+h1,h2,h3,h4,h5,h6 
+{
+// font-weight:normal !important; 
+text-shadow:0 0 0;
+//text-transform: capitalize;
+
+		p 
+		{
+		padding-bottom: inherit;
+		color: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		font-family: inherit;
+		line-height: inherit;
+		line-height: inherit;
+		}
+
+}
+
+h1
+{
+	.font(300; 55px; 65px);
+	text-transform: uppercase;
+}
+
+h2
+{
+	.font(300; 45px; 45px);
+	color: #dbd7d7;
+}
+
+h2, h3
+{
+	&:before
+	{
+		content:"";
+		display: block;
+		width:31px;
+		height:30px;
+	}
+	&.orange:before 
+	{
+		border-top: solid 2px @orange;
+	}
+	&.blue:before
+	{
+		border-top: solid 2px @blue;
+	}
+	&.green:before
+	{
+		border-top: solid 2px @green;
+	}
+	&.gray:before
+	{
+		border-top: solid 2px @gray;
+	}
+
+	&.white:before
+	{
+		border-top: solid 2px @white;
+	};
+}
+
+
+h1, h2, h3, h4, h5, h5, h6 
+{
+	a 
+	{
+		text-transform: capitalize;
+		text-shadow: none !important;
+	}
+	a.orange
+	{
+		color: @orange;
+	}
+	a.blue
+	{
+		color: @blue;
+	}
+	a.green
+	{
+		color: @green;
+	}
+	a.gray
+	{
+		color: @gray;
+	}
+}
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+   display:inline;
+}
+
+h3
+{
+	.font(300; 35px; 38px);
+}
+
+h4
+{
+	.font(300; 24px; 35px);
+}
+
+h5
+{
+	.font(300; 18px; 20px);
+}
+
+h6
+{
+	.font(300; 16px; 21px);
+
+	&.h7
+	{
+		.font(900; 15px; 15px);
+		text-transform: uppercase;
+	}
+
+	&.h8
+	{
+		.font(300; 15px; 35px);
+	}
+}
+
+ul.unstyled li{
+    margin-left: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+
+/*==============================================================================
+============================TYPO: Paragraphes Text=============================
+==============================================================================*/
+
+p 
+{
+	//.font(300; 16px; 26px);
+	//color: #aaa7a7;
+	//padding-bottom: 26px;
+	&.adresse
+	{
+		color: #faf6f6;
+		padding-bottom: 0;
+	}
+}
+
+
+/*==============================================================================
+=============================TYPO: Citation Text================================
+==============================================================================*/
+.quote 
+{
+	background: @orange;
+	border: 0;
+	padding: 20px;
+	margin-top:10px;
+	p
+	{
+		.font(100; 28px; 34px);
+		color: @textColor;
+		padding: 0;
+	}
+	cite
+	{
+		.font(500; 18px; 32px);
+		text-align: right;
+		display: block;
+		padding-top: 1em;
+	}
+	h2:before, h3:before
+	{
+		height: 0;
+	}
+}
+
+
+/*==============================================================================
+/*===========================TYPO: Form Text====================================
+==============================================================================*/
+label, input, button, select, textarea,
+.navbar .search-query:-moz-placeholder,
+.navbar .search-query::-webkit-input-placeholder {
+	font-family: museo-sans,sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	color: @gray;
+}
+
+
+/*==============================================================================
+=============================TYPO: Nav Text=====================================
+==============================================================================*/
+.navbar
+{
+	font-family: museo-sans,sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+
+code, pre {
+	background-color: @grayLighter;
+}
+
+
+blockquote {
+	border-left: 5px solid @grayDark;
+
+	&.pull-right {
+		border-right: 5px solid @grayDark;
+	}
+}
+
+
+// RELATIVE FLUID //
+.container-fluid {
+//width:99%;
+//max-width:987px;
+width: 987px;
+max-width: 100%;
+
+margin-right: auto;
+margin-left: auto;
+padding:0px;
+}
+
+
+
+// Fix Safari Sub Pixel Rounding //
+// Say whaaat?
+// .row-fluid {
+// 	> div:last-child {
+// 		float: right;
+// 		overflow: hidden;
+// 	}
+// }
+
+
+
+
+
+/*#################################################################################
+====================================SCAFFOLDING====================================
+#################################################################################*/
+html, .html {
+	min-height: 100%;
+}
+
+body, .body {
+	min-height: 100%;
+	// #gradient > .vertical (@bodyBackground, #252A30);
+	background-color: #000;
+}
+
+.page-header {
+	border-bottom: 1px solid @grayDark
+}
+
+hr {
+	border-bottom: none;
+}
+
+#typography .form 
+{
+	margin-top: 10px;
+}
+
+
+
+
+/*###########################################################################
+====================================LINKS====================================
+#############################################################################*/
+a 
+{
+	&:hover
+	{
+		text-decoration: none !important;
+	}
+}
+
+
+
+
+
+/*################################################################################
+=====================================NAVBAR=====================================
+################################################################################*/
+.navbar {
+	.navbar-inner {
+		.border-radius(0);
+		.box-shadow(none);
+		border-bottom: none;
+	}
+
+	.brand {
+		padding: 28px 21px 10px;
+		color: @grayLighter;
+		font-weight: normal;
+		text-shadow: none;
+	}
+
+	.nav > li >	{
+	    float: left;
+	    list-style: none outside none;
+	    margin: 0;
+	    padding: 0;	
+	}
+
+	.nav > li > a {
+		padding: 0px;
+		padding: 31px 0px 23px 0px;
+		border-bottom:4px solid transparent;
+		text-shadow: none;
+		// height: 71px;
+
+		> span {
+			border-left: 1px solid @grayDark;
+			border-bottom: 1px solid transparent;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	.nav  > li:first-child > a > span {
+		border-left: 1px solid transparent;	
+	}
+
+	.nav > li:hover, .nav > {
+		.active  {
+			> a > span {
+			border-left: 1px solid transparent;	
+			}
+
+			&.blue > a {
+				background-color: @blue;
+			}		
+			&.green > a {
+				background-color: @green;
+			}
+			&.orange > a {
+				background-color: @orange;
+			}
+
+			+ li  > a > span {
+				border-left: 1px solid transparent;	
+			}
+		}
+
+		&.blue > a {
+			border-color: @blue;
+		}		
+		&.green > a {
+			border-color:  @green;
+		}
+		&.orange > a{
+			border-color: @orange;
+		}
+	}
+
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.nav > .active > a:focus {
+		.box-shadow(none);
+	}
+
+	.navbar-text {
+		margin-bottom: 1px;
+	//padding: 15px 15px 14px;
+	line-height: inherit;
+	}
+
+	.divider-vertical {
+		margin: 0;
+		border-left: 1px solid @grayDark;
+		border-right-width: 0;
+	}
+
+	.search-query,
+	.search-query:focus,
+	.search-query.focused {
+		.border-radius(1px);
+		background-color: @grayDark;
+		line-height: normal;
+		color: @grayLight;
+		text-shadow: none;
+		.placeholder(@gray);
+	}
+
+	&-inverse {}
+}
+
+
+
+
+
+div.subnav {
+	margin: 0 1px;
+	background-color: @grayDarker;
+	background-image: none;
+	border: none;
+	border-bottom: 1px solid @grayDark;
+
+	.nav > li > a,
+	.nav > li:first-child > a,
+	.nav > li:first-child > a:hover {
+		padding: 11px 12px;
+		border: none;
+		background-color: @grayDarker;
+		color: @grayLight;
+	}
+
+	.nav > li > a:hover,
+	.nav > li.active > a,
+	.nav > li.active > a:hover,
+	.nav > li:first-child > a:hover {
+		padding: 11px 12px;
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid @blue;
+		color: @white;
+	}
+
+	.nav li.nav-header {
+		text-shadow: none;
+	}
+
+	&-fixed {
+		top: @navbarHeight;
+		margin: 0;
+	}
+}
+
+
+
+/*==============================================================================
+======================== NAV : Intern navigation ===============================
+==============================================================================*/
+.intern-nav {
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	position: relative;
+	padding: 10px 0;
+	text-transform: uppercase;
+	.font(500; 18px; 35px);
+
+
+	li:first-child > a
+	{
+		padding: 0 12px;
+		border: none;
+	}
+
+	li,  a
+	{
+		float: left;
+		margin-top:    5px;
+		margin-bottom: 5px;
+		display: block;
+		color: @white;
+		line-height: 26px;
+	}
+
+	span
+	{
+		border-left: 1px solid @grayLight;
+		border-bottom: 1px solid transparent;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.caret
+	{
+		border-bottom-color: @grayDark;
+		border-top-color: @grayDark;
+		vertical-align: center;
+		display: inline-block;
+		height: 5px;
+		margin-top: 10px;
+	}
+
+	.active
+	{
+		a:after
+		{
+			content:"";
+			display: block;
+			border-top: solid 4px;
+			width:100%;
+			margin: 0 auto;
+		}
+
+		&.orange a:after
+		{
+			border-color: @orange;
+		}
+		&.blue a:after
+		{
+			border-color: @blue;
+		}
+		&.gray a:after
+		{
+			border-color: @gray;
+		}
+		&.green a:after
+		{
+			border-color: @green;
+		}
+	}
+}
+
+.navbar-inner 
+{
+	&.intern
+	{
+		background: transparent;
+	}
+	&.form
+	{
+		padding-left: 0;
+	//margin: 0;
+	}
+}
+
+.navbar .btn-navbar 
+{
+	.icon-bar
+	{
+		width: 12px;
+		height: 3px;
+	}	
+}
+
+.form .btn-navbar 
+{
+	background: @grayLight url(../img/form_bg.png) 0 0 repeat;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.075);
+
+	.icon-bar
+	{
+		background: @grayDark;
+	}	
+}
+
+
+
+/* NAV-TABS
+------------------------------------------------*/
+.nav-tabs {
+	border-bottom: 1px solid @grayDark;
+
+	> li {
+	    float: left;
+	    list-style: none outside none;
+	    margin: 0 0 0 10px;
+	    padding: 0;
+	}
+
+	li > a:hover,
+	li.active > a,
+	li.active > a:hover {
+		border-color: transparent;
+		background-color: @blue;
+		color: @white;
+	}
+
+	.open .dropdown-toggle {
+		background-color: #060606;
+		border-color: transparent;
+	}
+}
+
+
+
+/* NAV-PILLS
+------------------------------------------------*/
+//pull lower if nav-pills is in header
+header ul.nav-pills {margin-top:20px; }
+
+.nav-pills {
+
+	> li {
+	    float: left;
+	    list-style: none outside none;
+	    margin: 0 0 0 10px;
+	    padding: 0;
+	}
+
+
+	// pills
+	li > a {
+		.font(300; 18px; 26px);
+		color: @white;
+		text-transform: uppercase; 
+		border-radius: 0;
+		line-height:18px; 
+		padding: 0 20px; 
+		margin-top: 10px;
+	}
+
+	// pills: hover state
+	li > a:hover {background: transparent}
+
+	li:hover > a:after {
+		background-color: transparent;
+		display: block;
+		width: 100%;
+		margin: 8px auto;
+		border-top: solid 4px white;
+		content: "";
+	}
+
+	// pills: active state
+	li.active {
+		>a {background-color:transparent;}
+
+		> a:after {
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+			margin: 8px auto;
+			border-top: solid 4px;
+			content: "";
+		}
+
+		&.orange > a:after {border-color: @orange;}
+		&.blue > a:after {border-color: @blue;}
+		&.green > a:after {border-color: @green;}
+
+		// hover on active
+		> a:hover {background:transparent;}
+
+		>a:focus 
+		{
+			background:transparent;
+			border: 0;
+			text-decoration: none;
+		}
+	}
+
+
+	// Dropdown
+	li.dropdown {
+		padding: 0;
+
+		a {
+			color: @black;
+			margin:0; 
+			padding:8px 10px;  
+		}
+
+		// hover (remove border-bottom)
+		&:hover > a:after,
+		ul.dropdown-menu > li:hover > a:after  {
+			background-color: transparent;
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+			border:none;
+			content: "";
+		}
+
+		&.open > a  {background: @gray;}
+	}
+
+	// Dropdrown-menu
+	ul.dropdown-menu {
+		left: auto; // reset left to default
+		right:0; // and stickit to di right (if you don't want it to deyborday from your grid).
+		border-radius: 0;
+		border:none; 
+		margin-top: 8px; 
+		padding:0;
+		background: @gray;
+		-webkit-box-shadow:none; box-shadow:none;
+
+		li > a {
+			.font(300, 14px, 18px); 
+			color: @white;
+			padding:10px 20px;
+
+			&:hover {background:@white; color:@black;}
+			&:after {
+				border-top: 0 none;
+				margin: 0px;
+				height: 0px;
+			}
+		}
+
+		.divider {border-color: @grayLight;}
+	}
+}
+
+
+
+
+/* NAV-LIST
+------------------------------------------------*/
+.nav-list {
+	li > a {
+		text-shadow: none;
+	}
+
+	li > a:hover {
+		background-color: @blue;
+		color: @white;
+	}
+
+	.nav-header
+	{
+		color: @white;
+		.font(500; 18px; 26px);
+		text-transform: none;
+	}
+
+	.divider {
+		background-color: transparent;
+		border-bottom: 1px solid @grayDark;
+	}
+}
+
+/* NAV-STACKED
+------------------------------------------------*/
+.nav-stacked {
+
+	li > a {
+		border: 1px solid @grayDark !important;
+	}
+
+	li > a:hover,
+	li.active > a {
+		background-color: @blue;
+		color: @white;
+	}
+}
+
+/* TABBABLE
+------------------------------------------------*/
+.tabbable  {
+	.nav-tabs,
+	.nav-tabs li.active > a {
+		border-color: @grayDark;
+	}
+}
+
+
+
+
+
+/*################################################################################
+=====================================BUTTONS=====================================
+################################################################################*/
+.btn {
+	.box-shadow(0px 0px 0px #111);
+	.buttonBackground(darken(@gray, 20%), darken(@gray, 30%));
+	color: @white;
+	font-family: museo-sans,sans-serif;
+	font-weight: 300;
+	text-shadow: none;
+	border-radius: 0;
+	border: 0;
+
+	&:hover {
+		text-shadow: none;
+		color: @white;
+	}
+	&.dropdown-toggle {
+		border-radius: 0;
+	}
+	&.green {
+		background: @green;
+	}
+	&.orange {
+		background: @orange;
+	}
+	&.blue {
+		background: @blue;
+	}
+	&.gray {
+		background: @gray;
+	}
+	&.active + li span {
+		border:none !important;
+	}
+}
+
+.btn-group > .btn:first-child {
+	border-radius: 0;
+}
+
+.btn-primary {
+	.buttonBackground(@blueDark, darken(@blueDark, 10%));
+}
+
+.btn-warning {
+	.buttonBackground(lighten(@orange, 10%), @orange);
+}
+
+.btn-danger {
+	.buttonBackground(lighten(@red, 10%), @red);
+}
+
+.btn-success {
+	.buttonBackground(lighten(@green, 10%), @green);
+}
+
+.btn-info {
+	.buttonBackground(darken(@gray, 40%), darken(@gray, 50%));
+}
+
+.btn-inverse {
+	.buttonBackground(lighten(@purple, 5%), @purple);
+}
+
+.btn .caret {
+	border-top: 4px solid black;
+	opacity: 0.3;
+}
+
+.btn-group > .dropdown-menu > li > a:hover {
+	border-bottom: 0;
+}
+
+.btn.disabled, .btn[disabled] {
+	background-color: @grayLight;
+}
+
+
+
+
+
+/*################################################################################
+======================================FORMS======================================
+################################################################################*/
+.form
+{
+	background: url(../img/form_bg.png) 0 0 repeat;
+
+	div 
+	{
+		padding:19px;
+	}
+
+
+	h1, h2, h3, h4, h5, h5, h6,p
+	{
+		color:#383838;
+	}
+	&.nav
+	{
+		padding:0 20px;
+	}
+	li > a
+	{
+		color:#383838 ;
+	}
+	.btn 
+	{
+		box-shadow:0px 0px 0px #111111;
+	} 
+}
+
+input, textarea, select {
+	border-width: 2px;
+	.border-radius(1px);
+}
+
+select, textarea,
+input[type="text"], input[type="password"], input[type="datetime"],
+input[type="datetime-local"], input[type="date"], input[type="month"],
+input[type="time"], input[type="week"], input[type="number"],
+input[type="email"], input[type="url"], input[type="search"],
+input[type="tel"], input[type="color"], .uneditable-input {
+	color: @grayDark;
+	background: @white;
+	border-radius: 0px;
+	border: none;
+	.font(300; 19px; 19px);
+	min-height: 30px;
+	option:nth-child(2n)
+	{
+		background: @grayLighter;
+	}
+
+	option 
+	{
+		margin:0;
+		padding:0 4%; 
+	}
+
+}
+
+.uneditable-input {
+	p {
+		vertical-align: middle;
+		.font(300; 19px; 19px);
+		margin-top: 8px;
+	}
+}
+
+
+
+.navbar, .navbar-inverse, .navbar-fixed-top {
+//margin:0 !important;
+padding:0 !important;
+margin-bottom: 0 !important;
+}
+
+
+
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly], .uneditable-input {
+	border-color: #444;
+}
+
+input:focus,
+textarea:focus,
+input.focused,
+textarea.focused {
+	border-color: rgba(82,168,236,1);
+	outline: 0;
+	outline: thin dotted \9; /* IE6-9 */
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+.box-shadow(none); // override for file inputs
+.tab-focus();
+}
+
+.radio input[type="radio"], .checkbox input[type="checkbox"]{
+	float: none;
+	margin-bottom: 8px;
+}
+
+legend, label {
+	color: @textColor;
+	border-bottom: 0px solid #222;
+	color: @grayDark;
+	display: block;
+}
+
+.form-actions {
+	border: none;
+	padding: 0 !important;
+	text-align: right;
+}
+
+.icon-btn {
+	background: url(../ico/crayon_small.png) 0 0 no-repeat;
+	margin: 0;
+	padding: 0;
+}
+
+.btn-large {
+	.icon-btn {
+		background: url(../ico/crayon_large.png) 0 0 no-repeat;
+		margin: -2px 10px 0 0;
+		padding: 0;
+	}
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	// width: 20px;
+	// height: 20px;
+	// padding-right: 10px;
+	margin-left:10px;
+	margin-top:2px;
+}
+
+.form-horizontal 
+{
+	padding: 5%;
+	.connect
+	{
+		display: inline-block;
+		margin-right: 50px;
+		margin-bottom: 20px; 
+
+		input
+		{
+			line-height:normal;
+		}
+	}
+
+	.control-label
+	{
+		float:none;
+		text-align: left;
+		.font(300; 22px; 35px);
+	}
+
+
+
+}
+
+.form-horizontal .control-label
+{
+	width: 100%;
+}
+
+.field-group
+{
+	.font(300; 19px; 35px);
+	padding: 0 !important;
+
+	#inputWarning
+	{
+		border:solid 1px @orange;
+	}
+
+	&.warning .help-inline
+	{
+		color: @orange;
+	}
+
+	#inputError
+	{
+		border:solid 1px @red;
+	}
+
+	&.error .help-inline
+	{
+		color: @red;
+	}
+
+	#inputSuccess
+	{
+		border:solid 1px @greenDark;
+
+	}
+	&.success .help-inline
+	{
+		color: @greenDark;
+	}
+	.focused
+	{
+		border: solid 1px @grayDark;
+	}
+}
+
+.radio, .checkbox
+{
+	.font(300; 19px; 35px);	
+}
+
+select 
+{
+	padding: 0;
+	margin:0;
+}
+
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]
+{
+	background: @gray;
+	color:@white;
+}
+
+// TABLES
+// -----------------------------------------------------
+.table {
+	border: none;
+	.border-radius(1px);
+	background: @grayTable;
+	.font(300; 16px; 26px);
+	tbody > tr:nth-child(2n+1) > td,  tbody > tr:nth-child(2n+1) > th
+	{
+		background:@black;
+	}
+	tbody, th, td 
+	{
+		border: none;
+	}
+
+	tbody tr.success td {
+		background-color: @green;
+		color: @white;
+	}
+
+	tbody tr.error td {
+		background-color: @red;
+		color: @white;
+	}
+
+	tbody tr.info td {
+		background-color: @blue;
+		color: @white;
+	}
+}
+
+// TAB ITEMS
+//-----------------------------------------------------
+.tab-nav
+{
+	list-style: none;
+	display: block;
+	margin: 0 10px 0 0;
+	position: relative;
+	padding: 10px 0;
+	text-transform: uppercase;
+	.font(500; 18px; 35px);
+
+	li:first-child > a
+	{
+		padding: 0 12px;
+		border: none;
+	}
+
+	li,  a
+	{
+		float: left;
+		margin-top:    5px;
+		margin-bottom: 5px;
+		display: block;
+		color: @white;
+		line-height: 25px;
+
+
+	}
+	span
+	{
+		border-left: 1px solid @grayLight;
+		border-bottom: 1px solid transparent;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	li.disabled a
+	{
+		color: @gray;		
+	}
+
+}
+
+
+// DROPDOWNS
+// -----------------------------------------------------
+
+.dropdown-menu {
+	.box-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
+}
+
+.dropdown
+{
+	background: @white;
+	margin: 0 10px;
+	padding: 0 10px;
+
+	a 
+	{
+		color:@grayDark;
+		.font(500; 16px; 25px)
+	}
+
+}
+
+
+
+
+/*################################################################################
+=================================Miscellaneous====================================
+################################################################################*/
+
+/*==============================================================================
+=====================MISC: Breadcrumb, Pagination, Pager========================
+==============================================================================*/
+
+// BREADCRUMBS
+// -----------------------------------------------------
+.breadcrumb {
+	.font(300; 15px; 26px);
+	background-color: transparent;
+	background-image: none;
+	border-width: 0;
+	.box-shadow(none);
+	padding: 0;
+
+	&.orange a
+	{
+		color: @orange;
+	}
+
+	&.blue a
+	{
+		color: @blue;
+	}
+	&.gray a
+	{
+		color: @gray;
+	}
+	&.green a
+	{
+		color: @green;
+	}
+
+	li 
+	{
+		text-shadow: none;
+	}
+
+	li > a {
+		text-shadow: none;
+	}
+	.active
+	{
+		color: @white;
+	}
+
+}
+
+// PAGINATION
+// -----------------------------------------------------
+.pagination {
+
+	&.orange .active a, &.orange li > a:hover
+	{
+		background: @orange;
+	}
+	&.blue .active a, &.blue li > a:hover
+	{
+		background: @blue;
+	}
+	&.green .active a, &.green li > a:hover
+	{
+		background: @green;
+	}
+
+	ul {
+		.box-shadow(none);
+	}
+
+	ul li
+	{
+		display: inline-block;
+	}
+
+	ul > li > a, ul > .disabled > a
+	{
+
+		margin:0 1%;
+		background: @black;
+		border-radius: 0 !important;
+		color: @white;
+
+	}
+
+	ul > li > a:hover,
+	ul > .active > a,
+	ul > .active > span {
+		color: @white;
+
+	}
+
+	ul > .disabled > a,
+	ul > .disabled > a:hover,
+	ul > .disabled > span,
+	ul > .disabled > span:hover {
+		background: @black;
+	}
+
+}
+
+// PAGER
+// -----------------------------------------------------
+.pager {
+
+	li> a, li > span
+	{
+		border-radius: 0;
+		background: transparent;
+		border: none;
+		color: @white;
+		padding: 0;
+	}
+
+	li:first-child, li:first-child img
+	{
+		padding-right: 20px;
+	}
+
+	li span
+	{
+		border-left: 1px solid @grayDark;
+		padding: 0 20px;
+	}
+
+
+	.disabled a,
+	.disabled a:hover {
+		background-color: @bodyBackground;
+	}
+
+}
+
+// ICONS
+// -----------------------------------------------------
+[class^=icon-] {
+	display:inline-block;
+	width:27px;
+	height:27px; 
+	background-repeat:no-repeat;
+	background-position: center center;
+	text-indent:-9999px; 
+	margin: 0 10px 0 0;
+}
+
+.icon-email {background-image:url(../img/company/ico-email.png);}
+.icon-twitter {background-image:url(../img/company/ico-twitter.png);}
+.icon-linkedin {background-image:url(../img/company/ico-linkedin.png);}
+
+
+/*==========================================================================
+=======================MISC: Alerts, Label, Badges==========================
+==========================================================================*/
+.alert,
+.alert .alert-heading,
+.alert-success,
+.alert-success .alert-heading,
+.alert-danger,
+.alert-error,
+.alert-danger .alert-heading,
+.alert-error .alert-heading,
+.alert-info,
+.alert-info .alert-heading {
+	color: @grayLighter;
+	text-shadow: none;
+	border: none;
+
+}
+
+.alert .close {
+	right: 0px;
+	top: 2px;
+}
+
+.label, .badge {
+	text-transform: uppercase;
+	.font(500; 14px; 20px);
+}
+
+.label {
+	border-radius: 0;
+}
+
+.badge, .label {background-color: @gray; }
+
+.badge {
+	.border-radius(15px);
+}
+
+.alert {
+	background: @grayDark;
+	border-radius: 0;
+}
+
+.badge:hover, .label:hover { background-color: darken(@gray, 30%); }
+
+.badge-important, .label-important,
+.alert-danger,
+.alert-error { background-color: @red; }
+
+.badge-important:hover, .label-important:hover { background-color: darken(@red, 10%); }
+
+.badge-warning, .label-warning { background-color: darken(@orange, 10%); }
+
+.badge-warning:hover, .label-warning:hover { background-color: darken(@orange, 20%); }
+
+.badge-success, .label-success, .alert-success { background-color: @greenDark; }
+
+.badge-success:hover, .label-success:hover { background-color: darken(@greenDark, 13%); }
+
+.badge-info, .label-info, .alert-info { background-color: @blueDark; }
+
+.badge-info:hover, .label-info:hover { background-color: darken(@blueDark, 20%); }
+
+.badge-inverse, .label-inverse, .alert-inverse { background-color: @grayDark; }
+
+.badge-inverse:hover, .label-inverse:hover { background-color: darken(@grayDark, 20%); }
+
+
+
+// MISC
+// -----------------------------------------------------
+
+.pils a {
+	padding: 0 20px;
+
+}
+
+.well, .hero-unit {
+	.border-radius(1px);
+	background: @black;
+	.font(300; 16px; 26px);
+}
+
+.well, .hero-unit {
+	.box-shadow(0 2px 4px rgba(0,0,0,.8));
+}
+
+.thumbnail {
+	border-color: @grayDark;
+}
+
+.progress {
+	background-color: #060606;
+	background-image: none;
+	.border-radius(0);
+}
+
+.bar {
+	&.orange {
+		background: @orange;
+	}
+	&.green	{
+		background: @green;
+	}
+}
+
+
+.modal {
+	.border-radius(1px);
+	border-top: solid 1px lighten(@grayDark, 5%);
+	background-color: @grayDark;
+}
+
+.modal-header {
+	border-bottom: 1px solid @grayDark;
+}
+
+.modal-footer {
+	background-color: @grayDark;
+	border-top: 1px solid @grayDark;
+	.border-radius(0 0 6px 6px);
+	.box-shadow(none);
+}
+
+.footer {
+	border-top: 1px solid @grayDark;
+}
+
+
+
+/*################################################################################
+========================================OTHERS===================================
+################################################################################*/
+
+
+[contenteditable]:focus,
+[contenteditable]:hover:not(:focus) {
+  outline: 1px dotted #ccc;
+
+}

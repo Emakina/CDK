@@ -1,0 +1,264 @@
+body
+{
+	//background: @black url(../img/logo_bg.png);
+	background: @black;
+}
+
+
+/*################################################################################
+====================================BOX===========================================
+################################################################################*/
+.box
+{
+	li 
+	{
+		list-style: none;
+	}
+
+	nav div .nav-collapse.collapse
+	{
+		display:inline-block !important;
+		float: right;
+		padding-right: 0;
+	}
+	ul 
+	{
+		margin:0;
+	}
+
+
+	//Header Intern Navigation
+	//==============================================================
+	.container-fluid > header {
+
+		> .left {width:20%; margin-top:0; }
+
+		> .right {width:80%;}
+
+		.navbar-inner {
+			padding-right:0; 
+
+			.container-fluid {margin-right:0; margin-top:5px; }
+		}
+	}
+
+	.visuneck01, .visuneck02, .visuneck03, .visuneck04, .visuhead05
+	{
+		position: relative;
+		top: 1px;
+		z-index: 3;
+		width: 100%;
+	}
+}
+
+
+
+/*################################################################################
+====================================VISUELS====================================
+################################################################################*/
+.visuholder
+{
+	height: 100%;
+	position: relative;
+	width: 100%;
+
+	// Overlay stripes ---
+	/*.overlay {
+		//background-image:url(../img/overlay.png);
+		width:100%;
+		height:600px; 
+		background-repeat: repeat;
+		position:absolute;
+		z-index:3;
+	}*/
+
+	.ratio
+	{
+		width: 100%;
+		padding-top: 40%;
+		position: relative;
+		margin-bottom: -10%; 
+	}
+
+	// Visu heads (neck)---
+	.visuhead01, .visuhead02, .visuhead03, .visuhead04, .visuhead05 {
+		background-repeat: no-repeat; 
+		background-position: center bottom;
+		position:absolute;
+		width:100%;
+		height:100%; 
+		z-index:4;
+	}
+
+	.visuhead01 {background-image:url(../img/service/head.png);}
+	.visuhead02 {background-image:url(../img/company/head.png);}
+	.visuhead03 {background-image:url(../img/journal/head.png);}
+	.visuhead04 {background-image:url(../img/contact/head.png);}
+	.visuhead05 {background-image:url(../img/financial/head.png);}
+
+	// Visuels per say ---
+	.visu01, .visu02, .visu03, .visu04, .visu05
+	{
+		height: 100%;
+		padding:0;
+		position: absolute;
+		top: 0;
+		background-size: 100% !important;
+		width: 100%;
+		//overflow: hidden;
+		margin: 0 auto;
+		z-index: 2;
+		-moz-box-shadow: inset 0px 5px 5px 0px #000;
+		-webkit-box-shadow: inset 0px 5px 5px 0px #000;
+		-o-box-shadow: inset 0px 5px 5px 0px #000;
+		box-shadow: inset 0px 5px 5px 0px #000;
+		filter:progid:DXImageTransform.Microsoft.Shadow(color=#000, Direction=180, Strength=5);
+	}
+
+
+}
+
+@media (max-width: 1510px) 
+{
+	.visuholder
+	{
+		/*max-width: 1510px !important;
+		overflow: hidden;*/
+	}
+
+	.visu01, .visu02
+	{
+		/*max-width: 1510px !important;*/
+		
+	}
+}
+
+
+.box-head01
+{
+	margin-top: -114px;
+	position: relative;
+	z-index: 3;
+	
+	p
+	{
+		margin: 0;
+		padding: 0;
+		background: transparent;
+		
+
+	}
+	img
+	{
+		width: 100%;
+		display:block;
+		background: transparent;
+	}
+}
+
+
+/*################################################################################
+================================Slide prev & next================================
+################################################################################*/
+
+
+		[class^=slide-] {
+			text-decoration: none;
+			position:absolute;
+			z-index:20;
+			top:0;
+			display:inline; 
+			width:55px; //really 50px wide, but gave it +5px to move when hover.
+			height:65px; 
+			background-repeat: no-repeat; 
+			color: @black;
+			.font(300; 55px; 65px);
+			background: #fff;
+			text-align: center;
+			vertical-align: middle;
+			&:hover, &:focus
+			{
+				text-decoration: none !important;
+			}
+			
+		}
+
+		.slide-previous {
+			
+		left: 0;
+
+			&:hover {background-position: left center;}
+		}
+
+		.slide-next {
+		
+		right: 0;
+			
+
+			&:hover {background-position: right center;}
+		}
+
+
+/*################################################################################
+================================1280 px BreakPoint================================
+################################################################################*/
+
+
+@media (min-width: 1280px) 
+{
+	
+	.visu01	{background: url(../img/visu/visu01.jpg) center top no-repeat;}
+	.visu02	{background: url(../img/visu/visu02.jpg) center top no-repeat;}
+	.visu03	{background: url(../img/visu/visu03.jpg) center top no-repeat;}
+	.visu04	{background: url(../img/visu/visu04.jpg) center top no-repeat;}
+	.visu05	{background: url(../img/visu/visu05.jpg) center top no-repeat;}
+}
+
+@media (max-width: 1280px) 
+{
+	.visu01	{background: url(../img/visu/visu01_tab.jpg) center top no-repeat;}
+	.visu02	{background: url(../img/visu/visu02_tab.jpg) center top no-repeat;}
+	.visu03	{background: url(../img/visu/visu03_tab.jpg) center top no-repeat;}
+	.visu04	{background: url(../img/visu/visu04_tab.jpg) center top no-repeat;}
+	.visu05	{background: url(../img/visu/visu05_tab.jpg) center top no-repeat;}
+}
+
+
+/*################################################################################
+====================================Parallax====================================
+################################################################################*/
+
+
+
+
+
+
+
+
+/*################################################################################
+===========================TRANSITIONS===========================
+################################################################################*/
+.slide-previous, .slide-next {
+	-webkit-transition: all .1s ease;
+	   -moz-transition: all .1s ease;
+		-ms-transition: all .1s ease;
+		 -o-transition: all .1s ease;
+			transition: all .1s ease;
+}
+
+
+/*################################################################################
+====================================Other====================================
+################################################################################*/
+//float of all the .left & right .elements
+//------------------------------------------
+
+.left
+{
+	float: left;
+}
+
+.right
+{
+	float: right;
+}

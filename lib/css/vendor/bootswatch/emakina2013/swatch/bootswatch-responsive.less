@@ -1,0 +1,545 @@
+// bootswatch-responsive.less
+// For phone and tablet devices
+// -------------------------------------------------------------
+
+// MEDIA QUERIES
+// -----------------------------------------------------
+/*#################################################################################
+====================================   MIN 1200px   ===============================
+====================================LARGE DESKTOP =================================
+#################################################################################*/
+@media (min-width: 1200px) {
+	// ========= FORM CONNECT ===========
+	.form-horizontal
+	{
+		.connect 
+		{
+			width:45%;
+			margin-right: 7%; 
+
+			input {width:100%; }
+		}
+
+		.connect:nth-child(2) {margin:0; }
+
+		.btn {float:right;}
+	}
+
+
+	// ========= BOX-WORK===========
+	.box-work .works .holder li {
+		figure.left {
+			width:40.650406504065%; // 200/484
+			margin-top:0;
+			margin-right: 4.065040650407%;
+			margin-bottom: 20px; 
+			margin-left:0; 
+		}
+
+		div.right {
+			width: 53.252032520325%;
+			padding-top:0;
+			padding-right:2.032520325203%;
+			padding-bottom: 0; 
+			padding-left:0;
+		}
+	} 
+
+
+
+
+	// ========= BOX-JOURNAL===========
+	.box-journal {
+		.journal {
+			.slide-previous {left:-80px;}
+			.slide-next {right:-80px;}
+		}
+	}
+
+}
+
+
+
+
+
+/*#################################################################################
+================================== MIN 980px & MAX 1199px =========================
+==================================      DESKTOP      ==============================
+#################################################################################*/
+
+@media (min-width: 980px) and (max-width: 1199px) {
+	// ========= FORM CONNECT ===========
+	.form-horizontal
+	{
+		.connect 
+		{
+			width:45%;
+			margin-right: 7%; 
+
+			input {width:100%; }
+		}
+
+		.connect:nth-child(2) {margin:0; }
+
+		.btn {float:right;}
+	}
+
+
+
+	// ========= BOX-WORK===========
+	// .box-work {margin-top:78px; }
+
+	.box-work .works .holder li {
+		figure.left {
+			width:40.650406504065%; // 200/484
+			margin-top:0;
+			margin-right: 4.065040650407%;
+			margin-bottom: 20px; 
+			margin-left:0; 
+		}
+
+		div.right {
+			width: 53.252032520325%;
+			padding-top:0;
+			padding-right:2.032520325203%;
+			padding-bottom: 0; 
+			padding-left:0;
+		}
+	} 
+
+
+
+	// ========= BOX-JOURNAL===========
+	.box-journal {
+		.journal {
+			.slide-previous {left:-10px;}
+			.slide-next {right:-10px;}
+		}
+	}
+}
+
+
+
+
+
+/*#################################################################################
+====================================   MAX 1024  ==================================
+#################################################################################*/
+@media (max-width: 1023px) {
+	.container-fluid {
+		//width:99%;
+		//max-width:987px;
+		width: 96%;
+		
+		margin-right: auto;
+		margin-left: auto;
+		padding:0px;
+	}
+
+
+	div.subnav .nav > li + li > a,
+	div.subnav .nav > li:first-child > a {
+		border-top: 1px solid @grayDark;
+		border-left: 1px solid @grayDark;
+	}
+
+
+	.subnav .nav > li + li > a:hover,
+	.subnav .nav > li:first-child > a:hover {
+		border-bottom: 0;
+		background-color: @blue;
+	}
+}
+
+
+
+
+
+/*##################################################################################
+================================== MIN 768px & MAX 979px ===========================
+========================= PORTRAIT TABLET TO LANDSCAPE & DESKTOP ===================
+##################################################################################*/
+@media (min-width: 768px) and (max-width: 979px) {
+	// ========= FORM CONNECT ===========
+	.form-horizontal
+	{
+		.connect
+		{
+			margin-right:0; 
+			width:100%;
+
+			input
+			{	
+				width:98.7%;
+				padding-right: 0px;
+			}
+		}
+		.btn {float:right;}
+	}
+
+	// ========= BOX-WORK===========
+	.box-work {margin-top:78px; }
+
+	.box-work .works .holder li {
+		figure.left {
+			width:40.650406504065%; // 200/484
+			margin-top:0;
+			margin-right: 4.065040650407%;
+			margin-bottom: 20px; 
+			margin-left:0; 
+		}
+
+		div.right {
+			width: 53.252032520325%;
+			padding-top:0;
+			padding-right:2.032520325203%;
+			padding-bottom: 0; 
+			padding-left:0;
+		}
+	} 
+
+
+
+
+	// ========= BOX-JOURNAL===========
+	.box-journal {
+		.journal {
+			.slide-previous {left:-10px;}
+			.slide-next {right:-10px;}
+		}
+	}
+
+
+}
+
+
+
+
+
+/*#################################################################################
+====================================    MAX 850px   ===============================
+====================================NAVBAR COLLAPSE ===============================
+#################################################################################*/
+@media (max-width: @navbarCollapseWidth) {
+	// ========= NAVBAR COLLAPSE ===========
+	.navbar-inverse .nav-collapse .nav .active > a {
+		background-color: @black;
+	}
+
+	.navbar .nav-collapse {
+		.nav > li:hover,
+		.nav >  {
+			> a, > li > a {
+				.border-radius(0px);	
+				margin-left:5px;
+				border-left:4px solid transparent;
+				font-weight: normal; 
+
+				> span {border: none;}
+			}
+
+			.active  {
+				> a {
+					border-left:4px solid transparent;
+				}
+				
+				&.blue > a {border-left-color: @blue;}		
+				&.green > a {border-left-color: @green;}
+				&.orange > a{border-left-color: @orange;}
+			}
+
+			&.blue > a {background-color: @blue;}		
+			&.green > a {background-color:  @green;}
+			&.orange > a{background-color: @orange;}
+		}
+	}
+
+
+	.nav-collapse .intern-nav
+	{
+		float: none;
+		margin: 0 0 10px;
+	}
+
+	.nav-collapse .intern-nav  li,
+	.nav-collapse .intern-nav a
+	{
+		float: none;
+	}
+
+	.intern-nav a span
+	{
+		border:none;
+	}
+
+	.intern-nav .active
+	{
+		a {
+			border-left: 4px solid @blue;
+			padding: 0;
+		}
+
+		&.blue a {border-left: 4px solid @blue;}
+
+		&.orange a {border-left: 4px solid @orange;}
+
+		&.green a {border-left: 4px solid @green;}
+
+		&.gray a {border-left: 4px solid @gray;}
+
+		a:after	{border:none; height: 0;}
+	}
+
+	.intern-nav
+	{
+		.dropdown
+		{
+			background: transparent;
+			a, .caret 
+			{
+				color: @white;
+				border-top-color: @white;
+				border-bottom-color: @white;
+			}			
+		}
+
+		li 
+		{
+			a:hover {text-decoration: none;}
+
+			&.orange a:hover {background: @orange;}
+			&.blue a:hover {background: @blue;}
+			&.green a:hover {background: @green;}
+			&.gray a:hover {background: @gray;}
+		}
+	}
+	.navbar-inner 
+	{
+		&.intern
+		{
+			background: @grayDarker;
+		}
+		&.form 
+		{
+			background: @white url(../img/form_bg.png) 0 0 repeat;
+			margin: 0;
+
+			.dropdown a,
+			.dropdown .caret
+			{
+				color: @grayDarker;
+				border-top-color: @grayDarker;
+				border-bottom-color: @grayDarker;
+			}
+
+			div	{padding: 0;}
+		}
+	}
+
+
+	// ========= BOX-WORK===========
+	.box-work {margin-top:0; }
+}
+
+
+
+
+
+/*#################################################################################
+======================================= MAX 767px =================================
+========================= LANDSCAPE PHONE  TO PORTRAIT TABLET =====================
+#################################################################################*/
+@media (max-width: 767px) {
+	// General
+	body {
+		padding:0;
+	}
+
+	.navbar-fixed-top {
+		margin-left:0;
+		margin-right:0;
+	}
+
+
+
+	// Form Connect
+	.form-horizontal {
+		.connect
+		{
+			margin-right:0; 
+			width:100%;
+
+		}
+		.btn {float:right;}
+	}
+
+	// ========= BOX-WORK ===========
+	.box-work {margin-top:0; }
+
+	.box-work .works .holder li {
+		figure.left {
+			width:96%; // 200/484
+			margin-top:0;
+			margin-right:4%;
+			margin-bottom: 20px; 
+			margin-left:0; 
+
+			img {width:100%;}
+		}
+
+		&+li {
+			figure.left {
+			margin-right:0;
+			margin-left:4%; 
+			}
+
+			div.right {
+				padding-right:0;
+				padding-left:4%;
+			}
+
+		}
+
+		div.right {
+			width: 96%;
+			padding-top:0;
+			padding-right:4%;
+			padding-bottom: 0; 
+			padding-left:0;
+		}
+	} 
+
+	// ========= BOX-COMPANY ===========
+	.box-company {
+		.span3 {
+			div:first-of-type {float:right; margin-left:21px; };
+
+			div > img {float:right; margin:0;}
+
+			h4 {
+				margin: 0 0 10px 0;
+				line-height:normal;
+			}
+		}
+	}
+
+
+
+	// ========= BOX-JOURNAL===========
+	.box-journal {
+		.journal {
+			.slide-previous {left:-10px;}
+			.slide-next {right:-10px;}
+
+			.item {
+				margin-bottom:20px; 
+
+				img {
+					width:100%;
+				} 
+				.wrapper {
+					width:100%;
+					margin:0 0 20px 0;
+					padding:0;
+				}
+			}
+		}
+	}
+
+
+	// ========= BOX-CONTACT===========
+	.box-contact
+	{
+		.form {
+			fieldset {
+				input[type="text"] {width: 100%; padding: 4px 0;}
+				textarea {
+					width:100%;
+					padding: 4px 0 ;
+					height:150px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+/*##################################################################################
+======================================= MAX 480px ==================================
+============================== FITTEST TO LANDSCAPE PHONE ==========================
+##################################################################################*/
+@media (max-width: 480px) {
+
+	h1 {
+	    font-size: 40px !important;
+	    line-height: 50px;
+	  }
+	h2 {
+	    font-size: 30px !important;
+	    line-height: 40px;
+	}
+
+	.form-horizontal {
+		.connect {
+			margin-right:0; 
+			width:100%;
+		}
+		.btn {float:right;}
+	}
+
+
+	// ========= BOX-WORK ===========
+	.box-work {margin-top:0; }
+
+	.box-work .works .holder li {
+		figure.left {
+			width:96%; // 200/484
+			margin-top:0;
+			margin-right:4%;
+			margin-bottom: 20px; 
+			margin-left:0; 
+		}
+
+		div.right {
+			width: 96%;
+			padding-top:0;
+			padding-right:0;
+			padding-bottom: 0; 
+			padding-left:4%;
+		}
+	} 
+
+	// ========= BOX-COMPANY ===========
+	.box-company {
+		.span3 {
+			div:first-of-type {float:right; margin-left:21px; width:40%; };
+		}
+	}
+
+	// ========= BOX-JOURNAL ===========
+	.box-journal {
+		.journal {
+			.slide-previous {left:-5px;}
+			.slide-next {right:-5px;}
+
+			.item {
+				margin-bottom:20px; 
+
+				img {width:100%;}
+
+				.wrapper {
+					width:100%; 
+					margin:0;
+
+					.gray {
+						width:90%;
+						padding:21px 5%; 
+					}
+				}
+			}
+		}
+	}
+}
