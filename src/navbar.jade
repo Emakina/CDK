@@ -1,0 +1,36 @@
+.navbar.navbar-fixed-top(style='display:block')
+  .navbar-inner.skrollable.skrollable-between(data-top='background:rgba(0, 0, 0, 1);', data--100-bottom='background:rgba(0, 0, 0, .3);', data-smooth-scrolling='false', style='background: rgb(0, 0, 0);')
+    .container-fluid
+      a.btn.btn-navbar.collapsed(data-toggle='collapse', data-target='.nav-collapse')
+        img(src='http://www.emakina.com/files/snippets/39D35BE4-CCE1-0CCA-B6593FE27A0B5228/menu_mobile.png')
+      a.brand(href='#cover', data-slide='slide-cover', data-menu-top='0')
+        img.logo(src='http://www.emakina.com/assets/themes/emakina2013/svg/logo_simple.svg', width='156', height='29', data-fallback='http://new.be.emakina.dev/assets/themes/emakina2013/img/logo.png', alt='Emakina', style='width:156px; position :relative; zoom: 0; background-red; height: 29px;')
+      .nav-collapse.collapse
+        ul.nav.pull-right.navigation
+          li.active(data-slide='slide-cover', style='display:none;')
+            a(href='#cover')
+              // Hidden Homepage Cover Section
+              span
+          li.orange(data-slide='slide-work')
+            a(href='#work')
+              span WORK
+          li.blue(data-slide='slide-company')
+            a(href='#company')
+              span COMPANY
+          li.orange(data-slide='slide-journal')
+            a(href='#journal')
+              span BLOG
+          li.blue(data-slide='slide-services')
+            a(href='#services')
+              span SERVICES
+          li.green.hidden-phone(data-slide='slide-contact')
+            a(href='#contact')
+              span CONTACT
+          li.green.visible-phone
+            a(href='contact')
+              span CONTACT
+          li.green.menu-search
+            a.search.searchOpen(href='#')
+              span #
+            a.search.searchClose(href='', style='display:none')
+              span.searchClose X
