@@ -59,7 +59,6 @@ module.exports = function(grunt) {
           livereload: true
         },
       },
-
     },
     
     // Concat
@@ -72,7 +71,7 @@ module.exports = function(grunt) {
       },
       dist: {
           src: 'src/js/main.js',
-          dest: 'dist/js/<%= pkg.name %>.js'
+          dest: 'dist/<%= pkg.name %>.js'
       },
     },
 
@@ -94,7 +93,7 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-            base: 'dist',
+            base: ['lib','dist'],
             port: '8888',
             livereload: true,
             open: {
@@ -116,7 +115,7 @@ module.exports = function(grunt) {
       one: {
         src: 'dist/<%= pkg.name %>.min.html',
         dest: 'dist/<%= pkg.name %>.html'
-      } 
+      }, 
     },
 
   });
