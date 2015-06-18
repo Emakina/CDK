@@ -1,0 +1,50 @@
+.navbar.navbar-fixed-top
+	.navbar-inner
+		.container-fluid
+
+			//- Btn Mobile
+			a.btn.btn-navbar.collapsed(data-toggle='collapse', data-target='.nav-collapse')
+				img(src='../img/menu_mobile.png')
+
+			//- Logo 
+			a.brand(href='#cover', data-slide='slide-cover', data-menu-top='0')
+				img.logo(src='../img/logo_simple.svg', data-fallback='../img/logo.png', alt='Emakina')
+
+			//- Nav 
+			.nav-collapse.collapse
+				ul.nav.pull-right.navigation
+
+					li.active(data-slide='slide-cover', style='display:none;')
+						a(href='#cover')
+							// Hidden Homepage Cover Section
+							span
+
+					li.orange(data-slide='slide-work')
+						a(href='#work')
+							span WORK
+
+					li.blue(data-slide='slide-company')
+						a(href='#company')
+							span COMPANY
+
+					li.orange(data-slide='slide-journal')
+						a(href='#journal')
+							span BLOG
+
+					li.blue(data-slide='slide-services')
+						a(href='#services')
+							span SERVICES
+
+					li.green.hidden-phone(data-slide='slide-contact')
+						a(href='#contact')
+							span CONTACT
+
+					li.green.visible-phone
+						a(href='contact')
+							span CONTACT
+
+					li.green.menu-search
+						a.search.searchOpen(href='#')
+							span #
+						a.search.searchClose(href='', style='display:none')
+							span.searchClose X
