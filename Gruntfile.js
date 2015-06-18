@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                     title : "<%= pkg.name %>"
                 },
                 files: {
-                    'dist/<%= pkg.name %>.html': 'src/main.jade'
+                    'dist/<%= pkg.name %>.html': '<%= src %>/main.jade'
                 },
             },
         },
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
         less: {
             dist: {
                 files: {
-                    "dist/assets/css/main.css": "src/main.less"
+                    "dist/assets/css/main.css": "<%= src %>/main.less"
                 },
             },
         },
@@ -43,14 +43,14 @@ module.exports = function(grunt) {
         sync: {
             img: {
                 files: [{
-                    cwd: 'src/',
+                    cwd: '<%= src %>/',
                     src: ['assets/img/**'],
                     dest: 'dist/'
                 }]
             },
             js: {
                 files: [{
-                    cwd: 'src/',
+                    cwd: '<%= src %>/',
                     src: ['main.js'],
                     dest: 'dist/assets/js'
                 }]
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
 
         // JsHint
         jshint: {
-            files: ['Gruntfile.js', 'src/*.js'],
+            files: ['Gruntfile.js', '<%= src %>/*.js'],
             options: {
                 globals: {
                     jQuery: true,
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'src/', 
+                    cwd: '<%= src %>/', 
                     src: ['assets/img/*.{png,jpg}'],
                     dest: 'dist/',
                 }],
@@ -89,7 +89,7 @@ module.exports = function(grunt) {
         // Watcher
         watch: {
             html: {
-                files: 'src/*.jade',
+                files: '<%= src %>/*.jade',
                 tasks: ['jade'],
                 options: {
                     debounceDelay: 250,
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
                 },
             },
             css: {
-                files: 'src/*.less',
+                files: '<%= src %>/*.less',
                 tasks: ['less'],
                 options: {
                     debounceDelay: 250,
@@ -105,7 +105,7 @@ module.exports = function(grunt) {
                 },
             },
             img: {
-                files: 'src/assets/img/**',
+                files: '<%= src %>/assets/img/**',
                 tasks: ['imagemin'],
                 options: {
                     debounceDelay: 250,
@@ -113,13 +113,19 @@ module.exports = function(grunt) {
                 },
             },
             js: {
-                files: 'src/*.js',
+                files: '<%= src %>/*.js',
                 tasks: ['jshint','sync:js'],
                 options: {
                     debounceDelay: 250,
                     livereload: true
                 },
             },
+        },
+
+
+        // Clean
+        clean: {
+            dest: ["dist"]
         },
 
 
@@ -141,6 +147,9 @@ module.exports = function(grunt) {
     });
 
 
+    // Arguments settings
+    grunt.config.set('src', grunt.option('source') || 'src');
+
     // Load Npm Tasks 
     grunt.loadNpmTasks('grunt-sync');
     grunt.loadNpmTasks('grunt-contrib-jade');
@@ -149,6 +158,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
 
     // Tasks
@@ -157,6 +167,6 @@ module.exports = function(grunt) {
     grunt.registerTask('js', ['jshint']);
     grunt.registerTask('img', ['imagemin']);
     grunt.registerTask('default', ['html','css','js']);
-    grunt.registerTask('serve', ['connect','html','css','img','js','sync','watch']);
+    grunt.registerTask('serve', ['connect','clean','html','css','img','js','sync','watch']);
 
 };
