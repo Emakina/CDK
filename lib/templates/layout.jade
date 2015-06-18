@@ -1,0 +1,50 @@
+doctype html
+html
+
+	head
+
+		//- META 
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(name='csrf-token', content=_csrf)
+
+
+		//- TITLE 
+		title Emakina - #{title}
+
+
+		//- SCRIPT 
+		script(type='text/javascript', src='//use.typekit.net/wiu4xom.js')
+		script(type='text/javascript').
+			try{Typekit.load();}catch(e){}
+
+		//- SCRIPT - Lib
+		script(type='text/javascript', src='js/vendor/jquery-1.9.1.min.js')
+		script(type='text/javascript', src='js/vendor/skrollr.min.js')
+		script(type='text/javascript', src='js/main.js')
+
+		//- SCRIPT - Case
+		script(type='text/javascript', src='assets/js/main.js')
+
+
+		//- CSS - Lib
+		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/navbar.css")
+		link(rel="stylesheet", href="css/footer.css")
+
+		//- CSS - Case
+		link(rel="stylesheet", href="assets/css/main.css")
+
+	body
+
+		//- NAVBAR
+		include navbar.jade
+
+
+		//- CASE
+		block case
+
+
+		//- FOOTER
+		include footer.jade

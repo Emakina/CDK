@@ -1,0 +1,123 @@
+footer {
+  width: 100%;
+  height: 500px;
+  z-index: 0 !important;
+  background-color: #252525;
+}
+footer.bigger {
+  height: 565px;
+}
+footer .footer-container {
+  position: fixed;
+  background-color: #252525;
+  bottom: 0px;
+  width: 100%;
+}
+footer .footer-container .row-fluid {
+  margin-bottom: 10px;
+}
+footer a {
+  color: #a8a6a7;
+}
+footer ul li {
+  list-style: none;
+  color: #a8a6a7;
+  margin: 0;
+  padding-left: 0;
+}
+footer ul li p {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+footer .link,
+footer .address,
+footer .social {
+  border-top: 4px solid #4b494a;
+  margin-top: 40px;
+}
+footer .link h4 {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+footer .link ul {
+  font-size: 13px;
+  margin-left: 0;
+}
+footer .address h4 {
+  font-size: 15px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+footer .address p {
+  color: #faf6f6;
+  font-size: 18px;
+  padding-bottom: 0;
+}
+footer .address .vat {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+footer .address .phone {
+  font-size: 14px;
+}
+footer .address .logo {
+  margin-top: 30px;
+}
+footer .address span {
+  display: block;
+  line-height: 1.2em;
+  font-weight: 200;
+}
+footer .address span span {
+  color: #a8a6a7;
+  display: inline;
+  padding-left: 5px;
+}
+footer .social {
+  margin-top: 20px;
+}
+footer .social h4 {
+  font-size: 15px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+footer .social ul {
+  margin-left: 0;
+}
+footer .social ul li {
+  float: left;
+  padding-right: 10px;
+  padding-left: 0px;
+}
+footer .copyright {
+  background-color: #131313;
+  padding-top: 20px;
+}
+footer .copyright p {
+  padding-bottom: 10px;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+footer .btn {
+  float: left;
+  margin: 25px 0;
+}
+@media (max-width: 1024px) {
+  footer .footer-container {
+    position: relative;
+  }
+}
+@media (max-width: 767px) {
+  footer {
+    height: auto;
+  }
+  footer .footer-container .link {
+    display: none !important;
+  }
+  footer .footer-container .address {
+    display: none;
+  }
+}
