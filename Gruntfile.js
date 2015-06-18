@@ -33,7 +33,7 @@ module.exports = function(grunt) {
         less: {
             dist: {
                 files: {
-                    "dist/assets/css/main.css": "src/assets/less/*.less"
+                    "dist/assets/css/main.css": "src/main.less"
                 },
             },
         },
@@ -51,8 +51,8 @@ module.exports = function(grunt) {
             js: {
                 files: [{
                     cwd: 'src/',
-                    src: ['assets/js/**'],
-                    dest: 'dist/'
+                    src: ['main.js'],
+                    dest: 'dist/assets/js'
                 }]
             },
         },
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
 
         // JsHint
         jshint: {
-            files: ['Gruntfile.js', 'src/assets/js/*.js'],
+            files: ['Gruntfile.js', 'src/*.js'],
             options: {
                 globals: {
                     jQuery: true,
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
                 },
             },
             css: {
-                files: 'src/assets/less/*.less',
+                files: 'src/*.less',
                 tasks: ['less'],
                 options: {
                     debounceDelay: 250,
@@ -113,7 +113,7 @@ module.exports = function(grunt) {
                 },
             },
             js: {
-                files: 'src/assets/js/**',
+                files: 'src/*.js',
                 tasks: ['jshint','sync:js'],
                 options: {
                     debounceDelay: 250,
