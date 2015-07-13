@@ -148,7 +148,7 @@ module.exports = function(grunt) {
 
 
     // Arguments settings
-    grunt.config.set('src', grunt.option('source') || 'src');
+    grunt.config.set('src', grunt.option('source') || 'demo');
 
     // Load Npm Tasks 
     grunt.loadNpmTasks('grunt-sync');

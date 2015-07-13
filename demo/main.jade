@@ -3,7 +3,7 @@ extends ../lib/templates/layout
 
 //- Case DEMO
 block case
-	.case.case-demo
+	.case.case-template.bg-style.bg-jeans
 
 		//- Slide INFO
 		section.slide
@@ -14,10 +14,10 @@ block case
 							.span12
 								h1.pull-left.orange
 									span Case
-									| ING jobs
+									| Big header
 						.row-fluid.description
 							.span5
-								h2.orange A facelift to attract new job seekers
+								h2.orange Here comes a large image of the case (2560x765), Full HD 1080p
 								.info
 									.row-fluid.sub1
 										.span5 Client:
@@ -26,155 +26,197 @@ block case
 										.span5 Services:
 
 
-		//- Slide CHALLENGE
+		//- Slide GRIDE
 		section.slide
-			.box.box-challenge
-				.visu.visu-challenge
+			.box.box-grid.bg-style.bg-jeans_light
+				.visu.visu-grid
 					.container-fluid
 						.row-fluid
-							.span6.offset6
-								h2.orange Challenge
-								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lorem nisi, pulvinar vitae mi vel, consequat eleifend enim. Curabitur iaculis volutpat massa at vestibulum.
-								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lorem nisi, pulvinar vitae mi vel, consequat eleifend enim. Curabitur iaculis volutpat massa at vestibulum.
-								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lorem nisi, pulvinar vitae mi vel, consequat eleifend enim. Curabitur iaculis volutpat massa at vestibulum.
-								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lorem nisi, pulvinar vitae mi vel, consequat eleifend enim. Curabitur iaculis volutpat massa at vestibulum.
+							.span12
+								h2.orange Grid
+						.grid 
+							.row-fluid
+								.span6 Span6
+								.span6 Span6
+							.row-fluid
+								.span4 Span4
+								.span8 Span8
+							.row-fluid
+								.span4 Span4
+								.span4 Span4
+								.span4 Span4
+							.row-fluid
+								.span3 Span3
+								.span3 Span3 
+								.span3 Span3
+								.span3 Span3
 
-		//- Slide CONCEPT
+
+		//- Slide CONTENT
 		section.slide
-			.box.box-concept
-				.visu.visu-concept.visu-light-bg
+			.box.box-content.bg-style.bg-jeans_dark
+				.visu.visu-content
 					.container-fluid
+						.row-fluid
+							h2.orange Typography
 						.row-fluid
 							.span4
-								h2.orange Concept
-								p The job description, the daily content of the work, the context and working environment, the colleagues, the bosses, are all such important parts of anyone’s life, that these should be set out clearly from the start. We wanted to give a richer picture of what life at ING is really going to be like - to prospective employees.
-								p Our concept was to create a window on the ING universe, as a place to work, not simply a page listing job vacancies.
-								p To do this, we wanted to make use of a couple of assets that ING has in its favour: a huge interest and investment in the art world and a multitude of events and activities happening in its midst.
-							.span8.concept
-								.visible-desktop-1024
-									img(src="assets/img/concept-box-event.jpg" alt="Box Event" class="box-1" data-bottom="opacity:0" data--300-bottom="opacity:1" data-top="opacity:0.5")
-									img(src="assets/img/concept-box-job_tv.jpg" alt="Box Job TV" class="box-2" data-200-bottom="opacity:0" data--50-bottom="opacity:1" data-150-top="opacity:0.2")
-									img(src="assets/img/concept-box-art.jpg" alt="Box Art" class="box-3" data--100-bottom="opacity:0" data--350-bottom="opacity:1" data-top="opacity:0.6")
-									img(src="assets/img/concept-box-youtube.jpg" alt="Box Youtube" class="box-4" data--150-bottom="opacity:0" data--200-bottom="opacity:1")
-									img(src="assets/img/concept-box-video.jpg" alt="Box Video" class="box-5" data--50-bottom="opacity:0" data--100-bottom="opacity:1")
-									img(src="assets/img/concept-box-job.jpg" alt="Box Job" class="box-6" data--350-bottom="opacity:0" data--400-bottom="opacity:1")
-									img(src="assets/img/concept-box-minute_orange.jpg" alt="Box Minute Orange" class="box-7" data--200-bottom="opacity:0" data--250-bottom="opacity:1")
-								.hidden-desktop-1024
-									img(src="assets/img/concept-box-responsive.png" alt="Box Event - Job TV - Art - Youtbe - Video - Job - Minute Orange")
+								h2 H2 Title
+								h3 H3 Subtitle
+								h4 H4 Subtitle
+								h5 H5 Subtitle
+							.span8
+								h2 Example body text
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-		//- Slide DESIGN
+
+		//- Slide DARK BACKGROUND
 		section.slide
-			.box.box-design
-				.visu.visu-design.bg-style.bg-jeans
+			.box.box-dark_background
+				.visu.visu-dark_background.bg-style.bg-jeans
 					.container-fluid
 						.row-fluid
-							.span6
-								h2.orange The Design
+							.span12
+								h2.orange Slide with a dark background (Jeans pattern)
 						.row-fluid
-							.span6
-								img(src="assets/img/design-page-home.jpg" alt="Home page")
-								img(src="assets/img/design-page-events.jpg" alt="Events page")
-							.span6
-								h4 One page
-								p The web page was conceived as a single long window, showing off all kinds of rich information on the company events and activities, videos of likeable ING staff talking about the details of their work and working environment.
-								.design
-									img(src="assets/img/design-page-jobs_filter.jpg" alt="Jobs Filter page")
-									img(src="assets/img/design-page-job_tv.jpg" alt="Job TV page")
-									img(src="assets/img/design-page-blog.jpg" alt="Blog page")
-
-						.mask
-						.mask-fixed
+							.span8
+								h4 You have to put .bg-style .bg-jeans, .bg-style .bg-jeans_dark, .bg-style .bg-jeans_light on .visu
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-		//- Slide ARTISTIC
+		//- Slide WHITE BACKGROUND
 		section.slide
-			.box.box-artistic(data-bottom-top="background-position:center 70%" data-top-bottom="background-position:center 30%")
-				.visu.visu-artistic
+			.box.box-light_background
+				.visu.visu-light_background.visu-light-bg
 					.container-fluid
 						.row-fluid
-							.span5.offset7
-								h4 Artistic orientation
-								p Reference is also made to the artistic orientation of the company with one of the bank’s commissioned art works as a background.
-								p As an added feature, the scrolling window actually contains windows (or holes) to be able to view the work of art underneath!
+							.span12
+								h2.orange Slide with a light background (white)
+						.row-fluid
+							.span8
+								h4 You have to put .visu-light-bg on .visu
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-		//- Slide BOOKMARK
+		//- Slide BUTTON
 		section.slide
-			.box.box-bookmark
-				.visu.visu-bookmark.bg-style.bg-jeans
+			.box.box-button
+				.visu.visu-button.bg-style.bg-jeans_dark
 					.container-fluid
 						.row-fluid
-							.span5
-								h4 Bookmark
-								p Another innovation: To enhance the utility as a recruitment page, users can tag or ‘star’ their favourite job ads to save and read later or compare.
-							.span7
-								img(src="assets/img/bookmark.png" alt="Bookmark")
+							.span12
+								h2.orange Buttons
 						.row-fluid
-							.span12.bookmark
-								img(class="bg" src="assets/img/bookmark-video-bg.png" alt="Video Background")
+							.span4
+								h4 Small Button
+								a.btn.btn-small.orange(href='#' target='_blank') Button
+							.span4
+								h4 Medium Button
+								a.btn.orange(href='#' target='_blank') Button
+							.span4
+								h4 Large Button
+								a.btn.btn-large.orange(href='#' target='_blank') Button
+
+
+		//- Slide LIST
+		section.slide
+			.box.box-list
+				.visu.visu-list.bg-style.bg-jeans_light
+					.container-fluid
+						.row-fluid
+							.span12
+								h2.orange List
+						.row-fluid
+							.span4
+								ul.styled-orange
+									li Lorem Ipsum
+									li Lorem Ipsum
+									li Lorem Ipsum
+
+
+
+
+		//- Slide VIDEO
+		section.slide
+			.box.box-video
+				.visu.visu-video
+					.container-fluid
+						.row-fluid
+							.span12
+								h2.orange Video
 								.video
-									img(class="ratio" alt="ratio img" src="assets/img/ratio-16x9.jpg")
-									iframe(src="//player.vimeo.com/video/110364486"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+									img(class="ratio" alt="ratio img" src="../img/ratio-16x9.jpg")
+									iframe(src="//player.vimeo.com/video/132817258"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+								
+		
 
-
-		//- Slide WELCOME
+		//- Slide QUOTE
 		section.slide
-			.box.box-welcome
-				.visu.visu-welcome.visu-light-bg
+			.box.box-quote
+				.visu.visu-quote
 					.container-fluid
 						.row-fluid
 							.span6
-								h2.orange Welcome on board
-								p Since the window on the ING world world was so successful, we went on to create a ‘pre-boarding’ page, where new employees, before starting their ING job, would be able to enter into the ING universe and learn more about the job, the colleagues, the bosses etc. By signing in with their Linked-In profile, they will even be shown any of their Linked-In connections who are working at ING.
-						.row-fluid
-							.span12.welcome
-								img(src="assets/img/welcome-box-practical_infos.jpg" alt="Box - Practical Infos" class="first" data-bottom="opacity:0;top:30px" data--100-bottom="opacity:1;top:0")
-								img(src="assets/img/welcome-box-linkedin.png" alt="Box - Linkedin" class="middle" data--100-bottom="opacity:0;top:30px" data--200-bottom="opacity:1;top:0")
-								img(src="assets/img/welcome-box-are_you_ing.jpg" alt="Box - Are you ING" class="last" data--200-bottom="opacity:0;top:30px" data--300-bottom="opacity:1;top:0")
-
-
-		//- Slide ABOUT
-		section.slide
-			.box.box-about.bg-style.bg-jeans
-				.visu.visu-about
-					.container-fluid
-						.row-fluid
-							.span7.about
-								.visible-desktop-1024
-									img(src="assets/img/about-page-art_sponsoring.png" alt="Art Sponsoring Page" class="back" data-bottom="left:25%" data--150-bottom="left:-20%;")
-									img(src="assets/img/about-page-galleries.png" alt=" Galleries Page" class="middle" data-bottom="left:25%" data--100-bottom="left:-5%;")
-									img(src="assets/img/about-page-home.png" alt=" Home Page" class="front")
-								.hidden-desktop-1024
-									img(src="assets/img/about-pages-responsive.png" alt="Art Sponsoring - Galleries - Home Page")
-							.span5
-								h2.orange About ING
-								p As a further proof of concept, ING decided to use the same universe design in the About section of the website. Also a main destination for job-seekers but also customers and prospects, this way ING puts it strong foot forward!
-
-
-		//- Slide RESULTS
-		section.slide
-			.box.box-results
-				.visu.visu-results
-					.container-fluid
-						.row-fluid
-							.span6
-								h2.orange Results
+								h2.orange Quote
 								.quote
 									span.quote_begin
 									p With this revamping, we have not only a more attractive and dynamic way of communicating with potential staff, but an entirely new approach. Our recruitment and on-boarding pages are very user-centred, delivering useful and informative content, with a more social and innovative approach.
 									span.quote_end
-									p.author Anne-Catherine Zoller
-							.span6.results
-								img(src="assets/img/results.png" alt="Results")
+									div.author
+										p Anne-Catherine Zoller
 
-
-		//- Slide DISCOVER
+		//- Slide SLIDER
 		section.slide
-			.box.box-discover
-				.visu.visu-discover
+			.box.box-slider
+				.visu.visu-slider
 					.container-fluid
 						.row-fluid
-							.span8.offset2
-								h1 Discover careers <br>at ING Belgium 
-								a.btn.gray.btn-large(href='http://www.ing.jobs/belgium.htm' target='_blank') Go to the Website
+							.span12
+								h2.orange Sliders
+								h4 Slider simple
+								.carousel.slide#carousel
+									.carousel-inner
+										.item.active
+											.container-fluid
+												.row-fluid
+													.span12
+														img(src="../img/visu1.jpg")
 
+										.item
+											.container-fluid
+												.row-fluid
+													.span12
+														img(src="../img/visu2.jpg")
+
+									
+									a.carousel-control.left(href="#myCarousel" data-slide="prev") &lsaquo;
+									a.carousel-control.right(href="#myCarousel" data-slide="next") &rsaquo;
+
+
+
+						.row-fluid
+							.span12
+								h4 Slider menu
+								.carousel.carousel-menu.slide#carousel-menu
+									.carousel-inner
+										.item.active(data-slide="Slide 1")
+											.container-fluid
+												.row-fluid
+													.span12
+														img(src="../img/visu1.jpg")
+
+										.item(data-slide="Slide 2")
+											.container-fluid
+												.row-fluid
+													.span12
+														img(src="../img/visu2.jpg")
+
+										.item(data-slide="SLide 3")
+											.container-fluid
+												.row-fluid
+													.span12
+														img(src="../img/visu1.jpg")
+									
+									a.carousel-control.left(href="#myCarousel" data-slide="prev") &lsaquo;
+									a.carousel-control.right(href="#myCarousel" data-slide="next") &rsaquo;
+	
