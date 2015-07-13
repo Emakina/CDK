@@ -1,5 +1,5 @@
 {
-  "name": "Case-Demo",
+  "name": "Case-Builder",
   "engines": {
     "node": ">= 0.10.0"
   },

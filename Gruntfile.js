@@ -6,10 +6,17 @@
 
 module.exports = function(grunt) {
     require('time-grunt')(grunt);
+
+     // Arguments settings
+    src = grunt.option('source') || 'src';
+
     grunt.initConfig({
 
         // Package
         pkg: grunt.file.readJSON('package.json'),
+
+        // Case
+        case: grunt.file.readJSON(src + '/case.json'),
 
         // Jade 
         jade: {
@@ -20,10 +27,10 @@ module.exports = function(grunt) {
                 data: {
                     debug: true,
                     timestamp: "<%= new Date().getTime() %>",
-                    title : "<%= pkg.name %>"
+                    title : "<%= case.name %>"
                 },
                 files: {
-                    'dist/<%= pkg.name %>.html': '<%= src %>/main.jade'
+                    'dist/<%= case.name %>.html': '<%= src %>/main.jade'
                 },
             },
         },
@@ -137,7 +144,7 @@ module.exports = function(grunt) {
                     port: '8888',
                     livereload: true,
                     open: {
-                        target: 'http://localhost:8888/<%= pkg.name %>.html'
+                        target: 'http://localhost:8888/<%= case.name %>.html'
                     },
                 },
             },
@@ -147,8 +154,11 @@ module.exports = function(grunt) {
     });
 
 
-    // Arguments settings
-    grunt.config.set('src', grunt.option('source') || 'demo');
+    
+    grunt.config.set('src', src);
+
+    grunt.log.writeln('Working directory is ./' + src);
+
 
     // Load Npm Tasks 
     grunt.loadNpmTasks('grunt-sync');
@@ -168,5 +178,5 @@ module.exports = function(grunt) {
     grunt.registerTask('img', ['imagemin']);
     grunt.registerTask('default', ['html','css','js']);
     grunt.registerTask('serve', ['connect','clean','html','css','img','js','sync','watch']);
-
+    
 };
