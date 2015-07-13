@@ -135,6 +135,17 @@ module.exports = function(grunt) {
             dest: ["dist"]
         },
 
+        // Compress
+        compress: {
+          main: {
+            options: {
+              archive: './dist/export.zip'
+            },
+            expand: true,
+            cwd: 'dist/',
+            src: ['**/*','!export.zip'],
+          },
+        },
 
         // Connect
         connect: {
@@ -169,6 +180,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-compress');
 
 
     // Tasks
@@ -176,7 +188,9 @@ module.exports = function(grunt) {
     grunt.registerTask('css', ['less']);
     grunt.registerTask('js', ['jshint']);
     grunt.registerTask('img', ['imagemin']);
-    grunt.registerTask('default', ['html','css','js']);
-    grunt.registerTask('serve', ['connect','clean','html','css','img','js','sync','watch']);
+    grunt.registerTask('compile', ['html','css','js','sync']);
+    grunt.registerTask('export', ['clean','compile','img','compress']);
     
+    grunt.registerTask('serve', ['connect','clean','compile','img','watch']);
+    grunt.registerTask('default', ['compile']);   
 };
