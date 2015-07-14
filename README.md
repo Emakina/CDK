@@ -1,18 +1,17 @@
 Case Builder Tool
-===============
+=================
 
 
 This tool is in his alpha phase and not tested yet.
 
-Please use JIRA for any feedback
-
-https://bugtracking.emakina.net/browse/EMAWEBSITETREIZE
+Please use JIRA 
 
 Prerequisites
 -------------
 
 - [Node.js](http://nodejs.org)
 
+Please note that this tool is using GRUNT, LESS and JADES
 
 Getting Started
 ---------------
@@ -37,7 +36,6 @@ npm install
 Using the builder
 -----------------
 
-
 Compiling sources
 
 ```bash
@@ -61,4 +59,48 @@ Export dist in zip file
 ```bash
 grunt export
 ```
+
+
+Files structure
+-----------------
+
+###/src 
+
+Source code of your case
+
+##### case.json
+
+Config file, please rename your case.
+
+##### main.jade
+Main jade file
+
+##### main.js
+Javascript...
+
+##### main.less
+Less file...
+
+##### /assets
+Image assets folder for your case
+
+
+### /lib
+
+Global lib used by Emakina website.
+Please do not change it.
+
+###/dist
+
+Final compiled files
+
+
+###/demo
+
+Integrated demo case
+
+```bash
+grunt serve --source=demo
+```
+
 
