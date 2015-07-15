@@ -7,8 +7,11 @@
 module.exports = function(grunt) {
     require('time-grunt')(grunt);
 
-     // Arguments settings
-    src = grunt.option('source') || 'src';
+    // Arguments settings
+    //'src' = To see your case
+    //'samples/template' = To see the case template
+    //'samples/examples/ing' = To see examples
+    src = grunt.option('source') || 'samples/examples/ing';
 
     grunt.initConfig({
 
