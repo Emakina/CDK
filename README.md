@@ -1,5 +1,5 @@
-Case Builder Tool
-=================
+Emakina Case Development Kit
+============================
 
 
 This tool is in his alpha phase and not tested yet.
@@ -22,7 +22,8 @@ The easiest way to get started is to clone the repository:
 # Get the latest snapshot
 # Emakina / Marcom for user permission
 
-git clone https://git.emakina.net/projects/EG/repos/website-case-builder emakina-case-builder
+git clone https://git.emakina.net/scm/eg/cdk.git emakina-case
+-builder
 
 # OR unzip emakina-case-builder.zip
 
@@ -95,12 +96,14 @@ Please do not change it.
 Final compiled files
 
 
-###/demo
+###/samples
 
-Integrated demo case
+Several integrated sample case
 
 ```bash
-grunt serve --source=demo
+grunt serve --source=/sample/template
+grunt serve --source=/sample/ing
+
 ```
 
 

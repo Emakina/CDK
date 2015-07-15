@@ -7,11 +7,18 @@
 module.exports = function(grunt) {
     require('time-grunt')(grunt);
 
-    // Arguments settings
-    //'src' = To see your case
-    //'samples/template' = To see the case template
-    //'samples/ing' = To see examples
+    /* 
+    Arguments settings
+    
+    To see another samples
+
+    --source=samples/ing = To see the ing case sample
+    --source=samples/template = To see examples
+    
+    */
+
     src = grunt.option('source') || 'src';
+    cwd = process.cwd();
 
     grunt.initConfig({
 
@@ -25,15 +32,17 @@ module.exports = function(grunt) {
         jade: {
             compile: {
                 options: {
-                    pretty: true
+                    pretty: true,
+                    basedir: cwd,
                 },
                 data: {
                     debug: true,
                     timestamp: "<%= new Date().getTime() %>",
-                    title : "<%= case.name %>"
+                    title : "<%= case.name %>",
+                    root: cwd
                 },
                 files: {
-                    'dist/<%= case.name %>.html': '<%= src %>/main.jade'
+                    'dist/<%= case.name %>.html': '<%= src %>/main.jade',
                 },
             },
         },
@@ -169,10 +178,11 @@ module.exports = function(grunt) {
 
 
     
+    // Setting sources and current working dir.
     grunt.config.set('src', src);
+    grunt.config.set('cwd', cwd);
 
     grunt.log.writeln('Working directory is ./' + src);
-
 
     // Load Npm Tasks 
     grunt.loadNpmTasks('grunt-sync');
@@ -184,7 +194,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-compress');
-
 
     // Tasks
     grunt.registerTask('html', ['jade']);
