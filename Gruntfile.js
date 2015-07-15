@@ -10,8 +10,8 @@ module.exports = function(grunt) {
     // Arguments settings
     //'src' = To see your case
     //'samples/template' = To see the case template
-    //'samples/examples/ing' = To see examples
-    src = grunt.option('source') || 'samples/examples/ing';
+    //'samples/ing' = To see examples
+    src = grunt.option('source') || 'src';
 
     grunt.initConfig({
 
