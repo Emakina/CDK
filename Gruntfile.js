@@ -33,13 +33,12 @@ module.exports = function(grunt) {
             compile: {
                 options: {
                     pretty: true,
-                    basedir: cwd,
+                    basedir: cwd
                 },
                 data: {
                     debug: true,
                     timestamp: "<%= new Date().getTime() %>",
-                    title : "<%= case.name %>",
-                    root: cwd
+                    title : "<%= case.name %>"
                 },
                 files: {
                     'dist/<%= case.name %>.html': '<%= src %>/main.jade',
@@ -183,6 +182,7 @@ module.exports = function(grunt) {
     grunt.config.set('cwd', cwd);
 
     grunt.log.writeln('Working directory is ./' + src);
+    grunt.log.writeln('Project name is ' +   grunt.config.get("case.name"));
 
     // Load Npm Tasks 
     grunt.loadNpmTasks('grunt-sync');

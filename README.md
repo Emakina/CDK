@@ -22,8 +22,7 @@ The easiest way to get started is to clone the repository:
 # Get the latest snapshot
 # Emakina / Marcom for user permission
 
-git clone https://git.emakina.net/scm/eg/cdk.git emakina-case
--builder
+git clone https://git.emakina.net/scm/eg/cdk.git
 
 # OR unzip emakina-case-builder.zip
 
@@ -101,8 +100,8 @@ Final compiled files
 Several integrated sample case
 
 ```bash
-grunt serve --source=/sample/template
-grunt serve --source=/sample/ing
+grunt serve --source=samples/template
+grunt serve --source=samples/ing
 
 ```
 
