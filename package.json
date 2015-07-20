@@ -1,5 +1,6 @@
 {
-  "name": "Case-Builder",
+  "name": "Emakina-CDK",
+  "description": "Case Development Kit for Emakina website",
   "version": "1.0.0",
   "private":true,
   "engines": {
