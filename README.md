@@ -20,12 +20,8 @@ The easiest way to get started is to clone the repository:
 
 ```bash
 # Get the latest snapshot
-# Emakina / Marcom for user permission
 
 git clone https://git.emakina.net/scm/eg/cdk.git
-
-# OR unzip emakina-case-builder.zip
-
 cd emakina-case builder
 
 # Install NPM dependencies
@@ -48,10 +44,10 @@ Start local server & watcher
 grunt serve
 ```
 
-Start demo 
+Start Ing Demo 
 
 ```bash
-grunt serve --source=demo
+grunt serve --source=samples/ing
 ```
 
 Export dist in zip file
