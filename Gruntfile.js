@@ -139,7 +139,22 @@ module.exports = function(grunt) {
                 },
             },
         },
-
+   
+        // Copy
+        copy: {
+          lib: {      
+            expand:true,
+            files: 
+            [
+              // CSS
+              {expand: true, cwd:'lib/css', src: ['**'], dest: 'dist/css'},
+              // JS
+              {expand: true, cwd:'lib/js', src: ['**'], dest: 'dist/js'},
+              // IMG
+              {expand: true, cwd:'lib/img', src: ['**'], dest: 'dist/img'},
+            ],
+          },
+        },
 
         // Clean
         clean: {
@@ -194,6 +209,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Tasks
     grunt.registerTask('html', ['jade']);
@@ -201,7 +217,7 @@ module.exports = function(grunt) {
     grunt.registerTask('js', ['jshint']);
     grunt.registerTask('img', ['imagemin']);
     grunt.registerTask('compile', ['html','css','js','sync']);
-    grunt.registerTask('export', ['clean','compile','img','compress']);
+    grunt.registerTask('export', ['clean','copy:lib','compile','img','compress']);
     
     grunt.registerTask('serve', ['connect','clean','compile','img','watch']);
     grunt.registerTask('default', ['compile']);   
