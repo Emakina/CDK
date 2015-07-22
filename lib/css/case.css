@@ -177,7 +177,7 @@
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border-color: -moz-use-text-color #fff;
+    border-color: #fff;
     border-image: none;
     border-radius: 0;
     border-style: none solid;
