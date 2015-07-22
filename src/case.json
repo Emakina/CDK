@@ -1,0 +1,35 @@
+{
+    "name": "Unamed-Case",
+    "uuid": "",
+    "author": "",
+    "metas": {
+        "agency": "",
+        "customer": "",
+        "subsidiary": "",
+        "core_activities": "",
+        "competence_centers": "",
+        "release_date": "",
+        "contents": {
+            "en": {
+                "title": "",
+                "short_description": "",
+                "keywords": ""
+            },
+            "fr": {
+                "title": "",
+                "short_description": "",
+                "keywords": ""
+            },
+            "nl": {
+                "title": "",
+                "short_description": "",
+                "keywords": ""
+            },
+            "tr": {
+                "title": "",
+                "short_description": "",
+                "keywords": ""
+            }
+        }
+    }
+}

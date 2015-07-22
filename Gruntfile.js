@@ -6,24 +6,42 @@
 
 module.exports = function(grunt) {
     require('time-grunt')(grunt);
+
+    /* 
+    Arguments settings
+    
+    To see another samples
+
+    --source=samples/ing = To see the ing case sample
+    --source=samples/template = To see examples
+    
+    */
+
+    src = grunt.option('source') || 'src';
+    cwd = process.cwd();
+
     grunt.initConfig({
 
         // Package
         pkg: grunt.file.readJSON('package.json'),
 
+        // Case
+        case: grunt.file.readJSON(src + '/case.json'),
+
         // Jade 
         jade: {
             compile: {
                 options: {
-                    pretty: true
+                    pretty: true,
+                    basedir: cwd
                 },
                 data: {
                     debug: true,
                     timestamp: "<%= new Date().getTime() %>",
-                    title : "<%= pkg.name %>"
+                    title : "<%= case.name %>"
                 },
                 files: {
-                    'dist/<%= pkg.name %>.html': 'src/main.jade'
+                    'dist/<%= case.name %>.html': '<%= src %>/main.jade',
                 },
             },
         },
@@ -33,7 +51,7 @@ module.exports = function(grunt) {
         less: {
             dist: {
                 files: {
-                    "dist/assets/css/main.css": "src/assets/less/*.less"
+                    "dist/assets/css/main.css": "<%= src %>/main.less"
                 },
             },
         },
@@ -43,16 +61,16 @@ module.exports = function(grunt) {
         sync: {
             img: {
                 files: [{
-                    cwd: 'src/',
+                    cwd: '<%= src %>/',
                     src: ['assets/img/**'],
                     dest: 'dist/'
                 }]
             },
             js: {
                 files: [{
-                    cwd: 'src/',
-                    src: ['assets/js/**'],
-                    dest: 'dist/'
+                    cwd: '<%= src %>/',
+                    src: ['main.js'],
+                    dest: 'dist/assets/js'
                 }]
             },
         },
@@ -60,7 +78,7 @@ module.exports = function(grunt) {
 
         // JsHint
         jshint: {
-            files: ['Gruntfile.js', 'src/assets/js/*.js'],
+            files: ['Gruntfile.js', '<%= src %>/*.js'],
             options: {
                 globals: {
                     jQuery: true,
@@ -77,7 +95,7 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'src/', 
+                    cwd: '<%= src %>/', 
                     src: ['assets/img/*.{png,jpg}'],
                     dest: 'dist/',
                 }],
@@ -89,7 +107,7 @@ module.exports = function(grunt) {
         // Watcher
         watch: {
             html: {
-                files: 'src/*.jade',
+                files: '<%= src %>/*.jade',
                 tasks: ['jade'],
                 options: {
                     debounceDelay: 250,
@@ -97,7 +115,7 @@ module.exports = function(grunt) {
                 },
             },
             css: {
-                files: 'src/assets/less/*.less',
+                files: '<%= src %>/*.less',
                 tasks: ['less'],
                 options: {
                     debounceDelay: 250,
@@ -105,7 +123,7 @@ module.exports = function(grunt) {
                 },
             },
             img: {
-                files: 'src/assets/img/**',
+                files: '<%= src %>/assets/img/**',
                 tasks: ['imagemin'],
                 options: {
                     debounceDelay: 250,
@@ -113,7 +131,7 @@ module.exports = function(grunt) {
                 },
             },
             js: {
-                files: 'src/assets/js/**',
+                files: '<%= src %>/*.js',
                 tasks: ['jshint','sync:js'],
                 options: {
                     debounceDelay: 250,
@@ -121,7 +139,39 @@ module.exports = function(grunt) {
                 },
             },
         },
+   
+        // Copy
+        copy: {
+          lib: {      
+            expand:true,
+            files: 
+            [
+              // CSS
+              {expand: true, cwd:'lib/css', src: ['**'], dest: 'dist/css'},
+              // JS
+              {expand: true, cwd:'lib/js', src: ['**'], dest: 'dist/js'},
+              // IMG
+              {expand: true, cwd:'lib/img', src: ['**'], dest: 'dist/img'},
+            ],
+          },
+        },
 
+        // Clean
+        clean: {
+            dest: ["dist"]
+        },
+
+        // Compress
+        compress: {
+          main: {
+            options: {
+              archive: './dist/export.zip'
+            },
+            expand: true,
+            cwd: 'dist/',
+            src: ['**/*','!export.zip'],
+          },
+        },
 
         // Connect
         connect: {
@@ -131,7 +181,7 @@ module.exports = function(grunt) {
                     port: '8888',
                     livereload: true,
                     open: {
-                        target: 'http://localhost:8888/<%= pkg.name %>.html'
+                        target: 'http://localhost:8888/<%= case.name %>.html'
                     },
                 },
             },
@@ -141,6 +191,14 @@ module.exports = function(grunt) {
     });
 
 
+    
+    // Setting sources and current working dir.
+    grunt.config.set('src', src);
+    grunt.config.set('cwd', cwd);
+
+    grunt.log.writeln('Working directory is ./' + src);
+    grunt.log.writeln('Project name is ' +   grunt.config.get("case.name"));
+
     // Load Npm Tasks 
     grunt.loadNpmTasks('grunt-sync');
     grunt.loadNpmTasks('grunt-contrib-jade');
@@ -149,14 +207,18 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Tasks
     grunt.registerTask('html', ['jade']);
     grunt.registerTask('css', ['less']);
     grunt.registerTask('js', ['jshint']);
     grunt.registerTask('img', ['imagemin']);
-    grunt.registerTask('default', ['html','css','js']);
-    grunt.registerTask('serve', ['connect','html','css','img','js','sync','watch']);
-
+    grunt.registerTask('compile', ['html','css','js','sync']);
+    grunt.registerTask('export', ['clean','copy:lib','compile','img','compress']);
+    
+    grunt.registerTask('serve', ['connect','clean','compile','img','watch']);
+    grunt.registerTask('default', ['compile']);   
 };

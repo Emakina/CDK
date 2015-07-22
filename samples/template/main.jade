@@ -1,0 +1,213 @@
+//- Load the Layout
+extends ../../lib/templates/layout
+
+//- Case DEMO
+block case
+	.case.case-template.bg-style.bg-jeans
+
+		//- Slide INFO
+		section.slide
+			.box.box-info
+				.visu.visu-info
+					.container-fluid
+						header.row-fluid
+							.span12
+								h1.pull-left.orange
+									span Case
+									| Big header
+						.row-fluid.description
+							.span5
+								h2.orange Here comes a large image of the case (2560x765), Full HD 1080p
+								.info
+									.row-fluid.sub1
+										.span5 Client:
+									hr
+									.row-fluid.sub2
+										.span5 Services:
+
+
+		//- Slide GRIDE
+		section.slide
+			.box.box-grid.bg-style.bg-jeans_light
+				.visu.visu-grid
+					.container-fluid
+						.row-fluid
+							.span12
+								h2.orange Grid
+						.grid 
+							.row-fluid
+								.span6 Span6
+								.span6 Span6
+							.row-fluid
+								.span4 Span4
+								.span8 Span8
+							.row-fluid
+								.span4 Span4
+								.span4 Span4
+								.span4 Span4
+							.row-fluid
+								.span3 Span3
+								.span3 Span3 
+								.span3 Span3
+								.span3 Span3
+
+
+		//- Slide CONTENT
+		section.slide
+			.box.box-content.bg-style.bg-jeans_dark
+				.visu.visu-content
+					.container-fluid
+						.row-fluid
+							h2.orange Typography
+						.row-fluid
+							.span4
+								h2 H2 Title
+								h3 H3 Subtitle
+								h4 H4 Subtitle
+								h5 H5 Subtitle
+							.span8
+								h2 Example body text
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+		//- Slide DARK BACKGROUND
+		section.slide
+			.box.box-dark_background
+				.visu.visu-dark_background.bg-style.bg-jeans
+					.container-fluid
+						.row-fluid
+							.span12
+								h2.orange Slide with a dark background (Jeans pattern)
+						.row-fluid
+							.span8
+								h4 You have to put .bg-style .bg-jeans, .bg-style .bg-jeans_dark, .bg-style .bg-jeans_light on .visu
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+		//- Slide WHITE BACKGROUND
+		section.slide
+			.box.box-light_background
+				.visu.visu-light_background.visu-light-bg
+					.container-fluid
+						.row-fluid
+							.span12
+								h2.orange Slide with a light background (white)
+						.row-fluid
+							.span8
+								h4 You have to put .visu-light-bg on .visu
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+		//- Slide BUTTON
+		section.slide
+			.box.box-button
+				.visu.visu-button.bg-style.bg-jeans_dark
+					.container-fluid
+						.row-fluid
+							.span12
+								h2.orange Buttons
+						.row-fluid
+							.span4
+								h4 Small Button
+								a.btn.btn-small.orange(href='#' target='_blank') Button
+							.span4
+								h4 Medium Button
+								a.btn.orange(href='#' target='_blank') Button
+							.span4
+								h4 Large Button
+								a.btn.btn-large.orange(href='#' target='_blank') Button
+
+
+		//- Slide LIST
+		section.slide
+			.box.box-list
+				.visu.visu-list.bg-style.bg-jeans_light
+					.container-fluid
+						.row-fluid
+							.span12
+								h2.orange List
+						.row-fluid
+							.span4
+								ul.styled-orange
+									li Lorem Ipsum
+									li Lorem Ipsum
+									li Lorem Ipsum
+
+
+		//- Slide VIDEO
+		section.slide
+			.box.box-video
+				.visu.visu-video
+					.container-fluid
+						.row-fluid
+							.span12
+								h2.orange Video
+								.video
+									img(class="ratio" alt="ratio img" src="../img/ratio-16x9.jpg")
+									iframe(src="//player.vimeo.com/video/132817258"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)						
+		
+
+		//- Slide QUOTE
+		section.slide
+			.box.box-quote
+				.visu.visu-quote
+					.container-fluid
+						.row-fluid
+							.span6
+								h2.orange Quote
+								.quote
+									span.quote_begin
+									p With this revamping, we have not only a more attractive and dynamic way of communicating with potential staff, but an entirely new approach. Our recruitment and on-boarding pages are very user-centred, delivering useful and informative content, with a more social and innovative approach.
+									span.quote_end
+									div.author
+										p Anne-Catherine Zoller
+
+
+		//- Slide SLIDER
+		section.slide
+			.box.box-slider
+				.visu.visu-slider
+					.container-fluid
+						.row-fluid
+							.span12
+								h2.orange Sliders
+								h4 Slider simple
+								.carousel.slide#carousel
+									.carousel-inner
+										.item.active
+											.container-fluid
+												.row-fluid
+													.span12
+														img(src="../img/visu1.jpg")
+
+										.item
+											.container-fluid
+												.row-fluid
+													.span12
+														img(src="../img/visu2.jpg")
+
+
+
+						.row-fluid
+							.span12
+								h4 Slider menu
+								.carousel.carousel-menu.slide#carousel-menu
+									.carousel-inner
+										.item.active(data-slide="Slide 1")
+											.container-fluid
+												.row-fluid
+													.span12
+														img(src="../img/visu1.jpg")
+
+										.item(data-slide="Slide 2")
+											.container-fluid
+												.row-fluid
+													.span12
+														img(src="../img/visu2.jpg")
+
+										.item(data-slide="SLide 3")
+											.container-fluid
+												.row-fluid
+													.span12
+														img(src="../img/visu1.jpg")
+	
