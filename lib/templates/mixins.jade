@@ -1,0 +1,20 @@
+//- VIMEO 
+//-	Generate html for a vimeo video
+//-	Params : Id of the video
+
+mixin vimeo(id)
+	.video
+		img(class="ratio", alt="ratio img", src="../img/ratio-16x9.jpg")
+		iframe(src="//player.vimeo.com/video/#{id}",frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+
+//- QUOTE  
+//- Generate html for a quote
+//- Params : Quote + Author
+
+mixin quote(quote, author)
+	.quote
+		span.quote_begin
+		p #{quote}
+		span.quote_end
+		div.author
+			p #{author}
