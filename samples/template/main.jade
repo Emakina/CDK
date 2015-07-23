@@ -142,9 +142,7 @@ block case
 						.row-fluid
 							.span12
 								h2.orange Video
-								.video
-									img(class="ratio" alt="ratio img" src="../img/ratio-16x9.jpg")
-									iframe(src="//player.vimeo.com/video/132817258"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)						
+								+vimeo('132817258')
 		
 
 		//- Slide QUOTE
@@ -155,12 +153,7 @@ block case
 						.row-fluid
 							.span6
 								h2.orange Quote
-								.quote
-									span.quote_begin
-									p With this revamping, we have not only a more attractive and dynamic way of communicating with potential staff, but an entirely new approach. Our recruitment and on-boarding pages are very user-centred, delivering useful and informative content, with a more social and innovative approach.
-									span.quote_end
-									div.author
-										p Anne-Catherine Zoller
+								+quote('With this revamping, we have not only a more attractive and dynamic way of communicating with potential staff, but an entirely new approach. Our recruitment and on-boarding pages are very user-centred, delivering useful and informative content, with a more social and innovative approach.','Anne-Catherine Zoller')
 
 
 		//- Slide SLIDER
@@ -178,13 +171,13 @@ block case
 											.container-fluid
 												.row-fluid
 													.span12
-														img(src="../img/visu1.jpg")
+														img(src="assets/img/visu1.jpg")
 
 										.item
 											.container-fluid
 												.row-fluid
 													.span12
-														img(src="../img/visu2.jpg")
+														img(src="assets/img/visu2.jpg")
 
 
 
@@ -197,17 +190,17 @@ block case
 											.container-fluid
 												.row-fluid
 													.span12
-														img(src="../img/visu1.jpg")
+														img(src="assets/img/visu1.jpg")
 
 										.item(data-slide="Slide 2")
 											.container-fluid
 												.row-fluid
 													.span12
-														img(src="../img/visu2.jpg")
+														img(src="assets/img/visu2.jpg")
 
 										.item(data-slide="SLide 3")
 											.container-fluid
 												.row-fluid
 													.span12
-														img(src="../img/visu1.jpg")
+														img(src="assets/img/visu1.jpg")
 	
