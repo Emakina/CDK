@@ -17,7 +17,9 @@ module.exports = function(grunt) {
     
     */
 
+
     src = grunt.option('source') || 'src';
+    themePath = grunt.option('themepath');
     cwd = process.cwd();
 
     grunt.initConfig({
@@ -49,9 +51,20 @@ module.exports = function(grunt) {
 
         // Less
         less: {
-            dist: {
+            // Case
+            case: {
                 files: {
                     "dist/assets/css/main.css": "<%= src %>/main.less"
+                },
+            },
+            // Bootstrap
+            bootstrap: {
+                options: {
+                    modifyVars: themePath?{themePath: themePath}:{},
+                },
+                files: {
+                    "lib/css/bootstrap.css": "lib/css/bootstrap.less",
+                    "lib/css/bootstrap-responsive.css": "lib/css/bootstrap-responsive.less", 
                 },
             },
         },
@@ -212,8 +225,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Tasks
+    grunt.registerTask('init', ['less:bootstrap']);
     grunt.registerTask('html', ['jade']);
-    grunt.registerTask('css', ['less']);
+    grunt.registerTask('css', ['less:case']);
     grunt.registerTask('js', ['jshint']);
     grunt.registerTask('img', ['imagemin']);
     grunt.registerTask('compile', ['html','css','js','sync']);

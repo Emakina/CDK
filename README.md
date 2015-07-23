@@ -27,6 +27,11 @@ cd emakina-case builder
 # Install NPM dependencies
 
 npm install
+
+# Initialise the required lib elements
+
+grunt init
+
 ```
 
 Using the builder
