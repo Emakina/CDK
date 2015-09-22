@@ -2,16 +2,17 @@ Emakina Case Development Kit
 ============================
 
 
-This tool is in his alpha phase and not tested yet.
+This tool is still in his beta phase.
+Please use [JIRA](https://bugtracking.emakina.net/browse/EMAWEBSITETREIZE) to report bug, request or new idea.
 
-Please use JIRA 
 
 Prerequisites
 -------------
 
+- [Git](https://git-scm.com/)
 - [Node.js](http://nodejs.org)
 
-Please note that this tool is using GRUNT, LESS and JADES
+Please note that this tool is using GRUNT, LESS and JADE
 
 Getting Started
 ---------------
@@ -22,11 +23,16 @@ The easiest way to get started is to clone the repository:
 # Get the latest snapshot
 
 git clone https://git.emakina.net/scm/eg/cdk.git
-cd emakina-case builder
+cd cdk
 
 # Install NPM dependencies
 
 npm install
+
+# Init required libs
+
+grunt init
+
 ```
 
 Using the builder
@@ -44,7 +50,7 @@ Start local server & watcher
 grunt serve
 ```
 
-Start Ing Demo 
+Start ING Demo 
 
 ```bash
 grunt serve --source=samples/ing
@@ -55,6 +61,15 @@ Export dist in zip file
 ```bash
 grunt export
 ```
+
+Used technology
+-----------------
+
+Html template engine is [Jade](http://jade-lang.com/) because it's easy, powerfull and cool.
+
+Front-end framework and grid is a customized [Boostrap 2.3](http://getbootstrap.com/2.3.2/) (yep old version...)
+
+The parallax scrolling library is [Skrollr](https://github.com/Prinzhorn/skrollr). Please read the doc and print this [PDF](https://raw.github.com/Prinzhorn/skrollr/master/guide/anchor-position-guide.pdf) 
 
 
 Files structure
@@ -88,7 +103,7 @@ Please do not change it.
 
 ###/dist
 
-Final compiled files
+Final compiled files for production
 
 
 ###/samples
@@ -100,5 +115,3 @@ grunt serve --source=samples/template
 grunt serve --source=samples/ing
 
 ```
-
-
