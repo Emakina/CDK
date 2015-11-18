@@ -64,7 +64,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     "lib/css/bootstrap.css": "lib/css/bootstrap.less",
-                    "lib/css/bootstrap-responsive.css": "lib/css/bootstrap-responsive.less", 
+                    "lib/css/bootstrap-responsive.css": "lib/css/bootstrap-responsive.less",
                 },
             },
         },
@@ -108,7 +108,7 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: '<%= src %>/', 
+                    cwd: '<%= src %>/',
                     src: ['assets/img/*.{png,jpg}'],
                     dest: 'dist/',
                 }],
@@ -120,7 +120,7 @@ module.exports = function(grunt) {
         // Watcher
         watch: {
             html: {
-                files: '<%= src %>/*.jade',
+                files: ['<%= src %>/*.jade','lib/templates/*.jade'],
                 tasks: ['jade'],
                 options: {
                     debounceDelay: 250,
@@ -155,9 +155,15 @@ module.exports = function(grunt) {
    
         // Copy
         copy: {
-          lib: {      
+          img: {
+            files: [{expand:true, cwd: '<%= src %>/',src: ['assets/img/**'],dest: 'dist/'}],
+          },
+          js: { 
+            files: [{ cwd: '<%= src %>/', src: ['main.js'],dest: 'dist/assets/js'}],
+          },
+          lib: {   
             expand:true,
-            files: 
+            files:
             [
               // CSS
               {expand: true, cwd:'lib/css', src: ['**'], dest: 'dist/css'},
@@ -193,7 +199,7 @@ module.exports = function(grunt) {
                     base: ['lib','dist'],
                     port: '8888',
                     livereload: true,
-                    open: {
+                    open: {                     
                         target: 'http://localhost:8888/<%= case.name %>.html'
                     },
                 },
@@ -233,6 +239,6 @@ module.exports = function(grunt) {
     grunt.registerTask('compile', ['html','css','js','sync']);
     grunt.registerTask('export', ['clean','copy:lib','compile','img','compress']);
     
-    grunt.registerTask('serve', ['connect','clean','compile','img','watch']);
-    grunt.registerTask('default', ['compile']);   
+    grunt.registerTask('serve', ['clean','compile','connect','watch']);
+    grunt.registerTask('default', ['compile']);
 };
