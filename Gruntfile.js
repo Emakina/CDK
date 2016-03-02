@@ -28,7 +28,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         // Case
-        case: grunt.file.readJSON(src + '/case.json'),
+        case: grunt.file.readJSON(src + '/settings.json'),
 
         // Jade 
         jade: {
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
                     pretty: true,
                     basedir: cwd,
                     data: function() {
-                        return grunt.file.readJSON(src + '/case.json');
+                        return grunt.file.readJSON(src + '/settings.json');
                     }
                 },
                 files: {
