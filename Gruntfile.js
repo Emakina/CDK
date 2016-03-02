@@ -21,6 +21,7 @@ module.exports = function(grunt) {
     src = grunt.option('source') || 'src';
     themePath = grunt.option('themepath');
     cwd = process.cwd();
+    settings = grunt.file.readJSON(src + '/settings.json');
 
     grunt.initConfig({
 
@@ -28,20 +29,18 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         // Case
-        case: grunt.file.readJSON(src + '/settings.json'),
-
+        settings: settings,
         // Jade 
         jade: {
             compile: {
                 options: {
+                    debug:false,
                     pretty: true,
                     basedir: cwd,
-                    data: function() {
-                        return grunt.file.readJSON(src + '/settings.json');
-                    }
+                    data: settings
                 },
                 files: {
-                    'dist/<%= case.name %>.html': '<%= src %>/main.jade',
+                    'dist/<%= settings.name %>.html': '<%= src %>/main.jade',
                 },
             },
         },
@@ -175,7 +174,10 @@ module.exports = function(grunt) {
 
         // Clean
         clean: {
-            dest: ["dist"]
+            options: {
+                 'force': true
+            },
+            folder: ["dist/"],
         },
 
         // Compress
@@ -198,7 +200,7 @@ module.exports = function(grunt) {
                     port: '8888',
                     livereload: true,
                     open: {                     
-                        target: 'http://localhost:8888/<%= case.name %>.html'
+                        target: 'http://localhost:8888/<%= settings.name %>.html'
                     },
                 },
             },
@@ -214,7 +216,7 @@ module.exports = function(grunt) {
     grunt.config.set('cwd', cwd);
 
     grunt.log.writeln('Working directory is ./' + src);
-    grunt.log.writeln('Project name is ' +   grunt.config.get("case.name"));
+    grunt.log.writeln('Project name is ' +   grunt.config.get("settings.name"));
 
     // Load Npm Tasks 
     grunt.loadNpmTasks('grunt-sync');
