@@ -36,8 +36,8 @@ module.exports = function(grunt) {
                 options: {
                     pretty: true,
                     basedir: cwd,
-                    data: function(dest, src) {
-                        return grunt.file.readJSON('src/case.json');
+                    data: function() {
+                        return grunt.file.readJSON(src + '/case.json');
                     }
                 },
                 files: {
