@@ -35,12 +35,10 @@ module.exports = function(grunt) {
             compile: {
                 options: {
                     pretty: true,
-                    basedir: cwd
-                },
-                data: {
-                    debug: true,
-                    timestamp: "<%= new Date().getTime() %>",
-                    title : "<%= case.name %>"
+                    basedir: cwd,
+                    data: function(dest, src) {
+                        return grunt.file.readJSON('src/case.json');
+                    }
                 },
                 files: {
                     'dist/<%= case.name %>.html': '<%= src %>/main.jade',
