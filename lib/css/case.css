@@ -1,344 +1,512 @@
-.case .box-info {
-    height: 765px;
-    max-height: 765px;
-    min-height: 765px;
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+/* Variables */
+/* Imports */
+.case {
+  z-index: 5;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 150px;
 }
-.case .box-info .visu-info {
-    height: 100%;
-    padding: 0;
-    position: relative;
-}
-.case .box-info .visu-info .container-fluid {
-    height: 100%;
-}
-.case .box-info .visu-info .container-fluid .description {
-    height: 100%;
-}
-.case .box-info .visu-info .container-fluid .description .info {
-    background: transparent url(../img/info_bg.png) repeat scroll 0 0;
-    color: #1f1f1f;
-    padding: 30px;
-    position: relative;
-    z-index: 20;
-}
-.case .box-info .visu-info .container-fluid .description .info hr {
-    background-color: #adafae;
-    border: 0 none;
-    height: 1px;
-    margin: 10px 0 15px;
-}
-.case .box-info .visu-info .container-fluid .description .info .sub3 {
-    display: none;
-}
-.case .box-info .visu-info .container-fluid .description .info .sub2 span {
-    font-size: 14px;
-}
-.case .box-info .visu-info .container-fluid .description .info span {
-    display: block;
-}
-.case .box-info .visu-info .banner-video {
-    height: 100%;
-    position: absolute;
-    width: 100%;
-}
-.case .box-info .visu-info .banner-video .video {
-    margin-top: 0;
-    position: relative;
-}
-.case .box-info .visu-info .banner-video .ratio-video {
-    height: auto;
-    position: relative;
-    width: 100%;
-}
-.case .box-info .visu-info .banner-video video {
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-}
-.case .quote {
-    background-color: transparent;
-    padding: 20px 30px;
-}
-.case .quote .quote_begin {
-    background: transparent url(../img/quote.png) no-repeat scroll 0 0;
-    display: inline-block;
-    height: 17px;
-    margin-left: -30px;
-    margin-right: 6px;
-    vertical-align: top;
-    width: 22px;
-}
-.case .quote .quote_end {
-    background: transparent url(../img//quote.png) no-repeat scroll 0 0;
-    display: inline-block;
-    height: 17px;
-    margin-left: 6px;
-    margin-right: -30px;
-    vertical-align: bottom;
-    width: 22px;
-}
-.case .quote p {
-    display: inline;
-    font-size: 20px;
-    font-style: italic;
-    line-height: 1.2em;
-    padding-bottom: 20px;
-}
-.case .quote .author p {
-    display: block;
-    font-size: 18px;
-    font-style: normal;
-    line-height: 24px;
-    padding: 30px 50px 0 0;
-    text-align: left;
-}
-.case .video {
-    margin-top: 30px;
-    position: relative;
-}
-.case .video .ratio {
-    height: auto;
-    width: 100%;
-}
-.case .video iframe {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-.case .carousel {
-    padding-bottom: 30px;
-}
-.case .carousel img {
-    margin: 0 auto;
-    max-width: 100%;
-}
-.case .carousel .item {
-    height: 100%;
-}
-.case .carousel .carousel-control {
-    border: 0 none;
-}
-.case .carousel .carousel-indicators {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    top: auto;
-}
-.case .carousel .carousel-indicators li {
-    background-color: transparent;
-    border: 1px solid #fb761c;
-    cursor: pointer;
-    display: inline-block;
-    float: none;
-    height: 9px;
-    margin: 0 5px;
-    position: relative;
-    width: 9px;
-    z-index: 50;
-}
-.case .carousel .carousel-indicators li.active {
-    background-color: #fb761c;
-}
-.case .carousel.carousel-menu {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    text-align: center;
-}
-.case .carousel.carousel-menu .carousel-inner {
-    margin-top: -45px;
-    text-align: left;
-}
-.case .carousel.carousel-menu .carousel-inner .container-fluid {
-    padding: 145px 0 60px;
-}
-.case .carousel.carousel-menu .carousel-indicators {
-    border: 1px solid #fff;
-    border-radius: 4px;
-    bottom: auto;
-    display: inline-block;
-    left: auto;
-    margin-bottom: 0;
-    overflow: hidden;
-    position: relative;
-    right: auto;
-    text-align: center;
-    top: 60px;
-}
-.case .carousel.carousel-menu .carousel-indicators li {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border-color: #fff;
-    border-image: none;
-    border-radius: 0;
-    border-style: none solid;
-    border-width: 0 1px;
-    color: white;
-    height: auto;
-    margin: 0;
-    padding: 10px 30px;
-    text-indent: 0;
-    width: auto;
-}
-.case .carousel.carousel-menu .carousel-indicators li.active {
-    background-color: white;
-    color: black;
-}
-@media (max-width: 1360px) {
-.case .box-info .visu-info {
-    position: relative;
-}
-.case .box-info .visu-info .banner-video {
-    height: 100%;
-    position: absolute;
-    width: 100%;
-}
-.case .box-info .visu-info .banner-video .video {
-    height: 100%;
-}
-.case .box-info .visu-info .banner-video .ratio-video {
-    height: 100%;
-    position: relative;
-    width: auto;
-}
-.case .box-info .visu-info .banner-video video {
-    bottom: 0;
-    height: 765px;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 1360px;
-}
-}
-@media (max-width: 1200px) {
-.case .carousel .carousel-control.left {
-    display: none;
-}
-.case .carousel .carousel-control.right {
-    display: none;
-}
-}
-@media (max-width: 1024px) {
 .case h1 {
-    font-size: 70px;
-}
-.case h2 {
-    padding-bottom: 20px;
-}
-.case .quote p {
-    font-size: 18px;
-}
-.case .quote .author p {
-    font-size: 16px;
-}
-}
-@media (max-width: 767px) {
-.case h1 {
-    font-size: 65px;
+  font-size: 85px;
+  line-height: 1em;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 .case h1 span {
-    line-height: 50px;
-}
-.case .box-info {
-    height: 745px;
-    max-height: 745px;
-    min-height: 745px;
-}
-}
-@media (max-width: 767px) {
-.case h1 {
-    font-size: 65px;
+  display: block;
+  font-size: 25px;
+  padding-left: 5px;
 }
 .case h2 {
-    padding-bottom: 20px;
+  color: white;
+  margin-top: 0px;
+  font-size: 45px;
+  font-weight: 100;
+  margin-bottom: 0px;
+  padding-bottom: 30px;
+}
+.case h2 p {
+  color: white;
+}
+.case h3 {
+  font-size: 35px;
+}
+.case h4 {
+  font-size: 30px;
+}
+.case a {
+  outline: none;
+}
+.case p,
+.case ul {
+  color: #848484;
+}
+.case p b,
+.case ul b,
+.case p strong,
+.case ul strong {
+  color: #fff;
+  font-weight: 700;
+}
+.case ul li {
+  line-height: 1.4em;
+  margin-bottom: 15px;
+}
+.case section {
+  position: static;
 }
 .case .visu {
-    padding-bottom: 40px;
-    padding-top: 50px;
+  overflow: hidden;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+.case .visu-light-bg {
+  background-color: white;
+}
+.case .visu-light-bg h2,
+.case .visu-light-bg h3,
+.case .visu-light-bg h4,
+.case .visu-light-bg h5,
+.case .visu-light-bg h6 {
+  color: black;
+}
+.case .visu-light-bg h2 p,
+.case .visu-light-bg h3 p,
+.case .visu-light-bg h4 p,
+.case .visu-light-bg h5 p,
+.case .visu-light-bg h6 p {
+  color: black;
+}
+.case .visu-light-bg p b,
+.case .visu-light-bg ul b,
+.case .visu-light-bg p strong,
+.case .visu-light-bg ul strong {
+  color: black;
 }
 .case .box-info {
-    height: 725px;
-    max-height: 725px;
-    min-height: 725px;
+  height: 765px;
+  min-height: 765px;
+  max-height: 765px;
+}
+.case .box-info .visu-info {
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+.case .box-info .visu-info .container-fluid {
+  height: 100%;
+}
+.case .box-info .visu-info .container-fluid h2 {
+  font-size: 35px;
+}
+.case .box-info .visu-info .container-fluid .description {
+  height: 100%;
 }
 .case .box-info .visu-info .container-fluid .description .info {
-    padding-bottom: 10px;
-    padding-top: 15px;
+  z-index: 20;
+  color: #1f1f1f;
+  font-size: 15px;
+  padding: 20px 30px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
 }
-.case .box-info .visu-info .container-fluid .description .sub1 div {
-    float: left;
+.case .box-info .visu-info .container-fluid .description .info .row-fluid {
+  overflow: hidden;
 }
-.case .box-info .visu-info .container-fluid .description .sub1 div.span5 {
-    width: 100px;
+.case .box-info .visu-info .container-fluid .description .info .row-fluid:after {
+  content: '';
+  width: 100%;
+  padding-top: 15px;
+  border-bottom: 1px solid #999999;
 }
-.case .box-info .visu-info .container-fluid .description .sub1 div.span7 {
-    width: auto;
+.case .box-info .visu-info .container-fluid .description .info .row-fluid + .row-fluid {
+  margin-top: 15px;
 }
-.case .box-info .visu-info .container-fluid .description .sub2, .case .box-info .visu-info .container-fluid .description hr {
-    display: none !important;
+.case .box-info .visu-info .container-fluid .description .info .row-fluid:last-child:after {
+  content: none;
+}
+.case .box-info .visu-info .container-fluid .description .info span {
+  display: block;
+}
+.case .box-info .visu-info .banner-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.case .box-info .visu-info .banner-video .video {
+  margin-top: 0;
+  position: relative;
+}
+.case .box-info .visu-info .banner-video .ratio-video {
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+.case .box-info .visu-info .banner-video video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.case .quote {
+  padding: 20px 30px;
+  background-color: transparent;
+}
+.case .quote .quote_begin {
+  background: transparent url(../img/quote.png) no-repeat;
+  width: 22px;
+  height: 17px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 6px;
+  margin-left: -30px;
+}
+.case .quote .quote_end {
+  background: transparent url(../img/quote.png) no-repeat;
+  width: 22px;
+  height: 17px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: -30px;
+  margin-left: 6px;
 }
 .case .quote p {
-    font-size: 16px;
+  font-size: 20px;
+  line-height: 1.2em;
+  font-style: italic;
+  display: inline;
+  padding-bottom: 20px;
 }
 .case .quote .author p {
-    font-size: 14px;
+  display: block;
+  font-size: 18px;
+  padding: 30px 50px 0 0;
+  text-align: left;
+  line-height: 24px;
+  font-style: normal;
+}
+.case .video {
+  margin-top: 30px;
+  position: relative;
+}
+.case .video .ratio {
+  height: auto;
+  width: 100%;
+}
+.case .video iframe {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.case .carousel {
+  padding-bottom: 30px;
+}
+.case .carousel img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+.case .carousel .item {
+  height: 100%;
+  transition-property: opacity;
+}
+.case .carousel .item,
+.case .carousel .active.left,
+.case .carousel .active.right {
+  opacity: 0;
+}
+.case .carousel .active,
+.case .carousel .next.left,
+.case .carousel .prev.right {
+  opacity: 1;
+}
+.case .carousel .next,
+.case .carousel .prev,
+.case .carousel .active.left,
+.case .carousel .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+.case .carousel .carousel-control {
+  border: 0;
+}
+.case .carousel .carousel-indicators {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.case .carousel .carousel-indicators li {
+  float: none;
+  height: 9px;
+  width: 9px;
+  z-index: 50;
+  margin: 0 5px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid #fb761c;
+}
+.case .carousel .carousel-indicators li.active {
+  background-color: #fb761c;
 }
 .case .carousel.carousel-menu {
-    text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  text-align: center;
 }
-.case .carousel.carousel-menu .indicators2 + .carousel-inner {
-    margin-top: -90px;
+.case .carousel.carousel-menu .carousel-inner {
+  text-align: left;
+  margin-top: -45px;
 }
-.case .carousel.carousel-menu .indicators2 + .carousel-inner .container-fluid {
-    padding: 140px 0 40px;
-}
-.case .carousel.carousel-menu .indicators3 + .carousel-inner {
-    margin-top: -135px;
-}
-.case .carousel.carousel-menu .indicators3 + .carousel-inner .container-fluid {
-    padding: 185px 0 40px;
+.case .carousel.carousel-menu .carousel-inner .container-fluid {
+  padding: 145px 0 60px;
 }
 .case .carousel.carousel-menu .carousel-indicators {
-    margin: 0 15px;
-    top: 40px;
+  top: 60px;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 0px;
+  border: 1px solid #fff;
 }
 .case .carousel.carousel-menu .carousel-indicators li {
-    display: block;
+  height: auto;
+  text-indent: 0 ;
+  width: auto;
+  border-radius: 0px;
+  border: 0;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  color: white;
+  padding: 10px 30px;
+  background: none;
+  margin: 0;
 }
+.case .carousel.carousel-menu .carousel-indicators li.active {
+  color: black;
+  background-color: white;
 }
-@media (max-width: 480px) {
-.case .visu {
+/*#################################################################################
+====================================   MIN 1360px   ===============================
+====================================LARGE DESKTOP =================================
+#################################################################################*/
+@media (max-width: 1360px) {
+  .case .box-info .visu-info {
+    position: relative;
+  }
+  .case .box-info .visu-info .banner-video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .case .box-info .visu-info .banner-video .video {
+    height: 100%;
+  }
+  .case .box-info .visu-info .banner-video .ratio-video {
+    height: 100%;
+    position: relative;
+    width: auto;
+  }
+  .case .box-info .visu-info .banner-video video {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 1360px;
+    height: 765px;
+    position: absolute;
+  }
+}
+/*#################################################################################
+====================================   Max 1200px   ===============================
+#################################################################################*/
+@media (max-width: 1200px) {
+  .case h1 {
+    font-size: 70px;
+  }
+  .case h2 {
+    font-size: 40px;
     padding-bottom: 20px;
+  }
+  .case h3 {
+    font-size: 30px;
+  }
+  .case h4 {
+    font-size: 25px;
+  }
+  .case .visu {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+  .case .box-info {
+    height: 745px;
+    min-height: 745px;
+    max-height: 745px;
+  }
+  .case .box-info .visu-info .container-fluid .description .info {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+  .case .box-info .visu-info .container-fluid .description .info .row-fluid div {
+    float: left;
+  }
+  .case .box-info .visu-info .container-fluid .description .info .row-fluid div.span5 {
+    width: 100px;
+  }
+  .case .box-info .visu-info .container-fluid .description .info .row-fluid div.span7 {
+    width: auto;
+  }
+  .case .box-info .visu-info .container-fluid .description .info .row-fluid:nth-child(2) {
+    display: none !important;
+  }
+  .case .carousel .carousel-control.left {
+    display: none;
+  }
+  .case .carousel .carousel-control.right {
+    display: none;
+  }
+}
+/*#############################################################################
+================================== MAX 1024px =================================
+###############################################################################*/
+@media (max-width: 1024px) {
+  .case h1 {
+    font-size: 60px;
+  }
+  .case h2 {
+    font-size: 35px;
+    padding-bottom: 20px;
+  }
+  .case h3 {
+    font-size: 25px;
+  }
+  .case h4 {
+    font-size: 20px;
+  }
+  .case .visu {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  .case .box-info {
+    height: 725px;
+    min-height: 725px;
+    max-height: 725px;
+  }
+  .case .box-info .visu-info .container-fluid h2 {
+    font-size: 30px;
+  }
+  .case .quote p {
+    font-size: 18px;
+  }
+  .case .quote .author p {
+    font-size: 16px;
+  }
+}
+/*##################################################################################
+================================== MIN 768px & MAX 979px =================================
+========================= LANDSCAPE PHONE  TO PORTRAIT TABLET =====================
+###################3#############################################################*/
+@media (max-width: 767px) {
+  
+}
+/*#################################################################################
+======================================= MAX 767px =================================
+========================= LANDSCAPE PHONE  TO PORTRAIT TABLET =====================
+#################################################################################*/
+@media (max-width: 767px) {
+  .case h1 {
+    font-size: 50px;
+  }
+  .case h2 {
+    font-size: 30px;
+  }
+  .case h3 {
+    font-size: 20px;
+  }
+  .case h4 {
+    font-size: 18px;
+  }
+  .case .visu {
+    padding-bottom: 30px;
     padding-top: 30px;
-}
-.case .box-info {
+  }
+  .case .box-info {
     height: 665px;
-    max-height: 665px;
     min-height: 665px;
-}
-.case .carousel.carousel-menu .indicators2 + .carousel-inner {
+    max-height: 665px;
+  }
+  .case .box-info .visu-info .container-fluid h2 {
+    font-size: 25px !important;
+  }
+  .case .box-info .visu-info .container-fluid .description .info {
+    font-size: 14px;
+  }
+  .case .box-info .visu-info .container-fluid .description .info .row-fluid:after {
+    padding-top: 10px;
+  }
+  .case .box-info .visu-info .container-fluid .description .info .row-fluid + .row-fluid {
+    margin-top: 10px;
+  }
+  .case .quote p {
+    font-size: 16px;
+  }
+  .case .quote .author p {
+    font-size: 14px;
+  }
+  .case .carousel.carousel-menu {
+    text-align: center;
+  }
+  .case .carousel.carousel-menu .indicators2 + .carousel-inner {
     margin-top: -90px;
-}
-.case .carousel.carousel-menu .indicators2 + .carousel-inner .container-fluid {
-    padding: 120px 0 20px;
-}
-.case .carousel.carousel-menu .indicators3 + .carousel-inner {
+  }
+  .case .carousel.carousel-menu .indicators2 + .carousel-inner .container-fluid {
+    padding: 140px 0 40px;
+  }
+  .case .carousel.carousel-menu .indicators3 + .carousel-inner {
     margin-top: -135px;
+  }
+  .case .carousel.carousel-menu .indicators3 + .carousel-inner .container-fluid {
+    padding: 185px 0 40px;
+  }
+  .case .carousel.carousel-menu .carousel-indicators {
+    top: 40px;
+    margin: 0 15px;
+  }
+  .case .carousel.carousel-menu .carousel-indicators li {
+    display: block;
+  }
 }
-.case .carousel.carousel-menu .indicators3 + .carousel-inner .container-fluid {
+/*##################################################################################
+======================================= MAX 480px ==================================
+============================== FITTEST TO LANDSCAPE PHONE ==========================
+##################################################################################*/
+@media (max-width: 480px) {
+  .case .carousel.carousel-menu .indicators2 + .carousel-inner {
+    margin-top: -90px;
+  }
+  .case .carousel.carousel-menu .indicators2 + .carousel-inner .container-fluid {
+    padding: 120px 0 20px;
+  }
+  .case .carousel.carousel-menu .indicators3 + .carousel-inner {
+    margin-top: -135px;
+  }
+  .case .carousel.carousel-menu .indicators3 + .carousel-inner .container-fluid {
     padding: 165px 0 20px;
-}
-.case .carousel.carousel-menu .carousel-indicators {
+  }
+  .case .carousel.carousel-menu .carousel-indicators {
     top: 20px;
-}
+  }
 }
