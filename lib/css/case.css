@@ -205,7 +205,8 @@
   position: absolute;
 }
 .case .carousel {
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
 .case .carousel img {
   margin: 0 auto;
@@ -240,6 +241,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  margin: 0 auto;
   text-align: center;
 }
 .case .carousel .carousel-indicators li {
@@ -262,15 +264,24 @@
   margin-bottom: 0;
   text-align: center;
 }
+.case .carousel.carousel-menu.slide-background {
+  padding: 0;
+}
+.case .carousel.carousel-menu.slide-background .carousel-inner {
+  margin-top: -60px;
+}
+.case .carousel.carousel-menu.slide-background .carousel-indicators {
+  top: 60px;
+}
+.case .carousel.carousel-menu.slide-background .container-fluid {
+  padding: 160px 0 100px;
+}
 .case .carousel.carousel-menu .carousel-inner {
   text-align: left;
-  margin-top: -45px;
-}
-.case .carousel.carousel-menu .carousel-inner .container-fluid {
-  padding: 145px 0 60px;
+  margin-top: 20px;
 }
 .case .carousel.carousel-menu .carousel-indicators {
-  top: 60px;
+  top: 0px;
   left: auto;
   right: auto;
   bottom: auto;
@@ -414,6 +425,31 @@
   .case .quote .author p {
     font-size: 16px;
   }
+  .case .carousel {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .case .carousel.carousel-menu {
+    text-align: center;
+  }
+  .case .carousel.carousel-menu.slide-background {
+    padding: 0;
+  }
+  .case .carousel.carousel-menu.slide-background .carousel-inner {
+    margin-top: -125px;
+  }
+  .case .carousel.carousel-menu.slide-background .carousel-indicators {
+    top: 50px;
+  }
+  .case .carousel.carousel-menu.slide-background .container-fluid {
+    padding: 180px 0 50px;
+  }
+  .case .carousel.carousel-menu .carousel-indicators {
+    margin: 0 15px;
+  }
+  .case .carousel.carousel-menu .carousel-indicators li {
+    display: block;
+  }
 }
 /*##################################################################################
 ================================== MIN 768px & MAX 979px =================================
@@ -466,27 +502,18 @@
   .case .quote .author p {
     font-size: 14px;
   }
-  .case .carousel.carousel-menu {
-    text-align: center;
+  .case .carousel {
+    padding-top: 20px;
+    padding-bottom: 30px;
   }
-  .case .carousel.carousel-menu .indicators2 + .carousel-inner {
-    margin-top: -90px;
+  .case .carousel.carousel-menu.slide-background {
+    padding: 0;
   }
-  .case .carousel.carousel-menu .indicators2 + .carousel-inner .container-fluid {
-    padding: 140px 0 40px;
+  .case .carousel.carousel-menu.slide-background .carousel-indicators {
+    top: 30px;
   }
-  .case .carousel.carousel-menu .indicators3 + .carousel-inner {
-    margin-top: -135px;
-  }
-  .case .carousel.carousel-menu .indicators3 + .carousel-inner .container-fluid {
-    padding: 185px 0 40px;
-  }
-  .case .carousel.carousel-menu .carousel-indicators {
-    top: 40px;
-    margin: 0 15px;
-  }
-  .case .carousel.carousel-menu .carousel-indicators li {
-    display: block;
+  .case .carousel.carousel-menu.slide-background .container-fluid {
+    padding-bottom: 30px;
   }
 }
 /*##################################################################################
@@ -494,19 +521,5 @@
 ============================== FITTEST TO LANDSCAPE PHONE ==========================
 ##################################################################################*/
 @media (max-width: 480px) {
-  .case .carousel.carousel-menu .indicators2 + .carousel-inner {
-    margin-top: -90px;
-  }
-  .case .carousel.carousel-menu .indicators2 + .carousel-inner .container-fluid {
-    padding: 120px 0 20px;
-  }
-  .case .carousel.carousel-menu .indicators3 + .carousel-inner {
-    margin-top: -135px;
-  }
-  .case .carousel.carousel-menu .indicators3 + .carousel-inner .container-fluid {
-    padding: 165px 0 20px;
-  }
-  .case .carousel.carousel-menu .carousel-indicators {
-    top: 20px;
-  }
+  
 }
