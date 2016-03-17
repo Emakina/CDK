@@ -189,6 +189,11 @@
   line-height: 24px;
   font-style: normal;
 }
+.case .quote .author p span{
+  display: block;
+  color:#848484;
+  font-size: 16px;
+}
 .case .video {
   margin-top: 30px;
   position: relative;
@@ -425,6 +430,9 @@
   .case .quote .author p {
     font-size: 16px;
   }
+  .case .quote .author p span{
+    font-size: 14px;
+  }
   .case .carousel {
     padding-top: 40px;
     padding-bottom: 30px;
@@ -501,6 +509,9 @@
   }
   .case .quote .author p {
     font-size: 14px;
+  }
+  .case .quote .author p span{
+    font-size: 12px;
   }
   .case .carousel {
     padding-top: 20px;
