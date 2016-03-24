@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     cwd = process.cwd();
     
     settings = grunt.file.readJSON(src + '/settings.json');
-    settings.imgPath = "/asset/img";
+    settings.imgPath = "/assets/img";
     
     var prod_settings= JSON.parse(JSON.stringify(settings));
     prod_settings.imgPath="%%imgPath%%";
