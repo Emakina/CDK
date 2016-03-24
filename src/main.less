@@ -5,63 +5,24 @@
 
 // Parameters and default values
 
-@imgPath="/assets/img"
+//@imgPath="/assets/img";
 
 // *********************************************************************
 
 
 .case-name {
-
-    background-color: black;
-
-    .box-info 
-    {
-        .visu-info
-        {
+    .box-info {
+        .visu-info {
             background: transparent url("@{imgPath}/box-info_bg.jpg") center top no-repeat;
-            .container-fluid
-            {
-                h1,h2 
-                {
-                    color:#ffffff;
-                    p 
-                    {
-                        color:#000000;
-                    }
-                }
-                p
-                {
-                    color:#383838
-                }
-                .description
-                {
-                    .screen {
-                        height:72%;
-                        position:relative;
-                        img
-                        {
-                            position: absolute;
-                            right:-200px;
-                            bottom:-12px;
-                            max-width: 830px;
-                        }
-                    }
-                }
+            .container-fluid {
+
             }
         }
     }
-
 }
 
+@media (max-width: 1200px) {}    
 
-@media (min-width: 1200px) {}
+@media (max-width: 992px) {}
 
-@media (min-width: 980px) and (max-width: 1199px) {}
-
-@media (max-width: 1023px) {}    
-
-@media (min-width: 768px) and (max-width: 979px) {}
-
-@media (max-width: 767px) {}
-
-@media (max-width: 480px) {}
+@media (max-width: 768px) {}
