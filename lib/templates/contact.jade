@@ -1,0 +1,31 @@
+section#contact.slide
+	.box.box-contact.case-box-contact
+		.visuneck.visuneck-form
+
+		.visu-contact.bg-style.bg-form
+			.container-fluid
+				.row-fluid
+					.span12
+						h1 Summary
+				.row-fluid
+					.span4.summary.bg-style.bg-jeans
+						.info
+							span Case name
+						.detail
+						.services
+							h4 Activities
+							h4 Services
+					.span8.form
+						form.form.form-horizontal(action='/contact/post', method='post', accept-charset='utf-8')
+							input(type='hidden', name='subject', value='Interested contact from Case name')
+							input(type='hidden', name='messageboxuuid', value='0EAE0B5E-5056-A048-18263F0942466D21')
+							h2.green Interested ?
+							fieldset
+								.row-fluid
+									.span12
+										label(for='message') Message
+										textarea#message(name='message', rows='8')
+								.row-fluid
+									.span12
+										.form-actions
+											button.btn.green.btn-large(type='submit') Contact me

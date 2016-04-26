@@ -11,10 +11,11 @@ mixin vimeo(id)
 //- Generate html for a quote
 //- Params : Quote + Author
 
-mixin quote(quote, author)
+mixin quote(quote, author, office)
 	.quote
 		span.quote_begin
 		p #{quote}
 		span.quote_end
 		div.author
 			p #{author}
+				span #{office}

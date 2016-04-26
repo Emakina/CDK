@@ -1,0 +1,137 @@
+.box-contact {
+  margin-top: -88px;
+  z-index: 999;
+  position: relative;
+  border-bottom: 5px solid #ffffff;
+}
+.box-contact .visuneck-form {
+  background-image: url(/img/head-form.png);
+}
+.box-contact .visu-contact {
+  position: relative;
+  z-index: 4;
+}
+.box-contact .form-horizontal {
+  padding: 0;
+}
+.box-contact form.form .error {
+  color: #990000;
+  line-height: 20px;
+  height: 20px;
+  margin-bottom: -20px;
+}
+@media (max-width: 768px) {
+  .slide#contact {
+    overflow-x: visible;
+  }
+}
+@media (max-width: 480px) {
+  .box-contact h1 {
+    font-size: 45px !important;
+    line-height: 45px;
+  }
+}
+.case-box-contact h1,
+.case-box-contact p {
+  color: #383838;
+}
+.case-box-contact .summary {
+  margin-top: 10px;
+  padding: 30px;
+}
+.case-box-contact .summary .info {
+  font-size: 22px;
+  border-bottom: 4px solid #4b4a4a;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.case-box-contact .summary .info span {
+  display: block;
+  line-height: 1.4em;
+  font-weight: 300;
+}
+.case-box-contact .summary .detail p {
+  color: #aaa7a7;
+}
+.case-box-contact .summary .services ul {
+  margin-left: 0;
+}
+.case-box-contact .summary .services ul li {
+  margin-bottom: 5px;
+  list-style: none;
+  padding-left: 0;
+  line-height: 55px;
+}
+.case-box-contact .summary .services ul li a:before {
+  background: transparent url(/files/snippets/39D35AD8-A584-3363-4D1C199D0FDD6B5A/icon-expertises.png) 0 0 no-repeat;
+  margin: 0 5px 0 0;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 55px;
+  height: 55px;
+  background-color: #00a6e0;
+}
+.case-box-contact .summary .services ul li a.ca-COMMUNICATION:before {
+  background-position: 0 -495px;
+}
+.case-box-contact .summary .services ul li a.ca-DEV:before {
+  background-position: 0 -550px;
+}
+.case-box-contact .summary .services ul li a.ca-WEBBUILDING:before {
+  background-position: 0 -605px;
+}
+.case-box-contact .summary .services ul li a.ca-APPLICATIONS:before {
+  background-position: 0 -660px;
+}
+.case-box-contact .summary .services ul li a.ca-COMMERCE:before {
+  background-position: 0 -715px;
+}
+.case-box-contact .summary .services ul li a[class*=cc-]:before {
+  border-radius: 50%;
+}
+.case-box-contact .summary .services ul li a.cc-STRAT:before {
+  background-position: 0 0;
+}
+.case-box-contact .summary .services ul li a.cc-INSIGHT:before {
+  background-position: 0 -55px;
+}
+.case-box-contact .summary .services ul li a.cc-SOCIAL:before {
+  background-position: 0 -110px;
+}
+.case-box-contact .summary .services ul li a.cc-MEDIA:before {
+  background-position: 0 -165px;
+}
+.case-box-contact .summary .services ul li a.cc-MOTION:before {
+  background-position: 0 -220px;
+}
+.case-box-contact .summary .services ul li a.cc-DIRECT:before {
+  background-position: 0 -275px;
+}
+.case-box-contact .summary .services ul li a.cc-ARCH:before {
+  background-position: 0 -330px;
+}
+.case-box-contact .summary .services ul li a.cc-PERF:before {
+  background-position: 0 -385px;
+}
+.case-box-contact .summary .services ul li a.cc-OPE:before {
+  background-position: 0 -440px;
+}
+.case-box-contact.box-contact .form fieldset label span {
+  color: #b3b3b3;
+  font-size: 19px;
+}
+.case-box-contact form.form .innerSelectWrap {
+  background: none;
+  width: 105%;
+}
+.case-box-contact form.form .selectWrap {
+  display: block;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  text-indent: 3px;
+  background: #ffffff url(/files/snippets/BCD7212A-5056-A048-180F683D10C569F9/dropdown-arrow.png) right 50% no-repeat;
+  height: 40px;
+}

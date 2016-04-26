@@ -19,10 +19,9 @@ block case
 							.span5
 								h2.orange Here comes a large image of the case (2560x765), Full HD 1080p
 								.info
-									.row-fluid.sub1
+									.row-fluid
 										.span5 Client:
-									hr
-									.row-fluid.sub2
+									.row-fluid
 										.span5 Services:
 
 
@@ -60,28 +59,14 @@ block case
 						.row-fluid
 							h2.orange Typography
 						.row-fluid
-							.span4
-								h2 H2 Title
+							.span8
+								h1 H1 Title
+								h2.orange H2 Title
 								h3 H3 Subtitle
 								h4 H4 Subtitle
 								h5 H5 Subtitle
-							.span8
 								h2 Example body text
-								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-		//- Slide DARK BACKGROUND
-		section.slide
-			.box.box-dark_background
-				.visu.visu-dark_background.bg-style.bg-jeans
-					.container-fluid
-						.row-fluid
-							.span12
-								h2.orange Slide with a dark background (Jeans pattern)
-						.row-fluid
-							.span8
-								h4 You have to put .bg-style .bg-jeans, .bg-style .bg-jeans_dark, .bg-style .bg-jeans_light on .visu
-								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								p <strong>Example body text</strong> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 		//- Slide WHITE BACKGROUND
@@ -168,16 +153,14 @@ block case
 								.carousel.slide#carousel
 									.carousel-inner
 										.item.active
-											.container-fluid
-												.row-fluid
-													.span12
-														img(src="assets/img/visu1.jpg")
+											.row-fluid
+												.span12
+													img(src="#{imgPath}/visu1.jpg")
 
 										.item
-											.container-fluid
-												.row-fluid
-													.span12
-														img(src="assets/img/visu2.jpg")
+											.row-fluid
+												.span12
+													img(src="#{imgPath}/visu2.jpg")
 
 
 
@@ -187,20 +170,17 @@ block case
 								.carousel.carousel-menu.slide#carousel-menu
 									.carousel-inner
 										.item.active(data-slide="Slide 1")
-											.container-fluid
-												.row-fluid
-													.span12
-														img(src="assets/img/visu1.jpg")
+											.row-fluid
+												.span12
+													img(src="#{imgPath}/visu1.jpg")
 
 										.item(data-slide="Slide 2")
-											.container-fluid
-												.row-fluid
-													.span12
-														img(src="assets/img/visu2.jpg")
+											.row-fluid
+												.span12
+													img(src="#{imgPath}/visu2.jpg")
 
 										.item(data-slide="SLide 3")
-											.container-fluid
-												.row-fluid
-													.span12
-														img(src="assets/img/visu1.jpg")
+											.row-fluid
+												.span12
+													img(src="#{imgPath}/visu1.jpg")
 	
