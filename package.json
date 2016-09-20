@@ -4,14 +4,13 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": ">= 0.10.0"
+    "node": "4.4.7"
   },
   "scripts": {
     "postinstall": "grunt init",
     "build": "grunt",
     "start": "grunt serve",
     "export": "grunt export",
-    "demo:ing": "grunt serve --source=samples/ing"
   },
   "repository": {
     "type": "git",
