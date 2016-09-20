@@ -10,9 +10,11 @@ Prerequisites
 -------------
 
 - [Git](https://git-scm.com/)
-- [Node.js](http://nodejs.org)
+- [Node.js](http://nodejs.org) 4.4.7
 
-Please note that this tool is using GRUNT, LESS and JADE
+We deeply recommand to use [nvm](https://github.com/creationix/nvm) for Node Version Manager
+
+Please note that this tool is using GRUNT, LESS and JADE locally
 
 Getting Started
 ---------------
@@ -28,11 +30,6 @@ cd cdk
 # Install NPM dependencies
 
 npm install
-
-# Init required libs
-
-grunt init
-
 ```
 
 Using the builder
@@ -41,25 +38,25 @@ Using the builder
 Compiling sources
 
 ```bash
-grunt
+npm built
 ```
 
 Start local server & watcher
 
 ```bash
-grunt serve
+npm start
 ```
 
 Start ING Demo 
 
 ```bash
-grunt serve --source=samples/ing
+npm start -- --source=samples/ing
 ```
 
 Export dist in zip file
 
 ```bash
-grunt export
+npm export
 ```
 
 Used technology
@@ -111,7 +108,7 @@ Final compiled files for production
 Several integrated sample case
 
 ```bash
-grunt serve --source=samples/template
-grunt serve --source=samples/ing
+npm start -- --source=samples/template
+npm start -- --source=samples/ing
 
 ```
