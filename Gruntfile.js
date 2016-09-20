@@ -35,32 +35,31 @@ module.exports = function(grunt) {
 
         // Case
         settings: settings,
-        // Jade 
-        jade: {
+        // Pug 
+        pug: {
             dev: {
                 options: {
                     debug:false,
                     pretty: true,
                     basedir: cwd,
-                    data: settings,
+                    data: settings
                 },
                 files: {
-                    'dist/<%= settings.name %>.html': '<%= src %>/main.jade',
-                },
+                    'dist/<%= settings.name %>.html': '<%= src %>/main.pug',
+                }
             },
             prod: {
                 options: {
                     debug:false,
                     pretty: true,
                     basedir: cwd,
-                    data: prod_settings,
+                    data: prod_settings
                 },
                 files: {
-                    'dist/<%= settings.name %>.html': '<%= src %>/main.jade',
-                },
-            },
+                    'dist/<%= settings.name %>.html': '<%= src %>/main.pug',
+                }
+            }
         },
-
 
         // Less
         less: {
@@ -85,8 +84,8 @@ module.exports = function(grunt) {
                 files: {
                     "lib/css/bootstrap.css": "lib/css/bootstrap.less",
                     "lib/css/bootstrap-responsive.css": "lib/css/bootstrap-responsive.less",
-                },
-            },
+                }
+            }
         },
 
 
@@ -105,7 +104,7 @@ module.exports = function(grunt) {
                     src: ['main.js'],
                     dest: 'dist/assets/js'
                 }]
-            },
+            }
         },
 
 
@@ -115,8 +114,8 @@ module.exports = function(grunt) {
             options: {
                 globals: {
                     jQuery: true,
-                },
-            },
+                }
+            }
         },
         
 
@@ -130,9 +129,9 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'src/',
                     src: ['assets/img/*.{png,jpg}'],
-                    dest: 'dist/',
-                }],
-            },
+                    dest: 'dist/'
+                }]
+            }
         },
 
 
@@ -140,12 +139,12 @@ module.exports = function(grunt) {
         // Watcher
         watch: {
             html: {
-                files: ['<%= src %>/*.jade','lib/templates/*.jade'],
-                tasks: ['jade:dev'],
+                files: ['<%= src %>/*.pug','lib/templates/*.pug'],
+                tasks: ['pug:dev'],
                 options: {
                     debounceDelay: 250,
                     livereload: true
-                },
+                }
             },
             css: {
                 files: '<%= src %>/*.less',
@@ -153,7 +152,7 @@ module.exports = function(grunt) {
                 options: {
                     debounceDelay: 250,
                     livereload: true
-                },
+                }
             },
             img: {
                 files: '<%= src %>/assets/img/**',
@@ -161,7 +160,7 @@ module.exports = function(grunt) {
                 options: {
                     debounceDelay: 250,
                     livereload: true
-                },
+                }
             },
             js: {
                 files: '<%= src %>/*.js',
@@ -169,8 +168,8 @@ module.exports = function(grunt) {
                 options: {
                     debounceDelay: 250,
                     livereload: true
-                },
-            },
+                }
+            }
         },
    
         // Copy
@@ -189,9 +188,9 @@ module.exports = function(grunt) {
               // JS
               {expand: true, cwd:'lib/js', src: ['**'], dest: 'dist/js'},
               // IMG
-              {expand: true, cwd:'lib/img', src: ['**'], dest: 'dist/img'},
-            ],
-          },
+              {expand: true, cwd:'lib/img', src: ['**'], dest: 'dist/img'}
+            ]
+          }
         },
 
         // Clean
@@ -210,8 +209,8 @@ module.exports = function(grunt) {
             },
             expand: true,
             cwd: 'dist/',
-            src: ['**/*','!export.zip'],
-          },
+            src: ['**/*','!export.zip']
+          }
         },
 
         // Connect
@@ -223,10 +222,10 @@ module.exports = function(grunt) {
                     livereload: true,
                     open: {                     
                         target: 'http://localhost:8888/<%= settings.name %>.html'
-                    },
-                },
-            },
-        },
+                    }
+                }
+            }
+        }
 
 
     });
@@ -242,7 +241,7 @@ module.exports = function(grunt) {
 
     // Load Npm Tasks 
     grunt.loadNpmTasks('grunt-sync');
-    grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks('grunt-contrib-pug');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -254,12 +253,12 @@ module.exports = function(grunt) {
 
     // Tasks
     grunt.registerTask('init', ['less:bootstrap']);
-    grunt.registerTask('html', ['jade:dev']);
+    grunt.registerTask('html', ['pug:dev']);
     grunt.registerTask('css', ['less:dev']);
     grunt.registerTask('js', ['jshint']);
     grunt.registerTask('img', ['imagemin']);
     grunt.registerTask('compile', ['html','css','js','sync']);
-    grunt.registerTask('export', ['clean','copy:less','jade:prod','less:prod','js','sync','img','compress']);
+    grunt.registerTask('export', ['clean','copy:less','pug:prod','less:prod','js','sync','img','compress']);
     
     grunt.registerTask('serve', ['clean','compile','connect','watch']);
     grunt.registerTask('default', ['compile']);

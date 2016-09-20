@@ -14,7 +14,7 @@ Prerequisites
 
 We deeply recommand to use [nvm](https://github.com/creationix/nvm) for Node Version Manager
 
-Please note that this tool is using GRUNT, LESS and JADE locally
+Please note that this tool is using GRUNT, LESS and PUG locally
 
 Getting Started
 ---------------
@@ -38,7 +38,7 @@ Using the builder
 Compiling sources
 
 ```bash
-npm built
+npm build
 ```
 
 Start local server & watcher
@@ -62,7 +62,7 @@ npm export
 Used technology
 -----------------
 
-Html template engine is [Jade](http://jade-lang.com/) because it's easy, powerfull and cool.
+Html template engine is [PUG](https://pugjs.org/) because it's easy, powerfull and cool.
 
 Front-end framework and grid is a customized [Boostrap 2.3](http://getbootstrap.com/2.3.2/) (yep old version...)
 
@@ -80,8 +80,8 @@ Source code of your case
 
 Config file, please rename your case.
 
-##### main.jade
-Main jade file
+##### main.pug
+Main pug file
 
 ##### main.js
 Javascript...

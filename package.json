@@ -10,7 +10,7 @@
     "postinstall": "grunt init",
     "build": "grunt",
     "start": "grunt serve",
-    "export": "grunt export",
+    "export": "grunt export"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^1.0.0",
-    "grunt-contrib-jade": "^1.0.0",
+    "grunt-contrib-pug": "1.0.0",
     "grunt-contrib-jshint": "~1.0.0",
     "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-watch": "~1.0.0",
