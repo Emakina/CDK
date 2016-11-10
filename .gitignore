@@ -13,6 +13,8 @@ logs
 results
 tmp
 dist
+lib/css/bootstrap-responsive.css
+lib/css/bootstrap.css
 
 .grunt
 
