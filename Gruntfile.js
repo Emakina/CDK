@@ -4,30 +4,34 @@
 
 /*global module:false*/
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     require('time-grunt')(grunt);
 
     /* 
-    Arguments settings
-    
-    To see another samples
+     Arguments settings
 
-    --source=samples/ing = To see the ing case sample
-    --source=samples/template = To see examples
-    
-    */
+     To see another samples
 
+     --source=samples/ing = To see the ing case sample
+     --source=samples/template = To see examples
 
-    src = grunt.option('source') || 'src';
-    themePath = grunt.option('themepath');
-    cwd = process.cwd();
-    
-    settings = grunt.file.readJSON(src + '/settings.json');
+     */
+
+    let src = grunt.option('source') || 'src',
+        themePath = grunt.option('themepath'),
+        cwd = process.cwd();
+
+    // Dev Settings
+    let settings = grunt.file.readJSON(src + '/settings.json');
+    settings.environment = "development";
     settings.imgPath = "/assets/img";
-    
-    var prod_settings= JSON.parse(JSON.stringify(settings));
-    prod_settings.imgPath="%%imgPath%%";
-    
+
+    // Prod Settings (export)
+    let prod_settings = JSON.parse(JSON.stringify(settings));
+    prod_settings.imgPath = "%%imgPath%%";
+    prod_settings.themePath = "..";
+    prod_settings.environment = "production";
+
     grunt.initConfig({
 
         // Package
@@ -39,24 +43,24 @@ module.exports = function(grunt) {
         pug: {
             dev: {
                 options: {
-                    debug:false,
+                    debug: false,
                     pretty: true,
                     basedir: cwd,
                     data: settings
                 },
                 files: {
-                    'dist/<%= settings.name %>.html': '<%= src %>/main.pug',
+                    'dist/<%= settings.name %>.html': '<%= src %>/main.pug'
                 }
             },
             prod: {
                 options: {
-                    debug:false,
+                    debug: false,
                     pretty: true,
                     basedir: cwd,
                     data: prod_settings
                 },
                 files: {
-                    'dist/<%= settings.name %>.html': '<%= src %>/main.pug',
+                    'dist/<%= settings.name %>.html': '<%= src %>/main.pug'
                 }
             }
         },
@@ -67,23 +71,16 @@ module.exports = function(grunt) {
             dev: {
                 files: {
                     "dist/assets/css/main.css": "<%= src %>/main.less"
-                },
+                }
             },
-            // Case Prod
-            prod: {
-                files: {
-                    "dist/assets/css/main.css": "<%= src %>/main.less"
-                },
- 
-            },
-            // Bootstrap
+            // Bootstrap (Used only for the emakina boostrap theme compilation)
             bootstrap: {
                 options: {
-                    modifyVars: themePath?{themePath: themePath}:{},
+                    modifyVars: themePath ? { themePath: themePath } : {}
                 },
                 files: {
                     "lib/css/bootstrap.css": "lib/css/bootstrap.less",
-                    "lib/css/bootstrap-responsive.css": "lib/css/bootstrap-responsive.less",
+                    "lib/css/bootstrap-responsive.css": "lib/css/bootstrap-responsive.less"
                 }
             }
         },
@@ -110,20 +107,20 @@ module.exports = function(grunt) {
 
         // JsHint
         jshint: {
-            files: ['Gruntfile.js', '<%= src %>/*.js'],
+            files: ['<%= src %>/*.js'],
             options: {
                 globals: {
-                    jQuery: true,
+                    jQuery: true
                 }
             }
         },
-        
+
 
         // Imagemin
         imagemin: {
             dynamic: {
                 options: {
-                    optimizationLevel: 3,
+                    optimizationLevel: 3
                 },
                 files: [{
                     expand: true,
@@ -135,11 +132,10 @@ module.exports = function(grunt) {
         },
 
 
-
         // Watcher
         watch: {
             html: {
-                files: ['<%= src %>/*.pug','lib/templates/*.pug'],
+                files: ['<%= src %>/*.pug', 'lib/templates/*.pug'],
                 tasks: ['pug:dev'],
                 options: {
                     debounceDelay: 250,
@@ -164,63 +160,59 @@ module.exports = function(grunt) {
             },
             js: {
                 files: '<%= src %>/*.js',
-                tasks: ['jshint','sync:js'],
+                tasks: ['jshint', 'sync:js'],
                 options: {
                     debounceDelay: 250,
                     livereload: true
                 }
             }
         },
-   
+
         // Copy
         copy: {
-          less: {
-             nonull: true,
-             src: src + '/main.less', 
-             dest: './dist/assets/css/main.less'
-          },
-          lib: {   
-            expand:true,
-            files:
-            [
-              // CSS
-              {expand: true, cwd:'lib/css', src: ['**'], dest: 'dist/css'},
-              // JS
-              {expand: true, cwd:'lib/js', src: ['**'], dest: 'dist/js'},
-              // IMG
-              {expand: true, cwd:'lib/img', src: ['**'], dest: 'dist/img'}
-            ]
-          }
+            less: {
+                nonull: true,
+                src: src + '/main.less',
+                dest: './dist/assets/css/main.less',
+                options: {
+                    process: (content) => {
+                        return content.replace(/@import ".*\/require\.dev\.less";/, grunt.file.read("lib/css/require.prod.less"));
+                    }
+                }
+            },
+            settings: {
+                src: src + '/settings.json',
+                dest: './dist/settings.json'
+            }
         },
-
         // Clean
         clean: {
             options: {
-                 'force': true
+                'force': true
             },
             folder: ["dist/"],
         },
 
         // Compress
         compress: {
-          main: {
-            options: {
-              archive: './dist/export.zip'
-            },
-            expand: true,
-            cwd: 'dist/',
-            src: ['**/*','!export.zip']
-          }
+            main: {
+                options: {
+                    archive: './dist/export.zip'
+                },
+                expand: true,
+                cwd: 'dist/',
+                src: ['**/*', '!export.zip']
+            }
         },
 
         // Connect
         connect: {
             server: {
                 options: {
-                    base: ['lib','dist'],
+                    base: ['lib', 'dist'],
                     port: '8888',
                     livereload: true,
-                    open: {                     
+                    open: {
                         target: 'http://localhost:8888/<%= settings.name %>.html'
                     }
                 }
@@ -231,7 +223,6 @@ module.exports = function(grunt) {
     });
 
 
-    
     // Setting sources and current working dir.
     grunt.config.set('src', src);
     grunt.config.set('cwd', cwd);
@@ -257,9 +248,10 @@ module.exports = function(grunt) {
     grunt.registerTask('css', ['less:dev']);
     grunt.registerTask('js', ['jshint']);
     grunt.registerTask('img', ['imagemin']);
-    grunt.registerTask('compile', ['html','css','js','sync']);
-    grunt.registerTask('export', ['clean','copy:less','pug:prod','less:prod','js','sync','img','compress']);
-    
-    grunt.registerTask('serve', ['clean','compile','connect','watch']);
-    grunt.registerTask('default', ['compile']);
+    grunt.registerTask('compile', ['html', 'css', 'js', 'sync']);
+    grunt.registerTask('build', ['clean', 'copy', 'pug:prod', 'js', 'sync', 'img']);
+    grunt.registerTask('export', ['build', 'compress']);
+
+    grunt.registerTask('serve', ['clean', 'compile', 'connect', 'watch']);
+    grunt.registerTask('default', ['serve']);
 };

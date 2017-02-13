@@ -1,35 +1,37 @@
 {
-    "name": "Unamed_Case",
-    "uuid": "",
-    "author": "",
-    "metas": {
-        "agency": "",
-        "customer": "",
-        "subsidiary": "",
-        "core_activities": "",
-        "competence_centers": "",
-        "release_date": "",
-        "contents": {
-            "en": {
-                "title": "",
-                "short_description": "",
-                "keywords": ""
-            },
-            "fr": {
-                "title": "",
-                "short_description": "",
-                "keywords": ""
-            },
-            "nl": {
-                "title": "",
-                "short_description": "",
-                "keywords": ""
-            },
-            "tr": {
-                "title": "",
-                "short_description": "",
-                "keywords": ""
-            }
-        }
+  "name": "case_name",
+  "uuid": "ask_for_us_for_uuid_before_to_export",
+  "author": "author_name",
+  "metas": {
+    "customer": "customer_name",
+    "subsidiary": "agency_name",
+    "core_activities": [],
+    "competence_centers": [],
+    "industry": "",
+    "media": [],
+    "services": [],
+    "release_date": "",
+    "contents": {
+      "en": {
+        "title": "",
+        "short_description": "",
+        "keywords": ""
+      },
+      "fr": {
+        "title": "",
+        "short_description": "",
+        "keywords": ""
+      },
+      "nl": {
+        "title": "",
+        "short_description": "",
+        "keywords": ""
+      },
+      "tr": {
+        "title": "",
+        "short_description": "",
+        "keywords": ""
+      }
     }
+  }
 }

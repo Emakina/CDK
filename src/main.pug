@@ -1,34 +1,27 @@
-//- Load the Layout
 extends ../lib/templates/layout
 
-//- Case DEMO
 block case
-	.case.case-name
-		
-		//- Slide INFO
-		section.slide
-			.box.box-info
-				.visu.visu-info
-					.container-fluid
-						header.row-fluid
-							.span12
-								h1.pull-left.orange
-									span Case
-									| Name
-						.row-fluid.description
-							.span5
-								h2.orange 
-								.info
-									.row-fluid
-										.span5 Client:
-									.row-fluid
-										.span5 Services:
+    .case.case-name
 
+        //- Slide INFO
+        section.slide
+            .box.box-info
+                .visu.visu-info
+                    .container-fluid
+                        header.row-fluid
+                            .span12
+                                h1.pull-left.orange
+                                    span Case
+                                    +t('case_title', 'My case')
+                        .row-fluid.description
+                            .span5
+                                h2.orange
+                                    +t('case_description', 'My description')
+                                +infoBox()
 
-		//- Slide NAME
-		section.slide
-			.box.box-name
-				.visu.visu-name
-					.container-fluid
-						.row-fluid
-		
+        //- Slide NAME
+        section.slide
+            .box.box-name
+                .visu.visu-name
+                    .container-fluid
+                        .row-fluid

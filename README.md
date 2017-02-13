@@ -1,16 +1,15 @@
 Emakina Case Development Kit
 ============================
 
+CDK Feb 2017
 
-This tool is still in his beta phase.
 Please use [JIRA](https://bugtracking.emakina.net/browse/EMAWEBSITETREIZE) to report bug, request or new idea.
-
 
 Prerequisites
 -------------
 
 - [Git](https://git-scm.com/)
-- [Node.js](http://nodejs.org) 4.4.7
+- [Node.js](http://nodejs.org) Latest LTS (lts/boron)
 
 We deeply recommand to use [nvm](https://github.com/creationix/nvm) for Node Version Manager
 
@@ -27,6 +26,11 @@ The easiest way to get started is to clone the repository:
 git clone https://git.emakina.net/scm/eg/cdk.git
 cd cdk
 
+# If you use NVM, tell him to install the node specified in .nvmrc
+nvm install
+# Tell him to use the node specified in .nvmrc
+nvm use
+
 # Install NPM dependencies
 
 npm install
@@ -35,32 +39,44 @@ npm install
 Using the builder
 -----------------
 
-Compiling sources
-
-```bash
-npm build
-```
-
 Start local server & watcher
 
 ```bash
 npm start
 ```
 
-Start ING Demo 
+Build case in "dist" directory
+
+```bash
+npm run build
+```
+
+Export zipped case in "dist" directory
+
+```bash
+npm run export
+```
+
+See samples
+-----------
+
+To run the examples and see what you can do with the cdk, try the commands below
+
+Start **template** sample
+
+```bash
+npm start -- --source=samples/template
+```
+
+Start **ING** sample 
 
 ```bash
 npm start -- --source=samples/ing
 ```
 
-Export dist in zip file
-
-```bash
-npm export
-```
 
 Used technology
------------------
+---------------
 
 Html template engine is [PUG](https://pugjs.org/) because it's easy, powerfull and cool.
 
@@ -70,15 +86,15 @@ The parallax scrolling library is [Skrollr](https://github.com/Prinzhorn/skrollr
 
 
 Files structure
------------------
+---------------
 
-###/src 
+### /src 
 
 Source code of your case
 
-##### case.json
+##### settings.json
 
-Config file, please rename your case.
+Config file, please update the content to match your case.
 
 ##### main.pug
 Main pug file
@@ -107,8 +123,28 @@ Final compiled files for production
 
 Several integrated sample case
 
-```bash
-npm start -- --source=samples/template
-npm start -- --source=samples/ing
+Using PUG
+---------
 
-```
+***Don't worry if you don't know PUG.***
+> PUG is elegent, powerfull and cool HTML template engine.
+
+* Quick [intro](https://medium.com/@andrewtsao/the-pug-life-a-quick-intro-to-pugjs-40b0895bdd5b#.qv57b5mvw) 
+* Full [Documentation](https://pugjs.org/api/getting-started.html)
+* [Try it online](http://html2jade.org/)
+
+##Custom mixings
+
+`+infoBox()`
+Generate the case info box based on the metas from settings.json
+
+`+t(key, defaultText, [Mode])`
+The CMS is multilanguage, we ask you to use this mixing to enable future translations 
+and text corrections.
+
+* **key**: Name of your text (Must be unique)
+* **defaultText**: Default text
+* **mode**: Mode of the CMS editor `full` (Default) provide font decoration and `simple` can 
+just edit the text. <br><br>Generaly we set mode to simple for title and subtitle elements.
+
+> 

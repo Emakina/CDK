@@ -1,7 +1,5 @@
-//- Load the Layout
 extends ../../lib/templates/layout
 
-//- Case DEMO
 block case
 	.case.case-ing
 
@@ -14,15 +12,12 @@ block case
 							.span12
 								h1.pull-left.orange
 									span Case
-									| ING jobs
+									+t('case_title', 'ING jobs')
 						.row-fluid.description
 							.span5
-								h2.orange A facelift to attract new job seekers
-								.info
-									.row-fluid
-										.span5 Client:
-									.row-fluid
-										.span5 Services:
+								h2.orange
+									+t('case_description', 'A facelift to attract new job seekers')
+								+infoBox()
 
 
 		//- Slide CHALLENGE
@@ -174,6 +169,5 @@ block case
 					.container-fluid
 						.row-fluid
 							.span8.offset2
-								h2 Discover careers <br>at ING Belgium 
+								h2 Discover careers <br>at ING Belgium
 								a.btn.gray.btn-large(href='http://www.ing.jobs/belgium.htm' target='_blank') Go to the Website
-
