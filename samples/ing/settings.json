@@ -1,35 +1,47 @@
 {
-    "name": "Case-ing",
-    "uuid": "",
-    "author": "gan",
-    "metas": {
-        "agency": "Emakina.BE",
-        "customer": "",
-        "subsidiary": "",
-        "core_activities": "",
-        "competence_centers": "",
-        "release_date": "",
-        "contents": {
-            "en": {
-                "title": "",
-                "short_description": "",
-                "keywords": ""
-            },
-            "fr": {
-                "title": "",
-                "short_description": "",
-                "keywords": ""
-            },
-            "nl": {
-                "title": "",
-                "short_description": "",
-                "keywords": ""
-            },
-            "tr": {
-                "title": "",
-                "short_description": "",
-                "keywords": ""
-            }
-        }
+  "name": "Case Ing",
+  "uuid": "ea526cb2-853b-44d0-8943-e0aa8888a480",
+  "author": "marcom@emakina.com",
+  "metas": {
+    "customer": "Ing",
+    "subsidiary": "EMAKINA.BE",
+    "core_activities": [
+      "Emakina/Architect",
+      "Emakina/Direct"
+    ],
+    "competence_centers": [],
+    "industry": "Bank",
+    "media": [
+      "Web",
+      "Email"
+    ],
+    "services": [
+      "Intranet",
+      "Direct Marketing",
+      "Hosting Solutions"
+    ],
+    "release_date": "04/04/1980",
+    "contents": {
+      "en": {
+        "title": "",
+        "short_description": "",
+        "keywords": ""
+      },
+      "fr": {
+        "title": "",
+        "short_description": "",
+        "keywords": ""
+      },
+      "nl": {
+        "title": "",
+        "short_description": "",
+        "keywords": ""
+      },
+      "tr": {
+        "title": "",
+        "short_description": "",
+        "keywords": ""
+      }
     }
+  }
 }

@@ -1,186 +1,188 @@
-//- Load the Layout
 extends ../../lib/templates/layout
 
-//- Case DEMO
 block case
-	.case.case-template.bg-style.bg-jeans
+    .case.case-template.bg-style.bg-jeans
 
-		//- Slide INFO
-		section.slide
-			.box.box-info
-				.visu.visu-info
-					.container-fluid
-						header.row-fluid
-							.span12
-								h1.pull-left.orange
-									span Case
-									| Big header
-						.row-fluid.description
-							.span5
-								h2.orange Here comes a large image of the case (2560x765), Full HD 1080p
-								.info
-									.row-fluid
-										.span5 Client:
-									.row-fluid
-										.span5 Services:
+        //- Slide INFO
+        section.slide
+            .box.box-info
+                .visu.visu-info
+                    .container-fluid
+                        header.row-fluid
+                            .span12
+                                h1.pull-left.orange
+                                    span Case
+                                    +t('case_title', 'My case title')
+                        .row-fluid.description
+                            .span5
+                                h2.orange
+                                    +t('case_description', 'My case description')
+                                +infoBox()
 
 
-		//- Slide GRIDE
-		section.slide
-			.box.box-grid.bg-style.bg-jeans_light
-				.visu.visu-grid
-					.container-fluid
-						.row-fluid
-							.span12
-								h2.orange Grid
-						.grid 
-							.row-fluid
-								.span6 Span6
-								.span6 Span6
-							.row-fluid
-								.span4 Span4
-								.span8 Span8
-							.row-fluid
-								.span4 Span4
-								.span4 Span4
-								.span4 Span4
-							.row-fluid
-								.span3 Span3
-								.span3 Span3 
-								.span3 Span3
-								.span3 Span3
+        //- Slide GRID
+        section.slide
+            .box.box-grid.bg-style.bg-jeans_light
+                .visu.visu-grid
+                    .container-fluid
+                        .row-fluid
+                            .span12
+                                h2.orange
+                                    +t('slide_grid_title', 'Grid')
+                        .grid
+                            .row-fluid
+                                .span6 Span6
+                                .span6 Span6
+                            .row-fluid
+                                .span4 Span4
+                                .span8 Span8
+                            .row-fluid
+                                .span4 Span4
+                                .span4 Span4
+                                .span4 Span4
+                            .row-fluid
+                                .span3 Span3
+                                .span3 Span3
+                                .span3 Span3
+                                .span3 Span3
 
 
-		//- Slide CONTENT
-		section.slide
-			.box.box-content.bg-style.bg-jeans_dark
-				.visu.visu-content
-					.container-fluid
-						.row-fluid
-							h2.orange Typography
-						.row-fluid
-							.span8
-								h1 H1 Title
-								h2.orange H2 Title
-								h3 H3 Subtitle
-								h4 H4 Subtitle
-								h5 H5 Subtitle
-								h2 Example body text
-								p <strong>Example body text</strong> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        //- Slide CONTENT
+        section.slide
+            .box.box-content.bg-style.bg-jeans_dark
+                .visu.visu-content
+                    .container-fluid
+                        .row-fluid
+                            h2.orange
+                                +t('slide_content_title', 'Typography')
+                        .row-fluid
+                            .span8
+                                h1 H1 Title
+                                h2.orange H2 Title
+                                h3 H3 Subtitle
+                                h4 H4 Subtitle
+                                h5 H5 Subtitle
+                                h2 Example body text
+                                p <strong>Example body text</strong> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-		//- Slide WHITE BACKGROUND
-		section.slide
-			.box.box-light_background
-				.visu.visu-light_background.visu-light-bg
-					.container-fluid
-						.row-fluid
-							.span12
-								h2.orange Slide with a light background (white)
-						.row-fluid
-							.span8
-								h4 You have to put .visu-light-bg on .visu
-								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        //- Slide WHITE BACKGROUND
+        section.slide
+            .box.box-light_background
+                .visu.visu-light_background.visu-light-bg
+                    .container-fluid
+                        .row-fluid
+                            .span12
+                                h2.orange
+                                    +t('slide_light_background_title', 'Slide with a light background (white)')
+                        .row-fluid
+                            .span8
+                                h4 You have to put .visu-light-bg on .visu
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-		//- Slide BUTTON
-		section.slide
-			.box.box-button
-				.visu.visu-button.bg-style.bg-jeans_dark
-					.container-fluid
-						.row-fluid
-							.span12
-								h2.orange Buttons
-						.row-fluid
-							.span4
-								h4 Small Button
-								a.btn.btn-small.orange(href='#' target='_blank') Button
-							.span4
-								h4 Medium Button
-								a.btn.orange(href='#' target='_blank') Button
-							.span4
-								h4 Large Button
-								a.btn.btn-large.orange(href='#' target='_blank') Button
+        //- Slide BUTTON
+        section.slide
+            .box.box-button
+                .visu.visu-button.bg-style.bg-jeans_dark
+                    .container-fluid
+                        .row-fluid
+                            .span12
+                                h2.orange
+                                    +t('slide_button_title', 'Buttons')
+                        .row-fluid
+                            .span4
+                                h4 Small Button
+                                a.btn.btn-small.orange(href='#' target='_blank') Button
+                            .span4
+                                h4 Medium Button
+                                a.btn.orange(href='#' target='_blank') Button
+                            .span4
+                                h4 Large Button
+                                a.btn.btn-large.orange(href='#' target='_blank') Button
 
 
-		//- Slide LIST
-		section.slide
-			.box.box-list
-				.visu.visu-list.bg-style.bg-jeans_light
-					.container-fluid
-						.row-fluid
-							.span12
-								h2.orange List
-						.row-fluid
-							.span4
-								ul.styled-orange
-									li Lorem Ipsum
-									li Lorem Ipsum
-									li Lorem Ipsum
+        //- Slide LIST
+        section.slide
+            .box.box-list
+                .visu.visu-list.bg-style.bg-jeans_light
+                    .container-fluid
+                        .row-fluid
+                            .span12
+                                h2.orange
+                                    +t('slide_list_title', 'List')
+                        .row-fluid
+                            .span4
+                                ul.styled-orange
+                                    li Lorem Ipsum
+                                    li Lorem Ipsum
+                                    li Lorem Ipsum
 
 
-		//- Slide VIDEO
-		section.slide
-			.box.box-video
-				.visu.visu-video
-					.container-fluid
-						.row-fluid
-							.span12
-								h2.orange Video
-								+vimeo('132817258')
-		
-
-		//- Slide QUOTE
-		section.slide
-			.box.box-quote
-				.visu.visu-quote
-					.container-fluid
-						.row-fluid
-							.span6
-								h2.orange Quote
-								+quote('With this revamping, we have not only a more attractive and dynamic way of communicating with potential staff, but an entirely new approach. Our recruitment and on-boarding pages are very user-centred, delivering useful and informative content, with a more social and innovative approach.','Anne-Catherine Zoller')
+        //- Slide VIDEO
+        section.slide
+            .box.box-video
+                .visu.visu-video
+                    .container-fluid
+                        .row-fluid
+                            .span12
+                                h2.orange
+                                    +t('slide_video_title', 'Video')
+                                +vimeo('132817258')
 
 
-		//- Slide SLIDER
-		section.slide
-			.box.box-slider
-				.visu.visu-slider
-					.container-fluid
-						.row-fluid
-							.span12
-								h2.orange Sliders
-								h4 Slider simple
-								.carousel.slide#carousel
-									.carousel-inner
-										.item.active
-											.row-fluid
-												.span12
-													img(src=imgPath + "/visu1.jpg")
-
-										.item
-											.row-fluid
-												.span12
-													img(src=imgPath + "/visu2.jpg")
+        //- Slide QUOTE
+        section.slide
+            .box.box-quote
+                .visu.visu-quote
+                    .container-fluid
+                        .row-fluid
+                            .span6
+                                h2.orange
+                                    +t('slide_quote_title', 'Quote')
+                                +quote('With this revamping, we have not only a more attractive and dynamic way of communicating with potential staff, but an entirely new approach. Our recruitment and on-boarding pages are very user-centred, delivering useful and informative content, with a more social and innovative approach.','Anne-Catherine Zoller')
 
 
+        //- Slide SLIDER
+        section.slide
+            .box.box-slider
+                .visu.visu-slider
+                    .container-fluid
+                        .row-fluid
+                            .span12
+                                h2.orange
+                                    +t('slide_slider_title', 'Sliders')
+                                h4 Slider simple
+                                .carousel.slide#carousel
+                                    .carousel-inner
+                                        .item.active
+                                            .row-fluid
+                                                .span12
+                                                    img(src=imgPath + "/visu1.jpg")
 
-						.row-fluid
-							.span12
-								h4 Slider menu
-								.carousel.carousel-menu.slide#carousel-menu
-									.carousel-inner
-										.item.active(data-slide="Slide 1")
-											.row-fluid
-												.span12
-													img(src=imgPath + "/visu1.jpg")
+                                        .item
+                                            .row-fluid
+                                                .span12
+                                                    img(src=imgPath + "/visu2.jpg")
 
-										.item(data-slide="Slide 2")
-											.row-fluid
-												.span12
-													img(src=imgPath + "/visu2.jpg")
 
-										.item(data-slide="SLide 3")
-											.row-fluid
-												.span12
-													img(src=imgPath + "/visu1.jpg")
-	
+
+                        .row-fluid
+                            .span12
+                                h4 Slider menu
+                                .carousel.carousel-menu.slide#carousel-menu
+                                    .carousel-inner
+                                        .item.active(data-slide="Slide 1")
+                                            .row-fluid
+                                                .span12
+                                                    img(src=imgPath + "/visu1.jpg")
+
+                                        .item(data-slide="Slide 2")
+                                            .row-fluid
+                                                .span12
+                                                    img(src=imgPath + "/visu2.jpg")
+
+                                        .item(data-slide="SLide 3")
+                                            .row-fluid
+                                                .span12
+                                                    img(src=imgPath + "/visu1.jpg")

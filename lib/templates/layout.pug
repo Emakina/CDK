@@ -1,66 +1,8 @@
-include mixins.pug
+include mixins
 
-doctype html
-html
++header()
++loadProjectData()
 
-	head
+block case
 
-		//- META 
-		meta(charset='utf-8')
-		meta(http-equiv='X-UA-Compatible', content='IE=edge')
-		meta(name='viewport', content='width=device-width, initial-scale=1.0')
-		meta(name='csrf-token', content=_csrf)
-
-
-		//- TITLE 
-		title Emakina - #{name}
-
-
-		//- SCRIPT 
-		script(type='text/javascript', src='//use.typekit.net/vko4rmo.js')
-		script(type='text/javascript').
-			try{Typekit.load();}catch(e){}
-
-		//- SCRIPT - Lib
-		script(type='text/javascript', src='js/vendor/jquery-1.9.1.min.js')
-		script(type='text/javascript', src='js/vendor/skrollr.min.js')
-
-		//- SCRIPT - CDN
-		script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.3/jquery.jcarousel.min.js')
-		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
-
-		//- SCRIPT - Main	
-		script(type='text/javascript', src='js/main.js')
-
-		//- SCRIPT - Case
-		script(type='text/javascript', src='assets/js/main.js')
-
-
-		//- CSS - Lib
-		link(rel="stylesheet", href="css/bootstrap.css")
-		link(rel="stylesheet", href="css/bootstrap-responsive.css")
-		link(rel="stylesheet", href="css/main.css")
-			
-		link(rel="stylesheet", href="css/navbar.css")
-		link(rel="stylesheet", href="css/contact.css")
-		link(rel="stylesheet", href="css/footer.css")
-		link(rel="stylesheet", href="css/case.css")
-
-		//- CSS - Case
-		link(rel="stylesheet", href="assets/css/main.css")
-
-	body
-
-		//- NAVBAR
-		include navbar.pug
-
-
-		//- CASE
-		block case
-
-
-		//- CONTACT
-		include contact.pug
-
-		//- FOOTER
-		include footer.pug
++footer()

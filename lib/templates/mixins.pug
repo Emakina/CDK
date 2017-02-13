@@ -1,21 +1,65 @@
-//- VIMEO 
+mixin header()
+    // Header
+    if environment === 'development'
+        include header
+    else
+        s:snippet(name="header")
+
+mixin loadProjectData()
+    // Load Project Data
+    if environment === 'production'
+        s:loadProjectData
+
+mixin infoBox()
+    // Info Box
+    if environment === 'development'
+        .info
+            .row-fluid
+                .span5 Client:
+                .span7 #{metas.customer}
+            .row-fluid
+                .span5 Services:
+                .span7
+                    each val in metas.services
+                        span= val
+            .row-fluid
+                .span5 Agency:
+                .span7 #{metas.subsidiary}
+    else
+        s:snippet(name="case-info-box")
+
+mixin footer()
+    // Footer
+    if environment === 'development'
+        include footer
+    else
+        s:snippet(name="footer")
+
+mixin t(key, defaultText, mode)
+    if environment === 'development'
+        | #{defaultText}
+    else
+        s:content(part=key, mode=mode) #{defaultText}
+
+//- VIMEO
 //-	Generate html for a vimeo video
 //-	Params : Id of the video
 
 mixin vimeo(id)
-	.video
-		img(class="ratio", alt="ratio img", src="../img/ratio-16x9.jpg")
-		iframe(src="//player.vimeo.com/video/#{id}",frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+    .video
+        img(class="ratio", alt="ratio img", src="../img/ratio-16x9.jpg")
+        iframe(src="//player.vimeo.com/video/" + id, frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
 
-//- QUOTE  
+//- QUOTE
 //- Generate html for a quote
 //- Params : Quote + Author
 
 mixin quote(quote, author, office)
-	.quote
-		span.quote_begin
-		p #{quote}
-		span.quote_end
-		div.author
-			p #{author}
-				span #{office}
+    .quote
+        span.quote_begin
+        p #{quote}
+        span.quote_end
+        div.author
+            p #{author}
+                span #{office}
+

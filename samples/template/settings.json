@@ -1,7 +1,50 @@
 {
-    "name": "case-template",
-    "author": "gan",
-    "metas": {
-        "agency": "Emakina.BE"
+  "name": "Case Name",
+  "uuid": "ask_for_us_for_uuid_before_to_export",
+  "author": "yourmail",
+  "metas": {
+    "customer": "Customer Name",
+    "subsidiary": "EMAKINA.XX",
+    "core_activities": [
+      "Emakina/Architect",
+      "Emakina/Direct",
+      "Ask your PM/AM"
+      ],
+    "competence_centers": [],
+    "industry": "",
+    "media": [
+      "Web",
+      "Email",
+      "Ask your PM/AM"
+      ],
+    "services": [
+      "Intranet",
+      "Direct Marketing",
+      "Hosting Solutions",
+      "Ask your PM/AM"
+    ],
+    "release_date": "DD/MM/YYYY",
+    "contents": {
+      "en": {
+        "title": "",
+        "short_description": "",
+        "keywords": ""
+      },
+      "fr": {
+        "title": "",
+        "short_description": "",
+        "keywords": ""
+      },
+      "nl": {
+        "title": "",
+        "short_description": "",
+        "keywords": ""
+      },
+      "tr": {
+        "title": "",
+        "short_description": "",
+        "keywords": ""
+      }
     }
+  }
 }
