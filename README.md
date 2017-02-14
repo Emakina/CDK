@@ -127,24 +127,70 @@ Using PUG
 ---------
 
 ***Don't worry if you don't know PUG.***
-> PUG is elegent, powerfull and cool HTML template engine.
+> PUG is elegant, powerful and cool HTML template engine.
 
 * Quick [intro](https://medium.com/@andrewtsao/the-pug-life-a-quick-intro-to-pugjs-40b0895bdd5b#.qv57b5mvw) 
 * Full [Documentation](https://pugjs.org/api/getting-started.html)
 * [Try it online](http://html2jade.org/)
 
-##Custom mixings
+## Custom mixins
 
-`+infoBox()`
-Generate the case info box based on the metas from settings.json
+A bunch of mixins have been created to transform the exported html file into a 
+CMS compatible file with header, footer and other snippets
 
-`+t(key, defaultText, [Mode])`
-The CMS is multilanguage, we ask you to use this mixing to enable future translations 
-and text corrections.
+### CMS related mixins
 
-* **key**: Name of your text (Must be unique)
+The only CMS related mixins that you should care about are:
+
+`+infoBox()` generates the case info box based on the metas from settings.json
+
+`+t(key, defaultText, [Mode])` enables future translations and text corrections in the CMS.
+
+* **key**: Translation key (Must be unique for the case)
 * **defaultText**: Default text
-* **mode**: Mode of the CMS editor `full` (Default) provide font decoration and `simple` can 
+* **mode**: (optional) Mode of the CMS editor `full` (Default) provide font decoration and `simple` can 
 just edit the text. <br><br>Generaly we set mode to simple for title and subtitle elements.
 
-> 
+Check the `/samples/template/main.pug` file to see working examples
+
+### Style mixins
+
+There are other mixins (CMS unrelated) available to help you style "Vimeo player" or "quotes".
+
+`+vimeo(id)` generates the html to display a Vimeo player
+
+* **id**: The id of a video on Vimeo server
+
+`+quotes(quote, [author], [office])` generates the html to display a styled quotes
+
+* **quote**: The text to quote
+* **author**: (optional) The author of the quote
+* **office**: (optional) The office of the author
+
+Check the `/samples/template/main.pug` file to see working examples
+
+Using images
+------------
+
+All images should be added in `src/assets/img`
+
+To use the image in your **less** or **pug** file, we provide a custom variable that will point 
+on the right directory in both **dev** and **prod** environment
+
+## Use in pug file
+
+To use an image in a **pug** file
+
+```jade
+img(src=imgPath + "/your_image_file.jpg")
+```
+
+## Use in less file
+
+To use an image in a **less** file
+
+```less
+.your-class {
+    background: transparent url("@{imgPath}/your_image_file.jpg") center top no-repeat;
+}
+```
