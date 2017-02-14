@@ -37,9 +37,12 @@ mixin footer()
 
 mixin t(key, defaultText, mode)
     if environment === 'development'
-        | #{defaultText}
+        if mode === 'simple'
+            | #{defaultText}
+        else
+            | !{defaultText}
     else
-        s:content(part=key, mode=mode) #{defaultText}
+        s:content(part=key, mode=mode) !{defaultText}
 
 //- VIMEO
 //-	Generate html for a vimeo video
