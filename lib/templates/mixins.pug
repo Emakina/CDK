@@ -28,6 +28,13 @@ mixin infoBox()
     else
         s:snippet(name="case-info-box")
 
+mixin contactBox()
+    // Box Contact
+    if environment === 'development'
+        include contact
+    else
+        s:snippet(name="case-box-contact")
+
 mixin footer()
     // Footer
     if environment === 'development'
