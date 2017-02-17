@@ -10,6 +10,11 @@ mixin loadProjectData()
     if environment === 'production'
         s:loadProjectData
 
+mixin pageSettings()
+    // Page settings
+    if environment === 'production'
+        s:set(name="category", value="WORK")
+
 mixin infoBox()
     // Info Box
     if environment === 'development'
