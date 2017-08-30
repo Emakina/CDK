@@ -385,9 +385,6 @@
   .case .box-info .visu-info .container-fluid .description .info .row-fluid div.span7 {
     width: auto;
   }
-  .case .box-info .visu-info .container-fluid .description .info .row-fluid:nth-child(2) {
-    display: none !important;
-  }
   .case .carousel .carousel-control.left {
     display: none;
   }
@@ -423,6 +420,9 @@
   }
   .case .box-info .visu-info .container-fluid h2 {
     font-size: 30px;
+  }
+  .case .box-info .visu-info .container-fluid .description .info .row-fluid:nth-child(2) {
+    display: none !important;
   }
   .case .quote p {
     font-size: 18px;

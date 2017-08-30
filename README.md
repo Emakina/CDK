@@ -18,21 +18,25 @@ Please note that this tool is using GRUNT, LESS and PUG locally
 Getting Started
 ---------------
 
-The easiest way to get started is to clone the repository:
+Create a new repo on https://git.emakina.net/projects/EC with the following naming convention: `[YEAR][COUNTRY]-[project]`
 
 ```bash
-# Get the latest snapshot
-
-git clone https://git.emakina.net/scm/eg/cdk.git
-cd cdk
-
+# Clone the newly created repo
+git clone https://git.emakina.net/scm/EC/16fr-ales_group.git
+cd 16fr-ales_group
+# Download the latest CDK and unzip it
+curl -o cdk-master.zip https://git.emakina.net/plugins/servlet/archive/projects/EG/repos/cdk?at=refs%2Fheads%2Fmaster
+unzip cdk-master.zip
+rm cdk-master.zip
+# Add all files to the newly created repo and commit/push them as the initial commit
+git add .
+git commit -m "Initial commit"
+git push
 # If you use NVM, tell him to install the node specified in .nvmrc
 nvm install
 # Tell him to use the node specified in .nvmrc
 nvm use
-
 # Install NPM dependencies
-
 npm install
 ```
 
