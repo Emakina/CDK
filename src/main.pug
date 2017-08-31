@@ -1,7 +1,7 @@
 extends ../lib/templates/layout
 
 block case
-    .case.case-name
+    .case.case-sbab
 
         //- Slide INFO
         section.slide
@@ -10,18 +10,87 @@ block case
                     .container-fluid
                         header.row-fluid
                             .span12
-                                h1.pull-left.orange
+                                h1.pull-left.white
                                     span Case
-                                    +t('case_title', 'My case')
+                                    +t('case_title', 'SBAB')
                         .row-fluid.description
-                            .span5
-                                h2.orange
-                                    +t('case_description', 'My description')
+                            .span4
+                                h2.white
+                                    +t('Boendeekonomiär jättekul ? !')
                                 +infoBox()
+                            .span8
+                                img(src=imgPath + '/box-info-demo.png' alt="demo SBAB")
 
-        //- Slide NAME
+        //- Slide Video Case
         section.slide
-            .box.box-name
-                .visu.visu-name
+            .box.box-video
+                .visu.visu-video
                     .container-fluid
                         .row-fluid
+                            .span12
+                                h2.white
+                                    +t('video_title', 'First Episode')
+                                +vimeo(231873505)
+        //- Slide Client
+        section.slide
+            .box.box-client
+                .visu.visu-client.visu-light-bg
+                    .container-fluid
+                        .row-fluid
+                            .span4.offset2
+                                img(src=imgPath + '/pig.png')
+                            .span6
+                                h2.gray
+                                    +t('client_title', 'Why the client hired us (yaay!):')
+                                p
+                                    +t('client_description', "Is your idea of fun discussing housing economics? No, didn´t think so. The same goes for the potential customers of the bank SBAB, who wanted to take positions as experts in housing economics.")
+
+
+        //- Slide Challenge
+        section.slide
+            .box.box-challenge
+                .visu.visu-challenge
+                    .container-fluid
+                        .row-fluid
+                            .span12
+                                img(src=imgPath + '/peoplesbab.jpg' alt="people sbab illu")
+        //- Slide illu1
+        section.slide
+            .box.box-illu1
+                .visu.visu-illu1
+
+
+        //- Slide Solution
+        section.slide
+            .box.box-solution
+                .visu.visu-solution
+                    .container-fluid
+                        .row-fluid
+                            .span6
+                                h2
+                                    +t('solution_title', 'How we used our brains (and hearts):')
+                                p
+                                    +t('solution_description', 'We like surveys. And if you use them rightly, they can create really successul results. In a SIFO survey we saw that Swedish people felt that housing economics are extremely boring. The question was: Is it possible to make housing economy a little more fun ? And question number two: Are we nuts participating in this tough challenge ? ')
+                            .span5.offset1
+                                img(src=imgPath + '/journal.png' alt="journal modification")
+
+
+        //- Slide using
+        section.slide
+            .box.box-using
+                .visu.visu-using.visu-light-bg
+                    .container-fluid
+                        .row-fluid
+                            .span5
+                                img(src=imgPath + '/website.jpg' alt="website interface")
+
+                            .offset1.span5
+                                h2
+                                    +t('solution_title', 'How we used our brains (and hearts):')
+                                p
+                                    +t('solution_description', "Yeah, we strongly believed it's possible to make housing economy fun. Or even great fun! So why not make a tv - show about just that ? About the challenge of setting up a comedy show in the large arena Globen in Stockholm ? Therefore, we gave the humor expert and tv personality Erik Haag the task and followed his tricky, but of course very funny, journey to the show. All documented in 5 web episodes. So, what was our goal ? To get as many people as possible to want to see and spread the films, and make the target groups feel that housing economy actually is not that boring. It´s fun! And primarily to get the target audience to feel more about the SBAB brand and choose them for their mortgage loans.")
+
+        //- Slide illu2
+        section.slide
+            .box.box-illu2
+                .visu.visu-illu2
