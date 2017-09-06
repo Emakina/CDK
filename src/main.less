@@ -3,12 +3,21 @@
 .case-sbab {
 
 	background-color: black;
+    padding-bottom: 0;
 
     .box-info {
         .visu-info {
             background: transparent url("@{imgPath}/box-info_bg.jpg") center top no-repeat;
             .container-fluid {
-
+                img{
+                    position: absolute;
+                    bottom: 0;
+                    width: 65%;
+                    @media (max-width: 1024px) {
+                        position: static;
+                        width: auto;    
+                    }
+                }
             }
         }
     }
@@ -17,9 +26,21 @@
         background: #000;
     }
 
+    .box-client{
+        @media (max-width: 768px) {
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
     .box-illu1,.box-illu2{
         min-height: 600px;
         background-size: cover;
+        @media (max-width: 768px) {
+            min-height: 400px;
+        }
     }
     .box-illu1{
         background: transparent url("@{imgPath}/illu1.jpg") center no-repeat;
