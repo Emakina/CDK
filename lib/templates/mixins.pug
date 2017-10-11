@@ -62,7 +62,10 @@ mixin t(key, defaultText, mode)
 
 mixin vimeo(id)
     .video
-        img(class="ratio", alt="ratio img", src="../img/ratio-16x9.jpg")
+        if environment === 'development'
+            img(class="ratio", alt="ratio img", src="../img/ratio-16x9.jpg")
+        else
+            img(class="ratio", alt="ratio img", src="/assets/themes/emakina2013/img/ratio-16x9.jpg")
         iframe(src="//player.vimeo.com/video/" + id, frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
 
 //- QUOTE
