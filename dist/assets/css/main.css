@@ -1,0 +1,48 @@
+.case-sbab {
+  background-color: black;
+  padding-bottom: 0;
+}
+.case-sbab .box-info .visu-info {
+  background: transparent url("/assets/img/box-info_bg.jpg") center top no-repeat;
+}
+.case-sbab .box-info .visu-info .container-fluid img {
+  position: absolute;
+  bottom: 0;
+  width: 65%;
+}
+@media (max-width: 1024px) {
+  .case-sbab .box-info .visu-info .container-fluid img {
+    position: static;
+    width: auto;
+  }
+}
+.case-sbab .box-challenge {
+  background: #000;
+}
+@media (max-width: 768px) {
+  .case-sbab .box-client img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+.case-sbab .box-illu1,
+.case-sbab .box-illu2 {
+  min-height: 600px;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .case-sbab .box-illu1,
+  .case-sbab .box-illu2 {
+    min-height: 400px;
+  }
+}
+.case-sbab .box-illu1 {
+  background: transparent url("/assets/img/illu1.jpg") center no-repeat;
+}
+.case-sbab .box-solution {
+  background-color: #000;
+}
+.case-sbab .box-illu2 {
+  background: transparent url("/assets/img/illu2.jpg") center no-repeat;
+  padding-bottom: 0;
+}
